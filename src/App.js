@@ -2647,6 +2647,17 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       color: "#06b6d4",
     },
     {
+      key: "clinical_audit",
+      title: "Clinical Audit",
+      subtitle: "Quality Improvement Tool",
+      badge: "Any Hospital",
+      tags: ["5-stage cycle", "Independent tool"],
+      desc: "Run clinical audits the proper way — pick a topic, set standards, collect data, compare, implement change and re-audit. Works alongside any accreditation programme, or on its own.",
+      available: true,
+      icon: "🔍",
+      color: "#7c3aed",
+    },
+    {
       key: "dental_elc",
       title: "Dental Clinic Certification",
       subtitle: "Entry Level — Dental Clinics",
@@ -6149,6 +6160,1066 @@ function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
   );
 }
 
+// ── CLINICAL AUDIT — standalone quality-improvement module, independent of every NABH programme.
+// Uses its own tables (clinical_audit_projects) — never touches HCO's audit_records/custom_audits.
+const CA_DONABEDIAN = [
+  {value:"structure",label:"Structure — resources, staff, equipment, protocols in place"},
+  {value:"process",label:"Process — the care actually delivered"},
+  {value:"outcome",label:"Outcome — the measurable change in patient status"},
+];
+const CA_DATA_APPROACH = [
+  {value:"retrospective",label:"Retrospective — look back at existing records"},
+  {value:"prospective",label:"Prospective — collect data as care is given"},
+];
+const CA_STAGES = [
+  {key:"topic",label:"Topic"},
+  {key:"standard",label:"Standard"},
+  {key:"sampling",label:"Sampling"},
+  {key:"data_collection",label:"Data Collection"},
+  {key:"results",label:"Results"},
+  {key:"action_plan",label:"Action Plan"},
+  {key:"reaudit",label:"Re-audit"},
+  {key:"closed",label:"Closed"},
+];
+const caEmptyForm=()=>({title:"",department:"",aim:"",objectives:"",priority_reason:"",donabedian_focus:"process",
+  criterion:"",target_pct:"",exceptions:"",standard_source:"",sampling_method:"",data_approach:"retrospective",
+  population_size:"",sample_size:""});
+
+function CreateClinicalAuditForm({ onSubmit, saving, onCancel }) {
+  const [form,setForm]=useState(caEmptyForm());
+  const set=k=>e=>setForm(f=>({...f,[k]:e.target.value}));
+  const section=(title)=><div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginTop:12,marginBottom:2}}>{title}</div>;
+  return (
+    <div style={{background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12,padding:"18px 20px",marginBottom:14}}>
+      <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:4,letterSpacing:1}}>🔍 NEW CLINICAL AUDIT</div>
+      <div style={{display:"grid",gap:10}}>
+        {section("STAGE 1 — TOPIC")}
+        <div>
+          <div style={lbl}>AUDIT TITLE *</div>
+          <input value={form.title} onChange={set("title")} placeholder="e.g. Post-operative Wound Infection Audit" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+          <div>
+            <div style={lbl}>DEPARTMENT</div>
+            <input value={form.department} onChange={set("department")} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+          <div>
+            <div style={lbl}>FOCUS (DONABEDIAN MODEL)</div>
+            <select value={form.donabedian_focus} onChange={set("donabedian_focus")} style={{...inp,width:"100%"}}>
+              {CA_DONABEDIAN.map(o=><option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+          </div>
+        </div>
+        <div>
+          <div style={lbl}>AIM — overall purpose of this audit</div>
+          <textarea value={form.aim} onChange={set("aim")} rows={2} style={{...inp,width:"100%",boxSizing:"border-box",resize:"vertical"}}/>
+        </div>
+        <div>
+          <div style={lbl}>OBJECTIVES — the steps needed to reach the aim</div>
+          <textarea value={form.objectives} onChange={set("objectives")} rows={2} style={{...inp,width:"100%",boxSizing:"border-box",resize:"vertical"}}/>
+        </div>
+        <div>
+          <div style={lbl}>WHY IS THIS WORTH AUDITING? — cost/volume/risk, complaints, incidents, priority fit</div>
+          <textarea value={form.priority_reason} onChange={set("priority_reason")} rows={2} style={{...inp,width:"100%",boxSizing:"border-box",resize:"vertical"}}/>
+        </div>
+
+        {section("STAGE 2 — CRITERIA & STANDARD")}
+        <div>
+          <div style={lbl}>CRITERION — measurable description of what care should be delivered</div>
+          <textarea value={form.criterion} onChange={set("criterion")} rows={2} placeholder="e.g. All surgical patients receive prophylactic antibiotics within 60 minutes of incision" style={{...inp,width:"100%",boxSizing:"border-box",resize:"vertical"}}/>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+          <div>
+            <div style={lbl}>TARGET % — acceptable performance level</div>
+            <input type="number" min="0" max="100" value={form.target_pct} onChange={set("target_pct")} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+          <div>
+            <div style={lbl}>STANDARD SOURCE — national guidance, professional body, local protocol…</div>
+            <input value={form.standard_source} onChange={set("standard_source")} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+        </div>
+        <div>
+          <div style={lbl}>EXCEPTIONS — agreed, justifiable reasons for not meeting the standard</div>
+          <textarea value={form.exceptions} onChange={set("exceptions")} rows={2} style={{...inp,width:"100%",boxSizing:"border-box",resize:"vertical"}}/>
+        </div>
+
+        {section("STAGE 3 — SAMPLING")}
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+          <div>
+            <div style={lbl}>DATA APPROACH</div>
+            <select value={form.data_approach} onChange={set("data_approach")} style={{...inp,width:"100%"}}>
+              {CA_DATA_APPROACH.map(o=><option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+          </div>
+          <div>
+            <div style={lbl}>SAMPLING METHOD</div>
+            <input value={form.sampling_method} onChange={set("sampling_method")} placeholder="e.g. simple random, every 5th case, stratified by ward" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+          <div>
+            <div style={lbl}>POPULATION SIZE</div>
+            <input type="number" min="0" value={form.population_size} onChange={set("population_size")} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+          <div>
+            <div style={lbl}>SAMPLE SIZE</div>
+            <input type="number" min="0" value={form.sample_size} onChange={set("sample_size")} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+        </div>
+
+        <div style={{display:"flex",gap:8,marginTop:6}}>
+          <button onClick={()=>onSubmit(form)} disabled={saving||!form.title.trim()} style={{padding:"9px 20px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:"pointer",opacity:saving||!form.title.trim()?0.5:1}}>
+            {saving?"Creating…":"✓ Create Audit"}
+          </button>
+          <button onClick={onCancel} style={{padding:"9px 16px",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ClinicalAuditDetail({ project, onUpdate, onDelete, saving }) {
+  const [results,setResults]=useState({compliant_count:project.compliant_count??"",total_count:project.total_count??"",findings:project.findings||""});
+  const [actionPlan,setActionPlan]=useState(Array.isArray(project.action_plan)?project.action_plan:[]);
+  const [newAction,setNewAction]=useState({action:"",owner:"",target_date:""});
+  const [reaudit,setReaudit]=useState({reaudit_date:project.reaudit_date||"",reaudit_compliant_count:project.reaudit_compliant_count??"",reaudit_total_count:project.reaudit_total_count??""});
+
+  const compliancePct = results.total_count>0 ? Math.round((results.compliant_count/results.total_count)*100) : null;
+  const reauditPct = reaudit.reaudit_total_count>0 ? Math.round((reaudit.reaudit_compliant_count/reaudit.reaudit_total_count)*100) : null;
+
+  const addAction=()=>{
+    if(!newAction.action.trim())return;
+    const next=[...actionPlan,{...newAction,done:false}];
+    setActionPlan(next);
+    setNewAction({action:"",owner:"",target_date:""});
+    onUpdate(project.id,{action_plan:next});
+  };
+  const toggleAction=(i)=>{
+    const next=actionPlan.map((a,idx)=>idx===i?{...a,done:!a.done}:a);
+    setActionPlan(next);
+    onUpdate(project.id,{action_plan:next});
+  };
+  const removeAction=(i)=>{
+    const next=actionPlan.filter((_,idx)=>idx!==i);
+    setActionPlan(next);
+    onUpdate(project.id,{action_plan:next});
+  };
+
+  return (
+    <div style={{display:"grid",gap:12,marginTop:10}}>
+      {(project.aim||project.objectives||project.priority_reason) && (
+        <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px",fontSize:12,color:T.text,lineHeight:1.7}}>
+          {project.aim&&<div><span style={{color:T.gold,fontWeight:700}}>Aim: </span>{project.aim}</div>}
+          {project.objectives&&<div><span style={{color:T.gold,fontWeight:700}}>Objectives: </span>{project.objectives}</div>}
+          {project.criterion&&<div><span style={{color:T.gold,fontWeight:700}}>Standard: </span>{project.criterion}{project.target_pct!=null&&` — target ${project.target_pct}%`}</div>}
+          {project.sampling_method&&<div><span style={{color:T.gold,fontWeight:700}}>Sampling: </span>{project.sampling_method}{project.sample_size?` (n=${project.sample_size})`:""}</div>}
+        </div>
+      )}
+
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"14px 16px"}}>
+        <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:10}}>STAGE 3B/4A — RESULTS</div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:8}}>
+          <div>
+            <div style={lbl}>COMPLIANT (n)</div>
+            <input type="number" min="0" value={results.compliant_count} onChange={e=>setResults(r=>({...r,compliant_count:e.target.value}))} onBlur={()=>onUpdate(project.id,{compliant_count:results.compliant_count||null})} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+          <div>
+            <div style={lbl}>TOTAL SAMPLED (n)</div>
+            <input type="number" min="0" value={results.total_count} onChange={e=>setResults(r=>({...r,total_count:e.target.value}))} onBlur={()=>onUpdate(project.id,{total_count:results.total_count||null})} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+        </div>
+        {compliancePct!==null&&<div style={{fontSize:13,fontWeight:700,color:compliancePct>=(project.target_pct||80)?T.green:T.red,marginBottom:8}}>Compliance: {compliancePct}% {project.target_pct!=null&&`(target ${project.target_pct}%)`}</div>}
+        <div style={lbl}>FINDINGS</div>
+        <textarea value={results.findings} onChange={e=>setResults(r=>({...r,findings:e.target.value}))} onBlur={()=>onUpdate(project.id,{findings:results.findings||null})} rows={2} style={{...inp,width:"100%",boxSizing:"border-box",resize:"vertical"}}/>
+      </div>
+
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"14px 16px"}}>
+        <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:10}}>STAGE 4B — ACTION PLAN</div>
+        {actionPlan.map((a,i)=>(
+          <div key={i} style={{display:"flex",gap:8,alignItems:"center",padding:"6px 0",borderBottom:i<actionPlan.length-1?`1px solid ${T.border}`:"none"}}>
+            <input type="checkbox" checked={!!a.done} onChange={()=>toggleAction(i)}/>
+            <div style={{flex:1,fontSize:12,color:T.text,textDecoration:a.done?"line-through":"none"}}>{a.action}{a.owner?` — ${a.owner}`:""}{a.target_date?` (by ${a.target_date})`:""}</div>
+            <button onClick={()=>removeAction(i)} style={{padding:"2px 7px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:"pointer"}}>✕</button>
+          </div>
+        ))}
+        <div style={{display:"grid",gridTemplateColumns:"2fr 1fr 1fr auto",gap:6,marginTop:8}}>
+          <input value={newAction.action} onChange={e=>setNewAction(a=>({...a,action:e.target.value}))} placeholder="Corrective action…" style={{...inp}}/>
+          <input value={newAction.owner} onChange={e=>setNewAction(a=>({...a,owner:e.target.value}))} placeholder="Owner" style={{...inp}}/>
+          <input type="date" value={newAction.target_date} onChange={e=>setNewAction(a=>({...a,target_date:e.target.value}))} style={{...inp}}/>
+          <button onClick={addAction} style={{padding:"4px 12px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:12,cursor:"pointer"}}>+ Add</button>
+        </div>
+      </div>
+
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"14px 16px"}}>
+        <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:10}}>STAGE 5 — RE-AUDIT (CLOSE THE LOOP)</div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:10}}>
+          <div>
+            <div style={lbl}>RE-AUDIT DATE</div>
+            <input type="date" value={reaudit.reaudit_date} onChange={e=>setReaudit(r=>({...r,reaudit_date:e.target.value}))} onBlur={()=>onUpdate(project.id,{reaudit_date:reaudit.reaudit_date||null})} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+          <div>
+            <div style={lbl}>COMPLIANT (n)</div>
+            <input type="number" min="0" value={reaudit.reaudit_compliant_count} onChange={e=>setReaudit(r=>({...r,reaudit_compliant_count:e.target.value}))} onBlur={()=>onUpdate(project.id,{reaudit_compliant_count:reaudit.reaudit_compliant_count||null})} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+          <div>
+            <div style={lbl}>TOTAL SAMPLED (n)</div>
+            <input type="number" min="0" value={reaudit.reaudit_total_count} onChange={e=>setReaudit(r=>({...r,reaudit_total_count:e.target.value}))} onBlur={()=>onUpdate(project.id,{reaudit_total_count:reaudit.reaudit_total_count||null})} style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+          </div>
+        </div>
+        {reauditPct!==null&&<div style={{fontSize:13,fontWeight:700,color:reauditPct>=(project.target_pct||80)?T.green:T.red,marginTop:8}}>Re-audit compliance: {reauditPct}% {compliancePct!==null&&`(baseline was ${compliancePct}%)`}</div>}
+      </div>
+
+      <div style={{display:"flex",gap:8,alignItems:"center"}}>
+        <div style={lbl}>STAGE</div>
+        <select value={project.stage} onChange={e=>onUpdate(project.id,{stage:e.target.value})} style={{...inp}}>
+          {CA_STAGES.map(s=><option key={s.key} value={s.key}>{s.label}</option>)}
+        </select>
+        <button onClick={()=>onUpdate(project.id,{status:project.status==="closed"?"active":"closed",stage:project.status==="closed"?project.stage:"closed"})}
+          style={{padding:"6px 14px",borderRadius:7,background:project.status==="closed"?T.greenD:"transparent",border:`1px solid ${T.green}60`,color:T.green,fontSize:12,fontWeight:700,cursor:"pointer"}}>
+          {project.status==="closed"?"✓ Closed — Reopen":"Mark Cycle Closed"}
+        </button>
+        <button onClick={()=>onDelete(project.id)} style={{marginLeft:"auto",padding:"6px 14px",borderRadius:7,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:12,cursor:"pointer"}}>Delete</button>
+      </div>
+    </div>
+  );
+}
+
+// ── Generates a clean, printable PDF for one illustrative worked-example audit report.
+// White/print layout (not the app's dark theme) since this mimics a real hand-off document.
+function generateExampleAuditPdf(ex){
+  const doc=new jsPDF({unit:'pt',format:'a4'});
+  const W=doc.internal.pageSize.getWidth();
+  const H=doc.internal.pageSize.getHeight();
+  const M=54; // margin
+  const contentW=W-M*2;
+  let y=M;
+
+  const navy='#1a2744', gold='#9c7a2e', text='#1f2937', muted='#6b7280', line='#d1d5db', rowAlt='#f3f4f6';
+
+  const ensureSpace=(needed)=>{
+    if(y+needed>H-50){ doc.addPage(); y=M; }
+  };
+  const addFooter=()=>{
+    const pageCount=doc.internal.getNumberOfPages();
+    for(let p=1;p<=pageCount;p++){
+      doc.setPage(p);
+      doc.setFontSize(7.5); doc.setTextColor(muted);
+      doc.text('Illustrative example for training purposes only — not a real hospital, patient or staff record.',W/2,H-28,{align:'center'});
+      doc.text(`Page ${p} of ${pageCount}`,W-M,H-28,{align:'right'});
+    }
+  };
+  const heading=(txt,size=11)=>{
+    ensureSpace(26);
+    doc.setFontSize(size); doc.setFont(undefined,'bold'); doc.setTextColor(navy);
+    doc.text(txt,M,y); y+=4;
+    doc.setDrawColor(gold); doc.setLineWidth(1);
+    doc.line(M,y+4,M+contentW,y+4);
+    y+=18;
+    doc.setFont(undefined,'normal');
+  };
+  const paragraph=(txt,size=9.5)=>{
+    doc.setFontSize(size); doc.setTextColor(text); doc.setFont(undefined,'normal');
+    const lines=doc.splitTextToSize(txt,contentW);
+    lines.forEach(line=>{
+      ensureSpace(14);
+      doc.text(line,M,y);
+      y+=13.5;
+    });
+    y+=8;
+  };
+  const labelledParagraph=(label,txt,size=9.5)=>{
+    ensureSpace(14);
+    doc.setFontSize(size); doc.setFont(undefined,'bold'); doc.setTextColor(navy);
+    doc.text(label+':',M,y);
+    y+=13.5;
+    doc.setFont(undefined,'normal');
+    paragraph(txt,size);
+  };
+  const bulletList=(items,size=9.5)=>{
+    doc.setFontSize(size); doc.setTextColor(text); doc.setFont(undefined,'normal');
+    items.forEach(item=>{
+      const lines=doc.splitTextToSize(item,contentW-14);
+      lines.forEach((line,li)=>{
+        ensureSpace(14);
+        doc.text(li===0?('•  '+line):('    '+line),M,y);
+        y+=13.5;
+      });
+    });
+    y+=8;
+  };
+
+  const r=ex.report;
+
+  // ── Header ──
+  doc.setFillColor(navy); doc.rect(0,0,W,70,'F');
+  doc.setFillColor(gold); doc.rect(0,70,W,3,'F');
+  doc.setFontSize(9); doc.setTextColor('#d4c896');
+  doc.text('CLINICAL AUDIT REPORT',M,26);
+  doc.setFontSize(13); doc.setFont(undefined,'bold'); doc.setTextColor('#ffffff');
+  const titleLines=doc.splitTextToSize(r.topic,contentW);
+  let ty0=46;
+  titleLines.slice(0,2).forEach(l=>{ doc.text(l,M,ty0); ty0+=15; });
+  doc.setFont(undefined,'normal');
+  y=titleLines.length>1?108:96;
+
+  doc.setFontSize(8.5); doc.setTextColor(muted);
+  doc.text('[Your Hospital Name]  ·  Department: [Department]  ·  Audit lead: [Name]  ·  Date: [DD Month YYYY]',M,y);
+  y+=10;
+  doc.setDrawColor(line); doc.setLineWidth(0.5);
+  doc.line(M,y,M+contentW,y);
+  y+=22;
+
+  // ── Formal report sections, matching how a real completed audit report is structured ──
+  heading('1. Purpose');
+  bulletList(r.purpose);
+
+  heading('2. Audit Methodology');
+  labelledParagraph('Type of Audit',r.methodology.type);
+  labelledParagraph('Sample Size',r.methodology.sampleSize);
+  labelledParagraph('Time Period',r.methodology.period);
+  if(r.standard) labelledParagraph('Standard',r.standard);
+
+  heading('3. Data Collection Parameters');
+  bulletList(r.dataCollectionParameters);
+
+  heading('4. Detailed Analysis');
+  paragraph(r.analysis);
+
+  heading('5. Audit Findings');
+  bulletList(r.findings);
+
+  // ── Results table, if this example has one ──
+  if(ex.table){
+    heading('6. Results');
+    const headers=ex.table.headers;
+    const nCols=headers.length;
+    const firstColW=contentW*0.46;
+    const otherColW=(contentW-firstColW)/(nCols-1);
+    const colWidths=headers.map((h,i)=>i===0?firstColW:otherColW);
+    const rowH=18;
+
+    ensureSpace(rowH+4);
+    let x=M;
+    doc.setFillColor(navy);
+    doc.rect(M,y,contentW,rowH,'F');
+    doc.setFontSize(8.5); doc.setFont(undefined,'bold'); doc.setTextColor('#ffffff');
+    headers.forEach((h,i)=>{
+      doc.text(h,x+6,y+12,{align:'left'});
+      x+=colWidths[i];
+    });
+    y+=rowH;
+    doc.setFont(undefined,'normal');
+
+    ex.table.rows.forEach((row,ri)=>{
+      ensureSpace(rowH+4);
+      if(ri%2===1){ doc.setFillColor(rowAlt); doc.rect(M,y,contentW,rowH,'F'); }
+      doc.setDrawColor(line); doc.setLineWidth(0.5); doc.rect(M,y,contentW,rowH);
+      x=M;
+      doc.setFontSize(8.5); doc.setTextColor(text);
+      row.forEach((c,ci)=>{
+        doc.text(String(c),x+6,y+12,{align:'left'});
+        x+=colWidths[ci];
+      });
+      y+=rowH;
+    });
+    y+=10;
+    if(ex.table.note){
+      doc.setFontSize(8); doc.setTextColor(muted);
+      doc.text(ex.table.note,M,y); y+=16;
+    }
+  }
+
+  heading('7. Recommendations');
+  bulletList(r.recommendations);
+
+  heading('8. Conclusion');
+  paragraph(r.conclusion);
+
+  // ── Action plan callout ──
+  ensureSpace(50);
+  const boxStart=y;
+  const actionLine1=`Owner: ${r.owner}`;
+  const actionLine2=`Re-audit: ${r.recheck}`;
+  doc.setFillColor('#fdf8ed'); doc.setDrawColor(gold); doc.setLineWidth(0.75);
+  doc.roundedRect(M,boxStart,contentW,46,4,4,'FD');
+  doc.setFontSize(9.5); doc.setFont(undefined,'bold'); doc.setTextColor(navy);
+  doc.text('Action Plan',M+12,boxStart+17);
+  doc.setFont(undefined,'normal'); doc.setTextColor(text);
+  doc.text(actionLine1,M+12,boxStart+32);
+  doc.text(actionLine2,M+12,boxStart+44);
+  y=boxStart+46+20;
+
+  heading('Sign-off');
+  ensureSpace(50);
+  doc.setFontSize(9); doc.setTextColor(text);
+  doc.text('Prepared by: _______________________        Reviewed by: _______________________',M,y); y+=28;
+  doc.text('Date: _______________        Re-audit due: _______________',M,y); y+=10;
+
+  addFooter();
+  const fileSafe=ex.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  doc.save(`clinical-audit-example-${fileSafe}.pdf`);
+}
+
+function ClinicalAuditScreen({ hospitalId, canAccessFull, isPaid, navigate }) {
+  const [tab,setTab]=useState("learn");
+  const [projects,setProjects]=useState([]);
+  const [loading,setLoading]=useState(true);
+  const [showCreate,setShowCreate]=useState(false);
+  const [saving,setSaving]=useState(false);
+  const [expanded,setExpanded]=useState(null);
+  const [openTopic,setOpenTopic]=useState(null);
+
+  const loadProjects=async()=>{
+    if(!hospitalId)return;
+    const{data}=await supabase.from("clinical_audit_projects").select("*").eq("hospital_id",hospitalId).order("created_at",{ascending:false});
+    setProjects(data||[]);
+    setLoading(false);
+  };
+  useEffect(()=>{loadProjects();},[hospitalId]); // eslint-disable-line
+
+  const createProject=async(form)=>{
+    setSaving(true);
+    const payload={
+      hospital_id:hospitalId,
+      title:form.title.trim(),department:form.department||null,aim:form.aim||null,objectives:form.objectives||null,
+      priority_reason:form.priority_reason||null,donabedian_focus:form.donabedian_focus||null,
+      criterion:form.criterion||null,target_pct:form.target_pct?parseFloat(form.target_pct):null,
+      exceptions:form.exceptions||null,standard_source:form.standard_source||null,
+      sampling_method:form.sampling_method||null,data_approach:form.data_approach||null,
+      population_size:form.population_size?parseInt(form.population_size):null,
+      sample_size:form.sample_size?parseInt(form.sample_size):null,
+      stage:"standard",
+    };
+    const{data,error}=await supabase.from("clinical_audit_projects").insert(payload).select().single();
+    if(!error){setProjects(p=>[data,...p]);setShowCreate(false);setExpanded(data.id);}
+    else alert("Error: "+error.message);
+    setSaving(false);
+  };
+
+  const updateProject=async(id,patch)=>{
+    setProjects(p=>p.map(x=>x.id===id?{...x,...patch}:x));
+    const{error}=await supabase.from("clinical_audit_projects").update({...patch,updated_at:new Date().toISOString()}).eq("id",id);
+    if(error)alert("Error saving: "+error.message);
+  };
+
+  const deleteProject=async(id)=>{
+    if(!window.confirm("Delete this clinical audit project? This cannot be undone."))return;
+    await supabase.from("clinical_audit_projects").delete().eq("id",id);
+    setProjects(p=>p.filter(x=>x.id!==id));
+    setExpanded(null);
+  };
+
+  const stageLabel=k=>CA_STAGES.find(s=>s.key===k)?.label||k;
+  const activeCount=projects.filter(p=>p.status!=="closed").length;
+  const closedCount=projects.filter(p=>p.status==="closed").length;
+
+  const LearnTab=()=>{
+    const chapter=openTopic||0;
+    const setChapter=(i)=>setOpenTopic(i);
+    const steps=[
+      {n:1,title:"Pick something worth checking",color:T.blue,icon:"🎯",
+        desc:"Start with one specific thing your hospital does for patients — not \"everything about the ward,\" but one focused practice. A good topic usually has one of these: it happens a lot, it's risky if done wrong, you've had complaints or near-misses about it, or you already know roughly what \"doing it right\" looks like.",
+        more:[
+          "Good starting questions to ask your team: Does this happen often, or matter a lot when it does? Have there been complaints, incidents or near-misses about it? Is it expensive when it goes wrong? Do we already have a guideline or known best practice to compare against? Can we realistically fix it if we find a problem? Does it line up with what the hospital is already trying to improve this year?",
+          "There are three different things you could be checking, and it helps to know which one you're doing. Do we have the right people, equipment and protocol in place to do this at all (readiness)? Are staff actually doing it the right way, day to day (the actual practice)? Did it lead to the result we wanted for the patient (the outcome)? Most audits focus on the middle one — the actual practice — because it's the easiest to measure fairly and the easiest to fix once you find a gap. Readiness problems (not enough equipment, no written protocol) are usually a budget/policy fix rather than an audit. Outcome problems (did the patient actually get better) are the most meaningful but the hardest to pin on one cause, since many things affect how a patient does.",
+          "A few good, realistic topics to start with: how quickly a specific type of patient is first assessed; whether a specific medicine or procedure is given the correct, safe way every time; whether a specific form or consent is always completed properly; how a specific high-risk group of patients is being looked after (e.g. the very young, the very old, or a particular condition); how often a particular complication happens after a particular procedure.",
+          "Write down, in one line, what you're trying to improve (e.g. \"improve how quickly patients with chest pain get their first ECG\"), and 2–3 smaller things that tell you whether you got there. Keep this line positive and action-focused — not \"count how many patients got an ECG,\" but \"improve how quickly they get one.\" Counting on its own isn't the goal; improving is.",
+          "Before you commit real time to it, sanity-check the topic: is there a genuine chance we can actually fix this if we find a problem? If the honest answer is \"no, that would need a budget/policy change way above our level,\" either reshape the topic to something you can act on, or make sure the right senior person is part of the team from day one.",
+          "There are three things an audit can reasonably check, and clinical audits tend to focus on the first two: is the right care being given to the right patient, and is it being given at the right time? A third — was it done the right way, with the result we wanted — matters too, but is harder to pin down. What audits usually aren't a good fit for: minimising cost/waste, patient satisfaction with the experience, or how easy a service is to access — those are usually better tackled as a service-redesign or management project, not a clinical audit.",
+        ]},
+      {n:2,title:"Decide what \"doing it right\" looks like",color:T.gold,icon:"📏",
+        desc:"Before you check anything, agree what the correct way of doing it actually is, and what percentage of the time you'd consider that acceptable. This becomes your yardstick for every case you check.",
+        more:[
+          "Write it as one sentence: [what should happen] + [how often it should happen]. For example: \"95% of surgical patients should receive their antibiotic within 60 minutes of the first cut.\" The first part is what you're checking; the number is your target. If it helps, break that sentence into two pieces — the description of the correct practice, and the number — since you'll often want to tweak the number separately from the description as you discuss it with the team.",
+          "For anything safety-critical (like never giving a drug to a patient with a known allergy), the target should be 100%. For things that are harder to always get perfect, a lower but still meaningful target (like 85–90%) is more realistic — don't set a number nobody can actually hit, or staff will stop taking the audit seriously. Picking the right number usually means weighing three things together: how serious is it if this is missed, how much effort/resource would it take to hit a very high number, and what's genuinely achievable given your current staffing and setup.",
+          "Decide upfront which situations are OK exceptions (e.g. the patient refused, or was transferred out before the step was due) so you don't unfairly count them as failures later. Agree this list with the team before you start checking, not halfway through once you've already seen the data — it's too easy to invent convenient exceptions after the fact. And make sure \"patient refused\" isn't secretly hiding a case where no one properly explained the options to them — that's a real gap wearing a disguise.",
+          "Before you lock in your standard, run it past four quick checks: is it clear enough that two different people checking the same case would agree on whether it passed or failed? Can you actually get the data needed to check it (don't write a standard around information nobody records)? Does your team genuinely agree this is the right thing to measure? And is it based on good evidence, not just a guess?",
+          "Base your standard on something solid rather than guessing — in rough order of preference: an official national/professional guideline, a relevant law or regulation, your own hospital's already-agreed protocol, published research or similar audits done elsewhere, or (if none of that exists) your team's best current clinical judgement, written down and agreed together.",
+        ]},
+      {n:3,title:"Check what's actually happening",color:T.orange,icon:"📋",
+        desc:"Now go look at real cases — either patient records from the past, or by watching/recording what happens going forward — and note down whether each one met your standard.",
+        more:[
+          "First, decide exactly which patients count: what condition, what time period, what department. Being specific here saves a lot of confusion later about which cases should and shouldn't be included.",
+          "You don't need to check every single patient. For most checks, looking at 20–50 recent cases is enough to get a clear picture that people will trust and act on. If you want to be more precise about it, roughly how many you need depends on how many patients you have in total in that time period — more patients overall generally means you need a slightly bigger sample, but not proportionally more:",
+        ],
+        table:{headers:["Total patients","Cases to check"],rows:[["50","~44"],["100","~79"],["200","~132"],["500","~217"],["1,000","~278"],["5,000","~357"]]},
+        more2:[
+          "Pick your cases fairly — don't just cherry-pick the good ones. A few simple, honest ways to choose: take the next N cases that come in from today onward; take the last N cases that already happened; pick every 5th (or 10th) case from a list, starting from a randomly chosen point; or, if you want to make sure every ward or shift is fairly represented and not accidentally left out, split your sample across them in proportion to how many patients each one sees.",
+          "You can look back at existing records (quicker, gives you a starting picture, but only shows you what was written down — not necessarily what was actually done) or watch it happen going forward from today (takes longer and needs more planning, but lets you design exactly the clean checklist you want and catch things that never get written down). Either way — if staff know they're specifically being watched for this one thing, they sometimes act a little more carefully than usual, which can make your numbers look better than everyday reality. Try to make the check feel like routine background monitoring, not a surprise inspection.",
+          "Before you collect data for real, do a quick trial run on 3–5 cases first. This is the fastest way to find out your checklist has a confusing question, is missing something important, or takes too long to fill in — much cheaper to fix now than after collecting 50.",
+          "Keep patients anonymous on your data sheet — use a case number instead of the patient's name, date of birth or address, and keep a separate, securely stored list linking numbers back to patients only if you ever genuinely need to trace one back for follow-up.",
+          "Keep the checklist short, specific and simple — plain yes/no or tick-box items are far easier (and fairer) to tally up afterwards than long written notes. Write questions so two different people filling it in for the same patient would tick the same answer.",
+          "A quick way to check you're not collecting too much: list every piece of data you're planning to gather down one side, and your standard(s) across the top. If an item doesn't connect to any standard, drop it — it just adds work for no benefit. If something feels important but doesn't connect to anything, that's usually a sign your standard needs another line, not that you should collect the data anyway.",
+          "If the group of patients you're sampling from keeps changing day to day (people are being admitted and discharged the whole time you're collecting), decide upfront how you'll handle that — e.g. only include patients who were there for the whole check period, or take a fresh small sample at intervals rather than one single snapshot. And if a quick first look at a small batch of cases already gives a clear answer, you don't always need to push on to the full sample — only go bigger if the picture is genuinely unclear.",
+        ]},
+      {n:4,title:"See how big the gap is",color:T.red,icon:"🔍",
+        desc:"Add up your results: how many cases met the standard, how many didn't, and why. This tells you exactly where the problem is — and whether there's really a problem at all.",
+        more:[
+          "For every case, it falls into one of three buckets: met the standard; didn't meet it but had a fair, already-agreed reason (an exception); or didn't meet it with no good reason — this last group is where the real problem is, and the one worth really digging into case by case.",
+          "Always report both the count and the percentage together — e.g. \"45 out of 50 (90%)\" — a percentage alone can be misleading if the sample is small (9 out of 10 also sounds like \"90%\" but means something very different from 45 out of 50).",
+          "A simple bar or pie chart makes the gap easy for anyone to understand at a glance — but always keep the actual numbers written next to it or in a small table, not just the picture on its own.",
+          "If a lot of cases landed in \"didn't meet it, no good reason,\" look for a pattern before assuming it's random: is it always the same shift, the same ward, the same day of the week, or the same step in the process? A pattern usually points straight at the real cause.",
+        ]},
+      {n:5,title:"Fix it, then check again",color:T.green,icon:"🔧",
+        desc:"This is the step that actually matters most — and the one most teams skip. Share what you found, agree what needs to change, make the change happen, and then repeat the check later to see if it actually worked.",
+        more:[
+          "Write it up — even briefly — so someone who wasn't involved could still understand what you checked, what you found, and what happens next. A simple structure that covers the essentials: what we checked and why it mattered; how we checked it (how many cases, over what period, looking back or going forward); what we found (the numbers); what we concluded from that; what we're going to do about it and by when; and when we'll check again. For a small, low-stakes topic this can genuinely be a few lines — it doesn't need to be a formal document to be useful. Save a copy of your checklist/data sheet alongside it.",
+          "Keep it factual throughout — state what the data shows, not opinions or guesses dressed up as facts. Never name individual staff members in the write-up; if you're comparing wards, shifts or doctors, just label them A, B, C. This is about fixing a system, not building a case against a person.",
+          "Before assuming staff just need telling off or retraining, ask why the gap actually exists. Talk directly to the people doing the work day to day — they usually already know why. Watch how the process really flows in practice, not how it's supposed to flow on paper. Or run a short team discussion specifically to find the real blocker: is it a knowledge gap, a missing supply or piece of equipment, an awkward or slow process, not enough staff at the right time, or simply that nobody ever explained why it matters?",
+          "Get the people who'll need to approve or fund the fix involved from the start, not after the plan is already written — a plan nobody agreed to pay for or support in advance rarely survives contact with reality. Break the fix into small, doable steps with one clearly responsible owner and a realistic date for each, rather than one big vague change. If the fix is a bigger or unfamiliar one, consider trying it in one ward or for a few weeks first, before rolling it out everywhere.",
+          "Expect some pushback or quiet resistance even to a sensible change — that's normal, not a sign you did something wrong. The useful move usually isn't to push harder on the people resisting — it's to find and remove whatever's actually making the old way easier than the new way (a missing supply, an awkward extra step, no reminder built into the routine). Once that's gone, the new way tends to stick on its own. People also go along with a change more easily when they were involved early, understand why it's needed, and don't feel blamed by it — and different people will be at different stages of being ready for it, so don't expect one announcement to convince everyone at once.",
+          "Set a date to check again — using the exact same method as before (same type of sample, same checklist, same time of year/week if that matters) so the two results are genuinely comparable. Expect it may take more than one round before the improvement really sticks; people tend to slip back into old habits unless the new way becomes the easy, normal way of working rather than something extra to remember.",
+        ]},
+    ];
+    const stepChapters=steps.map(s=>({
+      title:`Step ${s.n}: ${s.title}`,short:`Step ${s.n}`,icon:s.icon,color:s.color,
+      content:(
+        <>
+          <div style={{fontSize:13,color:T.text,lineHeight:1.8,marginBottom:12}}>{s.desc}</div>
+          <div style={{display:"grid",gap:10}}>
+            {s.more.map((b,i)=><div key={i} style={{fontSize:13,color:T.text,lineHeight:1.75,paddingLeft:14,borderLeft:`2px solid ${T.border}`}}>{b}</div>)}
+            {s.table&&(
+              <table style={{width:"100%",maxWidth:380,borderCollapse:"collapse",fontSize:12,marginLeft:14}}>
+                <thead><tr>{s.table.headers.map(h=><th key={h} style={{textAlign:"left",padding:"5px 8px",color:T.gold,borderBottom:`1px solid ${T.border}`}}>{h}</th>)}</tr></thead>
+                <tbody>{s.table.rows.map((r,i)=><tr key={i}>{r.map((c,j)=><td key={j} style={{padding:"5px 8px",color:T.text,borderBottom:`1px solid ${T.border}`}}>{c}</td>)}</tr>)}</tbody>
+              </table>
+            )}
+            {s.more2&&s.more2.map((b,i)=><div key={"b"+i} style={{fontSize:13,color:T.text,lineHeight:1.75,paddingLeft:14,borderLeft:`2px solid ${T.border}`}}>{b}</div>)}
+          </div>
+        </>
+      )}));
+
+    const chapters=[
+      {title:"What Is a Clinical Audit?",short:"What is it?",icon:"💡",color:T.gold,content:(
+        <>
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:8}}>DEFINITION</div>
+          <div style={{fontSize:14,fontWeight:700,color:T.white,marginBottom:14,lineHeight:1.6}}>
+            A clinical audit is a structured way of checking how your hospital does one specific thing for patients, comparing that against an agreed standard of "doing it right," and then acting on whatever gap you find. It's a loop, not a one-time project: decide the standard, check real cases against it, fix the gap, then check again to confirm the fix actually worked.
+          </div>
+
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:8}}>AIM</div>
+          <div style={{fontSize:13,color:T.text,lineHeight:1.8,marginBottom:14}}>
+            The aim of a clinical audit is always to <span style={{color:T.orange}}>improve patient care</span> — never to catch out or judge an individual member of staff. It's about finding where the system lets patients down, and fixing that system. Simply collecting data without acting on it is not a completed audit — a first check with no re-check is just a measurement exercise, not an audit. The fix and the re-check are what make it count.
+          </div>
+
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:8}}>WHAT A GOOD AUDIT ACTUALLY ACHIEVES</div>
+          <div style={{display:"grid",gap:7,fontSize:13,color:T.text,lineHeight:1.7,marginBottom:14}}>
+            <div>• Improves patient care</div>
+            <div>• Shows clearly whether an agreed standard is actually being met</div>
+            <div>• Gives you a baseline to set or refine future standards against</div>
+            <div>• Checks whether what staff think is happening actually matches what's happening</div>
+            <div>• Confirms whether current evidence/guidelines are really being used in day-to-day practice</div>
+            <div>• Reduces clinical risk</div>
+            <div>• Promotes better, more cost-effective use of resources</div>
+          </div>
+
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:8}}>TYPES OF AUDIT</div>
+          <div style={{fontSize:13,color:T.text,lineHeight:1.7,marginBottom:10}}>
+            Four activities get called "audit" in a hospital — but only the first one below is actually a <span style={{color:T.orange,fontWeight:700}}>clinical audit</span>. The other three are genuinely useful, related activities, just not the same thing — and this tool is built around the first one.
+          </div>
+          <div style={{display:"grid",gap:8,fontSize:13,color:T.text,lineHeight:1.7,marginBottom:14}}>
+            <div><span style={{color:T.gold,fontWeight:700}}>Standards-based audit ✓ — </span>the only one that counts as a clinical audit: agree a standard, check real cases against it, fix the gap, check again. This is what the rest of this guide covers.</div>
+            <div><span style={{color:T.muted,fontWeight:700}}>Incident review — </span>a team looks together at one or a few cases that didn't go as expected, to understand what happened and learn from it. Valuable, but it's reviewing specific cases rather than checking many cases against a standard — not a clinical audit.</div>
+            <div><span style={{color:T.muted,fontWeight:700}}>Peer review — </span>clinicians look at a small sample of each other's recent cases to check the care given was sound — e.g. regular case-discussion or mortality/morbidity meetings. Also not a clinical audit, even though it's often informally called one.</div>
+            <div><span style={{color:T.muted,fontWeight:700}}>Patient feedback review — </span>gathering patients' own views on the care they received. Only turns into clinical audit work if that feedback is then checked against an actual standard and acted on — gathering opinions alone isn't enough.</div>
+          </div>
+
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:8}}>WHY IT'S WORTH DOING</div>
+          <div style={{display:"grid",gap:8,fontSize:13,color:T.text,lineHeight:1.7}}>
+            <div><span style={{color:T.gold,fontWeight:700}}>For your staff: </span>it gives everyone a clear, agreed picture of what "good" looks like, resolves arguments about "how we do things here," and points straight at where training or support is actually needed.</div>
+            <div><span style={{color:T.gold,fontWeight:700}}>For your patients: </span>it directly improves the care they receive, and surfaces problems that patients experience but rarely get recorded anywhere else.</div>
+            <div><span style={{color:T.gold,fontWeight:700}}>For the hospital: </span>it makes better use of existing resources, builds a track record you can show an assessor or your own management, and is usually far cheaper than the cost of the problem it's fixing.</div>
+          </div>
+        </>
+      )},
+      {title:"Getting Your Team Ready",short:"Your team",icon:"👥",color:T.blue,content:(
+        <div style={{display:"grid",gap:10,fontSize:13,color:T.text,lineHeight:1.75}}>
+          <div>A good audit team is small and mixed — not just the most senior clinician, but also the frontline staff who actually do the work day to day. They usually know exactly where the real problems are, even if nobody's asked them before. A team covering just one staff group is fine for a narrow topic; most worthwhile topics need people from more than one discipline, since very few things in a hospital are done by just one kind of staff.</div>
+          <div>Make sure at least one person on the team can actually approve or fund a fix. Findings with nobody empowered to act on them tend to just sit in a folder.</div>
+          <div>Agree upfront, in a couple of lines, who's doing what: who's collecting the data, who's analysing it, who's presenting the results, and who's responsible for following up on the action plan. This avoids the common failure mode where everyone assumes someone else is driving it. Putting this in a short written note — what the team is here to do, who's on it, what's expected of each person — saves a lot of confusion later and gives new members something to read on joining.</div>
+          <div>Set a few simple ground rules for meetings so everyone knows how the team will work together, and if someone experienced at running meetings is available, have them facilitate — it makes a real difference to how smoothly the team actually functions.</div>
+          <div>Block real time on the calendar for this — not "whenever we get a spare moment." The single most common reason an audit stalls halfway through is simply that no protected time was ever set aside for it.</div>
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginTop:4}}>SKILLS WORTH HAVING SOMEWHERE ON THE TEAM</div>
+          <div style={{display:"grid",gap:6}}>
+            <div>• Someone to lead and organise the project</div>
+            <div>• Clinical and managerial input — people who understand the care itself and people who can act on findings</div>
+            <div>• Someone comfortable with the audit method itself (standards, sampling, analysis)</div>
+            <div>• Change-management skills — someone good at getting people on board with a new way of working</div>
+            <div>• Data collection and analysis skills</div>
+            <div>• Facilitation skills, to keep meetings productive</div>
+          </div>
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginTop:4}}>WHAT THE TEAM SHOULD DO WITH THE RESULTS</div>
+          <div style={{display:"grid",gap:6}}>
+            <div>• Share a results summary, with clear recommendations, with everyone who needs to see it</div>
+            <div>• Share the action plan with anyone else it affects</div>
+            <div>• If a finding points to a real risk, flag it to management directly — don't let it wait for the next scheduled meeting</div>
+            <div>• Present the results somewhere appropriate — a team meeting, a quality forum — not just file it away</div>
+          </div>
+          <div>And individually, every team member is expected to: actually take part (not just lend their name to it); get whatever training their role in the audit needs; keep patient and staff information confidential and securely stored; and follow through by acting on the results, not just collecting them.</div>
+          <div>If the topic touches patients directly, think about whether to involve them too — even informally, asking a few patients what matters to them about this aspect of care often surfaces something the team would never have thought to check.</div>
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginTop:4}}>SIX THINGS TO HAVE IN PLACE BEFORE YOU START</div>
+          <div style={{display:"grid",gap:7}}>
+            <div><span style={{color:T.gold,fontWeight:700}}>1. Reliable records — </span>if what you need to check isn't actually recorded anywhere, decide how you'll capture it before you start, not halfway through.</div>
+            <div><span style={{color:T.gold,fontWeight:700}}>2. Fair, impartial reviewers — </span>whoever checks the cases shouldn't be grading their own work; a second pair of eyes keeps it honest.</div>
+            <div><span style={{color:T.gold,fontWeight:700}}>3. Confidentiality — </span>agree upfront how patient and staff information will be kept anonymous on your data sheet.</div>
+            <div><span style={{color:T.gold,fontWeight:700}}>4. Real ownership — </span>it has to come from within the team doing the work, not be imposed from outside, or it won't stick.</div>
+            <div><span style={{color:T.gold,fontWeight:700}}>5. A simple, clear purpose — </span>one focused question, not a vague "check quality" — if you can't say it in one sentence, it's not ready yet.</div>
+            <div><span style={{color:T.gold,fontWeight:700}}>6. A genuine intent to change — </span>go in expecting to act on what you find, not just to produce a report.</div>
+          </div>
+        </div>
+      )},
+      {title:"Ethics & Involving Patients",short:"Ethics & patients",icon:"⚖️",color:T.blue,content:(
+        <div style={{display:"grid",gap:10,fontSize:13,color:T.text,lineHeight:1.75}}>
+          <div>Unlike research, a clinical audit doesn't need to go through a formal ethics committee. But "no ethics committee" doesn't mean "no ethics" — you're still handling real patient information and reflecting on real care, so run it within a proper ethical framework: protect confidentiality, store data securely, and keep the whole exercise focused on improving care rather than judging anyone.</div>
+          <div>Ethical questions tend to come up when the right thing to do genuinely isn't obvious, or people reasonably disagree about what's best for a patient. A few examples worth being aware of, especially if your topic touches end-of-life or consent-related care: when should life-sustaining treatment be started, continued or stopped? What should happen if a patient declines treatment that would clearly help them? Who decides for a patient who can't communicate or decide for themselves? What's owed to a patient who didn't really understand what they were told, or didn't feel able to take part in the decision?</div>
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginTop:4}}>HEARING FROM PATIENTS BEFORE YOU START</div>
+          <div>Healthcare is a two-way relationship, and what your team thinks "good care" looks like won't always match what patients actually want or notice. Before finalising your standard, it's worth deliberately checking what matters to the people on the receiving end — not as a box-ticking survey, but genuinely feeding what you hear into your standard.</div>
+          <div>Two ways to do this: <span style={{color:T.gold,fontWeight:700}}>directly</span> — have a patient or carer representative sit in on the team, or on a relevant committee; or <span style={{color:T.gold,fontWeight:700}}>indirectly</span> — run a short survey, often right at the end of a patient's episode of care, when the experience is still fresh.</div>
+          <div>Good places to look for what actually matters to patients, without having to run a fresh survey: complaint letters, incident reports, patient stories or focus-group feedback already collected, direct observation of care in action, and simply talking to patients and families directly.</div>
+          <div>If your team's view and the patients' view genuinely differ on the same point, don't just pick one — work it through together until you reach something both sides agree on. If they're each focused on a different aspect of the same care, it's often fine to include both.</div>
+        </div>
+      )},
+      ...stepChapters,
+      {title:"Making the Improvement Stick",short:"Keeping it going",icon:"🔁",color:T.green,content:(
+        <div style={{display:"grid",gap:10,fontSize:13,color:T.text,lineHeight:1.75}}>
+          <div>Fixing something once doesn't mean it stays fixed — people naturally drift back to old habits over time, especially under pressure or when new staff join who never learned the new way. Treat the re-check in Step 5 as the start of ongoing monitoring, not the final word.</div>
+          <div>A light, quick re-check every so often (a handful of cases, a few times a year) catches backsliding far earlier than waiting a full year to find out things slipped.</div>
+          <div>Staff are far more likely to flag a problem honestly — including their own near-misses — when they trust it will lead to a fix, not blame. That trust has to be earned by how the team actually responds to bad news, every time.</div>
+          <div>Whatever your team learns from running an audit — a better way to check something, a form that works well, a fix that worked — write it down somewhere others in the hospital can find it. Otherwise the next team just re-learns the same lessons from scratch.</div>
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,fontWeight:700,marginTop:4}}>WHAT KEEPS AN IMPROVEMENT ALIVE, AT EVERY LEVEL</div>
+          <div><span style={{color:T.gold,fontWeight:700}}>Individuals: </span>need enough time to actually do the new way properly, somewhere to ask for help when they're unsure, and the confidence that admitting a mistake or a below-average result won't be held against them personally.</div>
+          <div><span style={{color:T.gold,fontWeight:700}}>Teams: </span>need a leader who actually makes space for this work, clear shared goals everyone understands the same way, and regular time together to check in on how it's going.</div>
+          <div><span style={{color:T.gold,fontWeight:700}}>The hospital overall: </span>needs to treat this as a genuine, ongoing commitment rather than a one-off project, actively encourage staff to come up with better ways of doing things rather than just following old habits, and take the patient's actual experience — not just internal convenience — as the real test of whether something worked.</div>
+          <div style={{marginTop:4,padding:"10px 14px",background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8}}>
+            <span style={{fontWeight:700,color:T.green}}>It keeps going: </span>
+            once you've fixed one thing, pick the next topic and run the loop again. Each round should leave things a little better than before.
+          </div>
+        </div>
+      )},
+      {title:"Easy to Confuse With Something Else",short:"Mix-ups",icon:"❓",color:T.orange,content:(
+        <div style={{display:"grid",gap:9,fontSize:13,color:T.text,lineHeight:1.7}}>
+          <div><span style={{color:T.orange,fontWeight:700}}>Just counting/collecting numbers — </span>pulling a report isn't an audit on its own. It only becomes one when you compare the numbers to a standard and act on the gap.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Checking whether notes are filled in properly — </span>that only tells you whether paperwork was done, not whether the actual care was right. Useful, but it's just one input into a real audit, not the whole thing.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Looking only at one doctor's care — </span>checking a single doctor's own cases is narrower than a real clinical audit, which should look at care holistically — including the nurses, pharmacists and other staff involved, not just the treating doctor.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>An accreditation-style, whole-hospital audit — </span>a broad review of how the organisation runs day to day (the kind an outside body does for accreditation) is a different, bigger exercise than a focused clinical audit on one specific practice.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Just tracking an outcome over time — </span>watching a number (like infection rate) month over month isn't an audit by itself. It only becomes one once it's tied to a specific standard and a specific plan to act on the gap.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>A one-off case review — </span>looking at a single unusual case to learn from it (like a case discussion after something went wrong) is valuable, but it's not the same as checking many cases against an agreed standard.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>A financial or admin review — </span>looking at costs, billing or paperwork trails is a different kind of check entirely — a clinical audit is always about the actual care given to patients.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Trying something new to see if it works — </span>that's closer to a trial or a study, and usually needs a different, more cautious process. An audit checks current practice against an already-agreed standard — it doesn't test a brand-new, unproven approach on patients.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Comparing yourself to other hospitals — </span>useful context, but on its own it's a benchmarking exercise, not an audit — it only becomes one once you set your own standard and act on your own gap.</div>
+        </div>
+      )},
+      {title:"What Usually Trips People Up",short:"Pitfalls",icon:"⚠️",color:T.red,content:(
+        <div style={{display:"grid",gap:9,fontSize:13,color:T.text,lineHeight:1.7}}>
+          <div><span style={{color:T.orange,fontWeight:700}}>No protected time — </span>the single biggest reason audits stall: no one actually blocked time on the calendar to do it, so it keeps getting bumped by whatever's urgent that day.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Stopping after step 4 — </span>collecting the data and making a chart feels like the finish line, but nothing has actually improved until step 5 happens. A pile of completed audits with no action plans is a warning sign, not an achievement.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Nobody with authority on the team — </span>if the people who can actually approve or fund a fix aren't involved from the start, good findings just sit on a shelf waiting for someone else to act.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Making it feel like a blame exercise — </span>staff who feel judged will under-report, cover up gaps, or quietly push back; frame every conversation around fixing the system, not catching someone out.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Picking a topic too big to finish — </span>"improve the whole discharge process" is a programme, not an audit. A focused topic you can actually complete beats an ambitious one that stalls halfway.</div>
+          <div><span style={{color:T.orange,fontWeight:700}}>Changing the method between the first check and the re-check — </span>if you measure differently the second time (different sample size, different season, different checklist), you can't honestly compare the two results, even if the numbers look better.</div>
+        </div>
+      )},
+    ];
+
+    const active=chapters[chapter]||chapters[0];
+    const activeColor=active.color||T.gold;
+
+    const navGroups=[
+      {label:"GETTING READY",start:0,end:3},
+      {label:"THE 5 STEPS",start:3,end:8},
+      {label:"WRAPPING UP",start:8,end:chapters.length},
+    ];
+
+    return (
+      <div style={{display:"grid",gap:12}}>
+        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"14px 16px",display:"grid",gap:10}}>
+          {navGroups.map(g=>(
+            <div key={g.label}>
+              <div style={{fontSize:9.5,letterSpacing:1.5,color:T.muted,fontWeight:700,marginBottom:6}}>{g.label}</div>
+              <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+                {chapters.slice(g.start,g.end).map((c,gi)=>{
+                  const i=g.start+gi;
+                  const locked=i>=3&&!canAccessFull;
+                  return (
+                    <button key={i} onClick={()=>setChapter(i)}
+                      style={{padding:"6px 12px",borderRadius:20,border:`1px solid ${i===chapter?activeColor:T.border}`,
+                        background:i===chapter?`${activeColor}20`:T.panel2,color:i===chapter?activeColor:T.muted,
+                        fontSize:11,fontWeight:700,cursor:"pointer",whiteSpace:"nowrap",display:"flex",alignItems:"center",gap:5}}>
+                      <span>{c.icon}</span><span>{i+1}. {c.short}{locked?" 🔒":""}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{background:T.panel,border:`1px solid ${activeColor}40`,borderRadius:12,padding:"20px 22px"}}>
+          <div style={{fontSize:10,letterSpacing:2,color:T.muted,marginBottom:4}}>{chapter+1} OF {chapters.length}</div>
+          <div style={{fontSize:17,fontWeight:700,color:activeColor,marginBottom:14,display:"flex",alignItems:"center",gap:8}}>
+            <span>{active.icon}</span><span>{active.title}</span>
+          </div>
+          {(chapter>=3&&!canAccessFull)?<UpgradeLock title={`"${active.title}" needs a subscription`}/>:active.content}
+          <div style={{display:"flex",justifyContent:"space-between",marginTop:20,paddingTop:16,borderTop:`1px solid ${T.border}`}}>
+            <button onClick={()=>setChapter(Math.max(0,chapter-1))} disabled={chapter===0}
+              style={{padding:"8px 16px",borderRadius:8,border:`1px solid ${T.border}`,background:"transparent",color:chapter===0?T.muted:T.text,fontSize:12,fontWeight:600,cursor:chapter===0?"default":"pointer",opacity:chapter===0?0.4:1}}>
+              ← Previous
+            </button>
+            <button onClick={()=>setChapter(Math.min(chapters.length-1,chapter+1))} disabled={chapter===chapters.length-1}
+              style={{padding:"8px 16px",borderRadius:8,border:`1px solid ${activeColor}60`,background:`${activeColor}15`,color:activeColor,fontSize:12,fontWeight:700,cursor:chapter===chapters.length-1?"default":"pointer",opacity:chapter===chapters.length-1?0.4:1}}>
+              Next →
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const ExamplesTab=()=>{
+    const examples=[
+      {tag:"A full cycle, start to finish",color:T.blue,title:"Fall-Risk Assessment Completed Within 2 Hours of Admission",
+        story:[
+          {h:"The situation",p:"A \"fall\" simply means a patient unexpectedly ends up on the floor or a lower surface — because they're weak, dizzy or confused (from illness, medication, or low blood pressure on standing up), or because they tried to get up alone without calling a nurse. It's a well-known risk for frail or elderly patients especially, and it's genuinely common in hospitals — not every fall can be prevented. A medical ward noticed that a few elderly patients had fallen shortly after being admitted. Nobody thought anyone had done anything wrong — but it raised a fair question: were new patients being checked for fall risk quickly enough for staff to actually put precautions in place before something happened? That question is exactly what Step 1 of a clinical audit is about — picking one specific, checkable thing, not \"patient safety\" in general."},
+          {h:"Setting the standard (Step 2)",p:"The team agreed on a standard — one clear sentence combining what should happen with how often: \"100% of patients admitted to the medical ward should have a documented fall-risk assessment completed within 2 hours of admission.\" They set the target at 100%, not 90%, because this is a safety-critical step — there's no safe level of \"sometimes skipping it.\" They also agreed upfront that no exceptions would be allowed for this one, since every admitted patient needs this check regardless of circumstance."},
+          {h:"Checking what's really happening (Step 3)",p:"Rather than watching staff in real time (which takes weeks and can be disruptive), the team chose to look backward — a retrospective check of 40 recent admission files from the medical ward, covering the last 4 weeks. Forty was enough to get a trustworthy picture without taking forever to collect. For each file, someone simply asked: was the assessment started within 2 hours? Was the form completed? Was the risk level written in the nursing notes? And — critically — if the patient was found to be high-risk, were precautions (like a bed alarm or a sign on the door) actually put in place?"},
+          {h:"What they found (Step 4)",p:"Out of 40 files: 31 had the assessment started within the 2-hour window (9 didn't). 34 had the form fully completed. 37 had the risk level documented. And of the 34 patients who were flagged as high-risk, only 29 actually had precautions put in place — 5 high-risk patients had no bed alarm, no signage, nothing extra done for them at all. That last number is the one that mattered most. The audit never tried to count how many patients actually fell — that outcome depends on dozens of things no one fully controls. It checked something staff do fully control: once a patient is flagged as high-risk, does something actually get done about it? A late form is a paperwork problem; a missing bed alarm for a patient already flagged as likely to fall is the real safety gap — the exact kind of thing a clinical audit exists to catch."},
+          {h:"Fixing it, and checking again (Step 5)",p:"The team didn't just tell nurses to \"be more careful.\" They looked at why precautions were being missed and found it usually happened at shift handover — the assessment was done, but the next shift wasn't told to act on it. So they added a fall-risk prompt directly into the admission checklist nurses already fill out, and made it the shift lead's job to specifically check that precautions are in place for any high-risk patient before handing over to the next shift. The ward sister took ownership of this, and the team agreed to recheck another 40 cases in 3 months to see if it actually worked."},
+        ],
+        takeaway:"The lesson: the biggest number in your results isn't always the one that matters most. Here, \"9 forms were late\" sounds worse than \"5 high-risk patients got no precautions\" — but it's the second one that could actually hurt a patient.",
+        table:{headers:["Documentation Parameter","Yes","No"],rows:[
+          ["Assessment started within 2 hours of admission","31","9"],
+          ["Assessment form fully completed","34","6"],
+          ["Risk level documented in nursing notes","37","3"],
+          ["Precautions implemented (high-risk patients only, n=34)","29","5"],
+        ],note:"Sample: 40 consecutive admissions, medical ward, 4-week period."},
+        report:{
+          topic:"Nursing Audit on Fall-Risk Assessment Completion and Precaution Implementation — Medical Ward",
+          purpose:[
+            "To assess whether fall-risk assessments are completed within 2 hours of admission.",
+            "To evaluate completeness of fall-risk assessment documentation.",
+            "To check whether appropriate precautions are implemented for patients identified as high-risk.",
+            "To identify gaps in handover communication affecting precaution implementation.",
+            "To recommend improvements to reduce inpatient fall risk.",
+          ],
+          methodology:{type:"Retrospective audit of admission records.",sampleSize:"40 consecutive admissions to the medical ward.",period:"4-week period."},
+          standard:"100% of patients admitted to the medical ward should have a documented fall-risk assessment completed within 2 hours of admission. No exceptions agreed — this check applies to every admission.",
+          dataCollectionParameters:["Fall-risk assessment started within 2 hours of admission","Assessment form fully completed","Risk level documented in nursing notes","Precautions implemented for patients flagged high-risk"],
+          analysis:"Compliance was generally good for documentation-related parameters, with form completion and risk-level recording both above 85%. The most significant gap was identified in implementation of precautions for patients already flagged as high-risk: 5 of 34 high-risk patients (15%) had no documented precautions despite risk having been correctly identified. This gap clustered around shift handover, where risk status was not consistently communicated to the incoming shift.",
+          findings:[
+            "31/40 (78%) assessments were started within the 2-hour window.",
+            "34/40 (85%) assessment forms were fully completed.",
+            "37/40 (93%) had risk level documented in nursing notes.",
+            "29/34 (85%) high-risk patients had documented precautions in place.",
+            "Primary gap identified: inconsistent handover of risk status between shifts.",
+          ],
+          recommendations:[
+            "Integrate a fall-risk prompt into the existing admission checklist.",
+            "Make precaution verification an explicit shift-handover responsibility for the shift lead.",
+            "Conduct a focused re-audit of 40 cases in 3 months.",
+          ],
+          conclusion:"Fall-risk assessment is being completed for the majority of patients; however, a measurable gap exists between identifying risk and implementing precautions. Addressing the handover communication gap is expected to close this gap and reduce inpatient fall incidents.",
+          owner:"Ward Sister",recheck:"40 cases, 3 months from audit date",
+        }},
+      {tag:"Turning a standard into a real result — with a fair exception",color:T.gold,title:"Antibiotic Given Within 60 Minutes Before Surgery",
+        story:[
+          {h:"The situation",p:"Any cut made during surgery is an open door for bacteria to get into the body — a \"surgical-site infection\" is simply an infection that develops in or around that wound afterward, and it can mean a longer hospital stay, more pain, or further treatment for the patient. Giving an antibiotic shortly before the first cut (called a \"prophylactic\" antibiotic — prophylactic just means \"preventive\") is one of the best-proven ways to reduce that risk. But timing matters: give it too early and it can wear off by the time the cut is actually made; give it too late (after the cut) and bacteria already had a window to get in before the drug was working. That's why the window is specific — within 60 minutes before the first incision. A surgical team wanted to check: is this actually happening reliably, or does it just feel like it is?"},
+          {h:"Setting the standard (Step 2)",p:"Standard: \"95% of patients undergoing elective surgery should receive their prophylactic antibiotic within 60 minutes before the first incision.\" Why 95% and not 100%? Because a small number of patients are already on a related antibiotic for another condition, and giving them a second dose on the same schedule doesn't make clinical sense — the team agreed this upfront as a fair, legitimate exception, not an excuse invented after seeing bad results."},
+          {h:"Checking what's really happening (Step 3)",p:"This time the team chose to check forward (prospectively) rather than looking back at old notes — a theatre nurse simply noted the actual time the antibiotic was given on a sticker attached to the chart, for 50 consecutive elective surgeries over 6 weeks. Checking forward meant they could capture the exact time accurately, rather than relying on how well it was written down afterward."},
+          {h:"What they found (Step 4)",p:"41 of the 50 cases (82%) met the standard outright. Of the 9 that didn't, 3 turned out to be the agreed exception — patients already on a relevant antibiotic. So out of the 47 cases where the standard actually applied, 41 met it — 87%. Still short of the 95% target, but a fairer, more accurate picture than the raw 82% would have suggested. Looking closer at the 6 genuine misses, the team noticed something: they nearly all happened on the very first surgery of the morning list."},
+          {h:"Fixing it, and checking again (Step 5)",p:"That pattern pointed straight at the cause: for the first case of the day, the antibiotic request was often only made once the patient was already in theatre — too late to hit the 60-minute window reliably. For every other case on the list, there was already time built in while the previous surgery finished. The fix was specific and small: give the antibiotic in the pre-operative holding area for the first case of every day, not in theatre. The anaesthetic lead took ownership, and the team planned to recheck 50 more cases in 2 months."},
+        ],
+        takeaway:"The lesson: agreeing fair exceptions before you start — not after you see the numbers — keeps your results honest, and it's often worth asking \"is there a pattern to WHEN this goes wrong?\", not just \"how often does it go wrong?\"",
+        table:{headers:["Outcome","Cases","%"],rows:[
+          ["Met standard (antibiotic within 60 min before incision)","41","82%"],
+          ["Agreed exception (already on a relevant antibiotic)","3","6%"],
+          ["Non-compliant — no exception applies","6","12%"],
+        ],note:"Of 47 applicable cases (excluding the 3 agreed exceptions), 41 (87%) met the standard."},
+        report:{
+          topic:"Clinical Audit on Administration of Prophylactic Antibiotic Within 60 Minutes Before Surgical Incision — Elective Surgery",
+          purpose:[
+            "To assess compliance with timely administration of prophylactic antibiotic prior to elective surgery.",
+            "To identify factors contributing to delayed administration.",
+            "To recommend process improvements to reduce surgical-site infection risk.",
+          ],
+          methodology:{type:"Prospective audit using a theatre time-log.",sampleSize:"50 consecutive elective surgical cases.",period:"6-week period."},
+          standard:"95% of patients undergoing elective surgery should receive prophylactic antibiotic within 60 minutes before first incision. Agreed exception: patients already on a relevant antibiotic for another indication.",
+          dataCollectionParameters:["Time of antibiotic order","Time of antibiotic administration","Time of first incision","Whether patient already on a relevant antibiotic (exception flag)"],
+          analysis:"Non-compliant cases were not randomly distributed across the operating list: all 6 genuine misses occurred on the first case of the list. Review indicated the antibiotic was typically only requested once the patient reached theatre, rather than while still in the ward, leaving insufficient time to meet the 60-minute window.",
+          findings:[
+            "41/50 (82%) cases met the standard outright.",
+            "3 of the 9 non-compliant cases were the agreed exception (already on a relevant antibiotic).",
+            "Of 47 applicable cases, 41 (87%) met the standard — short of the 95% target.",
+            "All 6 genuine misses occurred on the first case of the operating list.",
+          ],
+          recommendations:[
+            "Administer the prophylactic antibiotic in the pre-operative holding area for the first case of each list, not in theatre.",
+            "Re-audit 50 consecutive cases in 2 months.",
+          ],
+          conclusion:"Overall compliance falls short of the 95% target, with delays concentrated specifically in first-case-of-the-day scheduling rather than distributed across all cases. The recommended change targets this specific point of failure.",
+          owner:"Anaesthetic Lead",recheck:"50 cases, 2 months from audit date",
+        }},
+      {tag:"Finding the real pattern, not just one headline number",color:T.orange,title:"Consent Form Fully Completed Before a Procedure",
+        story:[
+          {h:"The situation",p:"\"Consent\" means a patient has been told, in terms they understand, what a procedure involves — including the realistic risks and alternatives — and has agreed to go ahead. The consent form is simply the written record that this conversation actually happened, signed by the patient (and a witness) before the procedure starts. An incomplete form — a missing signature, a blank risk section — isn't just an administrative gap: it can mean the conversation itself never properly happened, or that there's no proof it did if a patient later says they weren't told something important. A hospital running several procedure-based departments wanted to check something simple but important: are consent forms actually being completed in full before a patient enters the procedure room?"},
+          {h:"Setting the standard (Step 2)",p:"Standard: \"90% of procedure consent forms should be fully completed before the patient enters the procedure room.\" The target was set at 90%, not 100%, because genuine emergencies sometimes can't wait for a fully completed form, and the team didn't want to penalise clinically necessary urgency — those emergency cases were excluded from the count entirely, by agreement, before data collection started."},
+          {h:"Checking what's really happening (Step 3)",p:"The team pulled 60 procedure files from the last quarter — but instead of grabbing the easiest 60 to find, they deliberately split the sample evenly across all three departments that do procedures, 20 from each. This mattered: if they'd just grabbed the first 60 files that came to hand, one busy department could easily have been over-represented, and the picture would have been misleading."},
+          {h:"What they found (Step 4)",p:"Overall: 48 of 60 (80%) — below the 90% target, which on its own might have led to a hospital-wide memo reminding everyone to \"do better.\" But because the sample was split evenly by department, the team could see the real picture: Department A was at 19/20 (95%), Department B at 18/20 (90%) — both already meeting the standard — while Department C was at just 11/20 (55%). The overall 80% figure was hiding the fact that this was really a one-department problem, not a hospital-wide one."},
+          {h:"Fixing it, and checking again (Step 5)",p:"Because the team could see exactly where the gap was, the fix could be precise instead of generic: targeted retraining and a process review specifically in Department C, led by that department's own lead — rather than a hospital-wide announcement that would have wasted the time of two departments already doing fine. They planned to recheck 20 cases, just from Department C, 6 weeks later."},
+        ],
+        takeaway:"The lesson: always ask what a single overall percentage might be hiding. Breaking a result down by ward, department or shift before concluding anything is often the difference between a fix that works and a fix that wastes everyone's time.",
+        table:{headers:["Department","Complete","Incomplete","%"],rows:[
+          ["Department A","19","1","95%"],
+          ["Department B","18","2","90%"],
+          ["Department C","11","9","55%"],
+          ["Overall","48","12","80%"],
+        ],note:"Sample: 60 procedure files, 20 per department, last quarter."},
+        report:{
+          topic:"Clinical Audit on Completeness of Informed Consent Documentation Prior to Procedure",
+          purpose:[
+            "To assess completeness of consent form documentation prior to procedures.",
+            "To identify whether gaps are isolated to a specific department or distributed hospital-wide.",
+            "To recommend targeted improvements.",
+          ],
+          methodology:{type:"Retrospective audit, stratified by department.",sampleSize:"60 procedure files (20 per department, 3 departments).",period:"Previous quarter."},
+          standard:"90% of procedure consent forms should be fully completed (all fields, patient signature, witness signature) before the patient enters the procedure room. Documented emergency cases excluded by agreement.",
+          dataCollectionParameters:["All form fields completed","Patient signature present","Witness signature present","Form completed before entry to procedure room"],
+          analysis:"The overall completion rate of 80% masked a significant difference between departments. Departments A and B were already meeting or close to the 90% target, while Department C was substantially below standard. The shortfall was therefore concentrated rather than hospital-wide.",
+          findings:[
+            "Overall: 48/60 (80%) forms fully completed — below the 90% target.",
+            "Department A: 19/20 (95%).",
+            "Department B: 18/20 (90%).",
+            "Department C: 11/20 (55%).",
+          ],
+          recommendations:[
+            "Targeted retraining and process review in Department C, led by the department lead.",
+            "Re-audit 20 cases from Department C in 6 weeks.",
+          ],
+          conclusion:"The overall shortfall against standard is attributable primarily to one department. A hospital-wide intervention is not indicated; a targeted response in Department C is recommended.",
+          owner:"Department C Lead",recheck:"20 cases (Department C only), 6 weeks from audit date",
+        }},
+      {tag:"A complete re-audit — proof the fix actually worked",color:T.green,title:"Hand Hygiene Compliance Before Touching a Patient",
+        story:[
+          {h:"The situation",p:"Germs travel on hands — a staff member can pick up bacteria from one patient, a bed rail, or a piece of equipment, and pass it straight to the next patient they touch, without either patient ever knowing. A \"hand-hygiene opportunity\" just means any moment staff are about to touch a patient, where washing or sanitising their hands first would stop that chain. It's one of the simplest, best-evidenced ways to prevent spreading infection in a hospital — and also one of the easiest things for busy staff to let slip without noticing, especially when rushed. An infection control nurse wanted real numbers, not an impression."},
+          {h:"Setting the standard (Step 2)",p:"Standard: \"85% of hand-hygiene opportunities (the moment right before touching a patient) should be followed correctly.\" 85% was chosen as a realistic, evidence-informed target — ambitious enough to matter, but not so unrealistic that staff would see it as pointless."},
+          {h:"Checking what's really happening (Step 3)",p:"A trained observer did short, unannounced spot-checks spread across all three shifts over 2 weeks, simply marking each hand-hygiene opportunity as compliant or not — without telling staff in advance which specific moments were being watched, since knowing exactly when you're being observed tends to make anyone behave better than usual, which would have made the numbers misleadingly good."},
+          {h:"What they found — the baseline (Step 4)",p:"62 of 100 observed opportunities were compliant — 62%, well short of the 85% target. Breaking it down by shift showed the gap was worst overnight, when staffing was thinner and the ward was quieter."},
+          {h:"Fixing it (Step 5)",p:"Two specific changes: alcohol hand-gel dispensers were added at every bedside (previously there was only one, at the ward entrance, meaning a genuine walk each time), and a hand-hygiene reminder was added directly into the night-shift handover checklist. The infection control nurse took ownership of both changes."},
+          {h:"Checking again — and this is the part most audits skip",p:"Three months later, the team repeated the exact same method — unannounced spot-checks, same shifts, same way of counting — and got 89 of 100 (89%). Not only had the overall number crossed the 85% target, but the night-shift gap specifically had closed too, confirming the fix had worked where it was needed most, not just on average. Rather than treating this as \"done,\" the team folded a lighter version of the same spot-check into the infection control team's regular monthly walk-round, so drifting back to old habits would get caught early next time."},
+        ],
+        takeaway:"The lesson: a first check with no re-check only tells you there was a problem — it never tells you whether your fix actually worked. The re-audit, using the exact same method as the first time, is what turns a one-off finding into a genuine clinical audit.",
+        table:{headers:["Measure","Baseline","Re-audit (3 months later)"],rows:[
+          ["Overall compliance","62/100 (62%)","89/100 (89%)"],
+          ["Night-shift compliance","Lowest of the 3 shifts","No longer the lowest shift"],
+        ],note:"Identical method used at both time points: unannounced observation across all 3 shifts, 2-week period."},
+        report:{
+          topic:"Clinical Audit on Hand Hygiene Compliance Before Patient Contact — Baseline and Re-Audit",
+          purpose:[
+            "To assess compliance with hand hygiene before patient contact.",
+            "To identify variation in compliance by shift.",
+            "To evaluate the effect of corrective action through re-audit.",
+          ],
+          methodology:{type:"Prospective, unannounced direct observation.",sampleSize:"100 observed hand-hygiene opportunities across all 3 shifts (baseline); identical method repeated at re-audit.",period:"Baseline: 2-week period. Re-audit: 2-week period, 3 months later."},
+          standard:"85% of hand-hygiene opportunities (immediately before patient contact) should be followed correctly.",
+          dataCollectionParameters:["Hand-hygiene opportunity observed","Compliant / non-compliant","Shift (morning / evening / night)"],
+          analysis:"Baseline compliance was below standard and lowest on the night shift, corresponding to periods of lower staffing. Following corrective action (additional bedside dispensers and a handover checklist prompt), re-audit using an identical method showed improvement across all shifts, including the previously worst-performing night shift.",
+          findings:[
+            "Baseline: 62/100 (62%) compliant — below the 85% target.",
+            "Baseline compliance was lowest on the night shift.",
+            "Re-audit (identical method, 3 months later): 89/100 (89%) compliant.",
+            "Night-shift compliance showed the largest improvement at re-audit.",
+          ],
+          recommendations:[
+            "Maintain bedside alcohol-gel dispenser provision.",
+            "Retain the hand-hygiene prompt in the night-shift handover checklist.",
+            "Continue light-touch monitoring via the infection control team's monthly walk-round.",
+          ],
+          conclusion:"Corrective action following the baseline audit resulted in a measurable improvement in hand hygiene compliance, confirmed by re-audit using an identical method. Ongoing monitoring has been incorporated into routine infection control activity to sustain the improvement.",
+          owner:"Infection Control Nurse",recheck:"Completed — see re-audit results above; ongoing monthly monitoring in place",
+        }},
+    ];
+    return (
+      <div style={{display:"grid",gap:10}}>
+        <div style={{background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12,padding:"18px 20px"}}>
+          <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:8}}>EXAMPLES OF CLINICAL AUDIT</div>
+          <div style={{fontSize:13,color:T.text,lineHeight:1.8}}>
+            Four complete, worked-through examples — each one walks through a whole audit from the first question to the re-check, explaining what was decided at each point and why. Everything here — the hospital, the staff, the topic, every number — is invented purely to teach the method; none of it is a real hospital's data. Read these even if you've never heard the term "clinical audit" before today — each one is written to stand on its own.
+          </div>
+        </div>
+
+        {examples.map((ex,ei)=>(
+          <div key={ei} style={{background:T.panel,border:`1px solid ${ex.color}40`,borderRadius:12,padding:"20px 22px",display:"grid",gap:14}}>
+            <div style={{display:"flex",flexWrap:"wrap",alignItems:"center",gap:10}}>
+              <div style={{fontSize:10,letterSpacing:1,fontWeight:700,color:ex.color,background:`${ex.color}18`,border:`1px solid ${ex.color}40`,borderRadius:20,padding:"4px 12px"}}>{ex.tag}</div>
+            </div>
+            <div style={{fontSize:16,fontWeight:700,color:ex.color}}>Example {ei+1}: {ex.title}</div>
+            <div style={{display:"grid",gap:12}}>
+              {ex.story.map((s,si)=>(
+                <div key={si}>
+                  <div style={{fontSize:12,fontWeight:700,color:T.gold,marginBottom:4}}>{s.h}</div>
+                  <div style={{fontSize:13,color:T.text,lineHeight:1.8}}>{s.p}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{padding:"10px 14px",background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,fontSize:12,color:T.text,lineHeight:1.6}}>
+              <span style={{fontWeight:700,color:T.green}}>Takeaway: </span>{ex.takeaway}
+            </div>
+
+            {ex.report&&!isPaid&&(
+              <div style={{background:"#fdfcf9",border:"1px solid #d8cfa8",borderRadius:8,padding:"28px 24px",color:"#1f2937",textAlign:"center"}}>
+                <div style={{fontSize:10,letterSpacing:2,color:"#9c7a2e",fontWeight:700,marginBottom:10}}>FINAL REPORT — AS IT WOULD ACTUALLY BE WRITTEN UP</div>
+                <div style={{fontSize:13,fontWeight:700,color:"#1a2744",marginBottom:16}}>{ex.report.topic}</div>
+                <div style={{fontSize:28,marginBottom:10}}>🔒</div>
+                <div style={{fontSize:13,color:"#374151",maxWidth:420,margin:"0 auto 18px",lineHeight:1.7}}>
+                  The full formatted report — Purpose, Methodology, Findings, Results table, Recommendations, Conclusion — needs a paid subscription to view and download.
+                </div>
+                <button onClick={()=>navigate&&navigate({screen:"pricing"})}
+                  style={{padding:"9px 20px",borderRadius:7,background:"#1a2744",border:"none",color:"#fff",fontSize:12,fontWeight:700,cursor:"pointer"}}>
+                  🔒 Upgrade to View Full Report
+                </button>
+              </div>
+            )}
+            {ex.report&&isPaid&&(()=>{const r=ex.report;const sec=(label,body)=>(
+              <div style={{marginBottom:14}}>
+                <div style={{fontSize:12,fontWeight:700,color:"#1a2744",borderBottom:"2px solid #9c7a2e",paddingBottom:3,marginBottom:7}}>{label}</div>
+                {body}
+              </div>
+            );const bullets=(items)=>(
+              <div style={{display:"grid",gap:3}}>
+                {items.map((it,i)=><div key={i} style={{fontSize:11.5,color:"#1f2937",lineHeight:1.6}}>• {it}</div>)}
+              </div>
+            );
+            return (
+              <div style={{background:"#fdfcf9",border:"1px solid #d8cfa8",borderRadius:8,padding:"22px 24px",color:"#1f2937"}}>
+                <div style={{fontSize:10,letterSpacing:2,color:"#9c7a2e",fontWeight:700,marginBottom:6}}>FINAL REPORT — AS IT WOULD ACTUALLY BE WRITTEN UP</div>
+                <div style={{fontSize:14,fontWeight:700,color:"#1a2744",marginBottom:4}}>Clinical Audit Report</div>
+                <div style={{fontSize:13,fontWeight:700,color:"#1a2744",marginBottom:8}}>{r.topic}</div>
+                <div style={{fontSize:10.5,color:"#6b7280",marginBottom:14,paddingBottom:10,borderBottom:"1px solid #e5e0d0"}}>
+                  [Your Hospital Name]  ·  Department: [Department]  ·  Audit lead: [Name]  ·  Date: [DD Month YYYY]
+                </div>
+
+                {sec("1. Purpose",bullets(r.purpose))}
+                {sec("2. Audit Methodology",(
+                  <div style={{display:"grid",gap:4,fontSize:11.5}}>
+                    <div><span style={{fontWeight:700}}>Type of Audit: </span>{r.methodology.type}</div>
+                    <div><span style={{fontWeight:700}}>Sample Size: </span>{r.methodology.sampleSize}</div>
+                    <div><span style={{fontWeight:700}}>Time Period: </span>{r.methodology.period}</div>
+                    {r.standard&&<div><span style={{fontWeight:700}}>Standard: </span>{r.standard}</div>}
+                  </div>
+                ))}
+                {sec("3. Data Collection Parameters",bullets(r.dataCollectionParameters))}
+                {sec("4. Detailed Analysis",<div style={{fontSize:11.5,lineHeight:1.65}}>{r.analysis}</div>)}
+                {sec("5. Audit Findings",bullets(r.findings))}
+                {ex.table&&sec("6. Results",(
+                  <table style={{width:"100%",borderCollapse:"collapse",fontSize:11}}>
+                    <thead><tr>{ex.table.headers.map(h=><th key={h} style={{textAlign:h===ex.table.headers[0]?"left":"center",padding:"6px 8px",background:"#1a2744",color:"#fff"}}>{h}</th>)}</tr></thead>
+                    <tbody>{ex.table.rows.map((row,ri)=>(
+                      <tr key={ri} style={{background:ri%2===1?"#f3f4f6":"transparent"}}>
+                        {row.map((c,ci)=><td key={ci} style={{padding:"6px 8px",textAlign:ci===0?"left":"center",borderBottom:"1px solid #e5e7eb"}}>{c}</td>)}
+                      </tr>
+                    ))}</tbody>
+                  </table>
+                ))}
+                {ex.table?.note&&<div style={{fontSize:10,color:"#6b7280",marginTop:4,marginBottom:14}}>{ex.table.note}</div>}
+                {sec("7. Recommendations",bullets(r.recommendations))}
+                {sec("8. Conclusion",<div style={{fontSize:11.5,lineHeight:1.65}}>{r.conclusion}</div>)}
+
+                <div style={{background:"#fdf8ed",border:"1px solid #9c7a2e40",borderRadius:6,padding:"10px 14px",marginBottom:14}}>
+                  <div style={{fontSize:11.5,fontWeight:700,color:"#1a2744",marginBottom:3}}>Action Plan</div>
+                  <div style={{fontSize:11,color:"#1f2937"}}>Owner: {r.owner}</div>
+                  <div style={{fontSize:11,color:"#1f2937"}}>Re-audit: {r.recheck}</div>
+                </div>
+
+                <div style={{fontSize:10.5,color:"#1f2937",borderTop:"1px solid #e5e0d0",paddingTop:10}}>
+                  Prepared by: _______________________&nbsp;&nbsp;&nbsp;&nbsp;Reviewed by: _______________________<br/>
+                  Date: _______________&nbsp;&nbsp;&nbsp;&nbsp;Re-audit due: _______________
+                </div>
+
+                <div style={{display:"flex",justifyContent:"flex-end",marginTop:14}}>
+                  <button onClick={()=>generateExampleAuditPdf(ex)}
+                    style={{padding:"6px 14px",borderRadius:7,background:"#1a2744",border:"none",color:"#fff",fontSize:11,fontWeight:700,cursor:"pointer"}}>
+                    ⬇ Download this report as PDF
+                  </button>
+                </div>
+              </div>
+            );})()}
+          </div>
+        ))}
+
+        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 20px",fontSize:12,color:T.muted,lineHeight:1.7}}>
+          Notice what's missing from every example above: no hospital name, no real staff names, no long formal background section, no reference list. Just enough detail that someone who wasn't there could understand what was checked, what was found, and what happened next — which, as covered in the Learn tab, is really all a clinical audit write-up needs to do.
+        </div>
+      </div>
+    );
+  };
+
+  const MyAuditsTab=()=>(
+    <div>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14}}>
+        <div style={{display:"flex",gap:16,fontSize:12,color:T.muted}}>
+          <span><span style={{color:T.gold,fontWeight:700}}>{activeCount}</span> active</span>
+          <span><span style={{color:T.green,fontWeight:700}}>{closedCount}</span> closed cycle{closedCount!==1?"s":""}</span>
+        </div>
+        {!showCreate&&<button onClick={()=>setShowCreate(true)} style={{padding:"8px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>+ New Audit</button>}
+      </div>
+      {showCreate&&<CreateClinicalAuditForm onSubmit={createProject} saving={saving} onCancel={()=>setShowCreate(false)}/>}
+      {loading?(
+        <div style={{textAlign:"center",color:T.muted,padding:30}}>Loading…</div>
+      ):projects.length===0&&!showCreate?(
+        <div style={{textAlign:"center",color:T.muted,padding:40,fontSize:13}}>No clinical audits yet. Click "+ New Audit" to start your first cycle.</div>
+      ):(
+        <div style={{display:"grid",gap:10}}>
+          {projects.map(p=>(
+            <div key={p.id} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"14px 16px"}}>
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",cursor:"pointer"}} onClick={()=>setExpanded(e=>e===p.id?null:p.id)}>
+                <div>
+                  <div style={{fontSize:14,fontWeight:700,color:T.white}}>{p.title}</div>
+                  <div style={{fontSize:11,color:T.muted,marginTop:3}}>{p.department||"—"} · {stageLabel(p.stage)}{p.status==="closed"?" · ✓ Closed":""}</div>
+                </div>
+                <div style={{fontSize:16,color:T.muted}}>{expanded===p.id?"▲":"▼"}</div>
+              </div>
+              {expanded===p.id&&<ClinicalAuditDetail project={p} onUpdate={updateProject} onDelete={deleteProject}/>}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+
+  const UpgradeLock=({title})=>(
+    <div style={{textAlign:"center",padding:"50px 24px",background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12}}>
+      <div style={{fontSize:34,marginBottom:12}}>🔒</div>
+      <div style={{fontSize:16,fontWeight:700,color:T.gold,marginBottom:8}}>{title||"This needs a subscription"}</div>
+      <div style={{fontSize:13,color:T.muted,maxWidth:420,margin:"0 auto 20px",lineHeight:1.7}}>
+        "Getting Ready" is free for everyone. The rest of Clinical Audit — the 5 steps, worked examples, and the audit tracker — unlocks with an active subscription.
+      </div>
+      <button onClick={()=>navigate&&navigate({screen:"pricing"})}
+        style={{padding:"10px 22px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>
+        View Pricing →
+      </button>
+    </div>
+  );
+
+  return (
+    <div style={{background:T.bg,minHeight:"100vh",color:T.text,fontFamily:"Segoe UI,system-ui,sans-serif"}}>
+      <div style={{display:"flex",alignItems:"center",overflowX:"auto",borderBottom:`1px solid ${T.border}`,padding:"0 16px",background:T.panel}}>
+        {[{key:"learn",label:"📖 Learn"},{key:"examples",label:`📋 Examples${canAccessFull?"":" 🔒"}`},{key:"audits",label:`🔍 My Audits${canAccessFull?(projects.length>0?" ("+projects.length+")":""):" 🔒"}`}].map(t=>(
+          <button key={t.key} onClick={()=>setTab(t.key)}
+            style={{padding:"12px 16px",border:"none",cursor:"pointer",background:"transparent",fontSize:13,fontWeight:600,
+              flexShrink:0,whiteSpace:"nowrap",color:tab===t.key?T.gold:T.muted,
+              borderBottom:tab===t.key?`2px solid ${T.gold}`:"2px solid transparent"}}>
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <div style={{padding:"18px 16px",maxWidth:900,margin:"0 auto"}}>
+        {tab==="learn"?<LearnTab/>
+          :tab==="examples"?(canAccessFull?<ExamplesTab/>:<UpgradeLock title="Examples need a subscription"/>)
+          :(canAccessFull?<MyAuditsTab/>:<UpgradeLock title="The audit tracker needs a subscription"/>)}
+      </div>
+    </div>
+  );
+}
+
 // ── CHECKLISTS ────────────────────────────────────────
 function ChecklistsScreen({ hospitalId }) {
   const [checklists,setChecklists]=useState([]); const [loading,setLoading]=useState(true);
@@ -8915,12 +9986,13 @@ export default function App() {
     return()=>document.removeEventListener("keydown",handler);
   },[drawerOpen]);
 
-  // Lock page scroll while the drawer is open (restore prior value on close/unmount)
+  // Lock page scroll while the drawer is open. Always resets to "" (not a captured
+  // "prev" value) on close/unmount — restoring a stale snapshot is what let the page
+  // get stuck unscrollable until a hard refresh if effects ever fired out of order.
   useEffect(()=>{
     if(!drawerOpen)return;
-    const prev=document.body.style.overflow;
     document.body.style.overflow="hidden";
-    return()=>{document.body.style.overflow=prev;};
+    return()=>{document.body.style.overflow="";};
   },[drawerOpen]);
 
   // NavStack refs — kept in sync via effects so goBack/navigate closures always read current values
@@ -9011,6 +10083,7 @@ export default function App() {
     else if(key==="hco_elc"){setSelectedProgramme("hco-elc");setScreen("hco-elc");setAuthState("app");}
     else if(key==="eco_full"){setSelectedProgramme("eco-full");setScreen("eco-full");setAuthState("app");}
     else if(key==="dental_elc"){setSelectedProgramme("dental-elc");setScreen("dental-elc");setAuthState("app");}
+    else if(key==="clinical_audit"){setSelectedProgramme("clinical-audit");setScreen("clinical-audit");setAuthState("app");}
   };
 
   if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:16}}>Loading…</div>;
@@ -12622,6 +13695,9 @@ export default function App() {
     {id:"dental-elc",label:"Checklist",icon:"ti-checklist",programmes:["dental-elc"], primary:true},
     {id:"pricing",  label:"Pricing",  icon:"ti-diamond",programmes:["dental-elc"], primary:false},
     {id:"profile",  label:"Profile",  icon:"ti-user",programmes:["dental-elc"], primary:false},
+    {id:"clinical-audit",label:"Clinical Audit",icon:"ti-search",programmes:["clinical-audit"], primary:true},
+    {id:"pricing",  label:"Pricing",  icon:"ti-diamond",programmes:["clinical-audit"], primary:false},
+    {id:"profile",  label:"Profile",  icon:"ti-user",programmes:["clinical-audit"], primary:false},
   ];
   const NAV=ALL_NAV.filter(n=>n.programmes.includes(selectedProgramme));
   const primaryItem=NAV.find(n=>n.primary);
@@ -12659,7 +13735,7 @@ export default function App() {
           )}
           <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":HP.brand,display:"flex",alignItems:"center",justifyContent:"center",fontSize:15,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff",fontFamily:"Figtree,sans-serif",fontWeight:800}}>A</div>
           <div style={{flex:1,minWidth:80,textAlign:hasDrawer?"center":"left",overflow:"hidden"}}>
-            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":HP.brandLight}}>{selectedProgramme==="shco-full"?"NABH SHCO 3RD EDITION":selectedProgramme==="shco-elc"?"NABH SHCO ELC":selectedProgramme==="hco-elc"?"NABH HCO ELC":selectedProgramme==="eco-full"?"NABH ECO FULL ACCREDITATION":selectedProgramme==="dental-elc"?"NABH DENTAL ELC — 1ST EDITION":"NABH 6TH EDITION"}</div>
+            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":HP.brandLight}}>{selectedProgramme==="shco-full"?"NABH SHCO 3RD EDITION":selectedProgramme==="shco-elc"?"NABH SHCO ELC":selectedProgramme==="hco-elc"?"NABH HCO ELC":selectedProgramme==="eco-full"?"NABH ECO FULL ACCREDITATION":selectedProgramme==="dental-elc"?"NABH DENTAL ELC — 1ST EDITION":selectedProgramme==="clinical-audit"?"CLINICAL AUDIT — QUALITY IMPROVEMENT":"NABH 6TH EDITION"}</div>
             <div style={{fontSize:14,fontWeight:700,color:"#ffffff",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{context?.hospitalName||"AccredReady"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
           {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,flexShrink:0}}>Refreshing…</div>}
@@ -12810,6 +13886,7 @@ export default function App() {
         {screen==="eco-full"&&renderECOFullTab()}
         {screen==="hco-elc"&&renderHCOTab()}
         {screen==="dental-elc"&&renderDentalTab()}
+        {screen==="clinical-audit"&&<ClinicalAuditScreen hospitalId={context?.hospitalId} canAccessFull={isPaid} isPaid={isPaid} navigate={navigate}/>}
       </div>
 
       {selectedProgramme==="shco-full"&&(
