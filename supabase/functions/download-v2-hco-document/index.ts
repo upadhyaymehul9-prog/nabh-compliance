@@ -1,17 +1,32 @@
-// HCO Full v2 policy delivery — fetch pre-rendered master .docx from Storage,
-// replace «Hospital Name» with the hospital's name, stream back.
-// Deliberately a SEPARATE function from download-v2-policy (SHCO): HCO and
-// SHCO standard codes collide in text (ROM.1, PSQ.1, ...) with different
-// content, so this reads from hco_policy_masters / policy-masters-hco-v2 only.
-// Does not call AI. Does not rebuild from database fields.
+// HCO Full v2 document delivery — Policy, SOP, and Record masters.
+// Fetches a pre-built .docx from Storage, replaces «Hospital Name»
+// with the hospital's name, streams it back.
+// Mirrors download-v2-policy (the SHCO policy-only function) but
+// generalised across all three HCO document types and keyed flexibly.
 //
-// Input: { standard_code: "AAC.1", hospital_name: "HMP Foundation" }
-//    or: { standard_code: "AAC.1", hospital_id: "<uuid>" }  (name looked up)
+// Input (one of):
+//   { document_id: "<uuid>", hospital_name: "HMP Foundation" }
+//   { standard_code: "AAC.1", document_type: "policy", hospital_name: "..." }
+//     (only valid for document_type "policy" — SOP/Record can have more
+//      than one row per standard, so those require document_id)
+//   ...or hospital_id in place of hospital_name (name looked up)
+//
+// PAYWALL: AAC-chapter documents are free for every signed-in hospital.
+// Every other chapter requires hospitals.plan = 'paid'. The plan check is
+// derived server-side from the caller's own JWT (profiles -> hospital_id),
+// never from a client-supplied hospital_id/hospital_name — those remain
+// for display/personalisation only and cannot be used to bypass the gate.
+//
+// TRACKING: every successful download is logged to document_downloads
+// (programme='hco') so we can see real usage — which hospitals actually
+// download, which standards get pulled most. Logging failures never block
+// the download itself; they're just console.error'd.
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { personalizeDocx } from "../_shared/personalize-docx.ts";
 
 const BUCKET = "policy-masters-hco-v2";
+const FREE_CHAPTER = "AAC";
 
 const PROD_ORIGIN = "https://accredready.in";
 const ALLOWED_ORIGINS = [
@@ -36,12 +51,17 @@ Deno.serve(async (req: Request) => {
 
   try {
     const body = await req.json();
-    const standard_code = body?.standard_code;
+    const document_id: string | undefined = body?.document_id;
+    const standard_code: string | undefined = body?.standard_code;
+    const document_type: string | undefined = body?.document_type;
     let hospital_name: string | undefined = body?.hospital_name;
     const hospital_id: string | undefined = body?.hospital_id;
 
-    if (!standard_code || typeof standard_code !== "string") {
-      return Response.json({ error: "Missing standard_code" }, { status: 400, headers: CORS });
+    if (!document_id && !(standard_code && document_type)) {
+      return Response.json(
+        { error: "Provide either document_id, or standard_code + document_type." },
+        { status: 400, headers: CORS },
+      );
     }
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
@@ -71,46 +91,147 @@ Deno.serve(async (req: Request) => {
       );
     }
 
-    const { data: masterRows, error: masterErr } = await supabase
-      .from("hco_policy_masters")
-      .select("standard_code, policy_title, master_docx_path")
-      .eq("standard_code", standard_code)
-      .limit(1);
+    // Resolve which row to serve.
+    let doc: { id: string; standard_code: string; document_type: string; title: string; storage_path: string };
 
-    if (masterErr) throw new Error(`Master fetch: ${masterErr.message}`);
-    if (!masterRows?.length) {
-      return Response.json(
-        { error: `No master document exists for HCO standard ${standard_code}.` },
-        { status: 404, headers: CORS },
-      );
+    if (document_id) {
+      const { data, error } = await supabase
+        .from("hco_documents")
+        .select("id, standard_code, document_type, title, storage_path")
+        .eq("id", document_id)
+        .maybeSingle();
+      if (error) throw new Error(`Document fetch: ${error.message}`);
+      if (!data) {
+        return Response.json({ error: `No document found for id ${document_id}.` }, { status: 404, headers: CORS });
+      }
+      doc = data;
+    } else {
+      if (document_type !== "policy") {
+        return Response.json(
+          {
+            error:
+              `document_type "${document_type}" can have more than one document per standard — ` +
+              `pass document_id instead of standard_code + document_type.`,
+          },
+          { status: 400, headers: CORS },
+        );
+      }
+      const { data, error } = await supabase
+        .from("hco_documents")
+        .select("id, standard_code, document_type, title, storage_path")
+        .eq("standard_code", standard_code)
+        .eq("document_type", "policy")
+        .limit(1);
+      if (error) throw new Error(`Document fetch: ${error.message}`);
+      if (!data?.length) {
+        return Response.json(
+          { error: `No policy document exists for standard ${standard_code}.` },
+          { status: 404, headers: CORS },
+        );
+      }
+      doc = data[0];
     }
 
-    const master = masterRows[0];
-    const storagePath = master.master_docx_path as string | null;
-    if (!storagePath) {
-      return Response.json(
-        { error: `Master for ${standard_code} has no master_docx_path — it hasn't been uploaded yet.` },
-        { status: 404, headers: CORS },
-      );
+    // ── Paywall ───────────────────────────────────────────────────────────
+    const chapter = doc.standard_code.split(".")[0];
+    let callerHospitalId: string | null = null;
+    if (chapter !== FREE_CHAPTER) {
+      const authHeader = req.headers.get("Authorization");
+      const jwt = authHeader?.replace(/^Bearer\s+/i, "");
+      if (!jwt) {
+        return Response.json(
+          { error: "Sign in required to download this document." },
+          { status: 401, headers: CORS },
+        );
+      }
+
+      const { data: userData, error: userErr } = await supabase.auth.getUser(jwt);
+      if (userErr || !userData?.user) {
+        return Response.json(
+          { error: "Your session has expired — sign in again." },
+          { status: 401, headers: CORS },
+        );
+      }
+
+      const { data: profile, error: profileErr } = await supabase
+        .from("profiles")
+        .select("hospital_id")
+        .eq("id", userData.user.id)
+        .maybeSingle();
+      if (profileErr) throw new Error(`Profile lookup: ${profileErr.message}`);
+
+      let planOk = false;
+      if (profile?.hospital_id) {
+        callerHospitalId = profile.hospital_id;
+        const { data: hospRow, error: hospPlanErr } = await supabase
+          .from("hospitals")
+          .select("plan")
+          .eq("id", profile.hospital_id)
+          .maybeSingle();
+        if (hospPlanErr) throw new Error(`Plan lookup: ${hospPlanErr.message}`);
+        planOk = hospRow?.plan === "paid";
+      }
+
+      if (!planOk) {
+        return Response.json(
+          {
+            error: `${chapter} documents need a paid plan. ${FREE_CHAPTER} chapter documents are free to try — upgrade to unlock the rest.`,
+            upgrade_required: true,
+          },
+          { status: 402, headers: CORS },
+        );
+      }
+    } else {
+      // Free chapter — still try to resolve the caller's hospital for logging,
+      // but never block the download if this fails or there's no session.
+      const authHeader = req.headers.get("Authorization");
+      const jwt = authHeader?.replace(/^Bearer\s+/i, "");
+      if (jwt) {
+        const { data: userData } = await supabase.auth.getUser(jwt);
+        if (userData?.user) {
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("hospital_id")
+            .eq("id", userData.user.id)
+            .maybeSingle();
+          callerHospitalId = profile?.hospital_id ?? null;
+        }
+      }
     }
+    // ─────────────────────────────────────────────────────────────────────
 
     const { data: blob, error: dlErr } = await supabase.storage
       .from(BUCKET)
-      .download(storagePath);
+      .download(doc.storage_path);
     if (dlErr || !blob) {
-      throw new Error(`Storage download (${storagePath}): ${dlErr?.message ?? "empty object"}`);
+      throw new Error(`Storage download (${doc.storage_path}): ${dlErr?.message ?? "empty object"}`);
     }
 
     const masterBytes = new Uint8Array(await blob.arrayBuffer());
     const { bytes: personalised, replacements } = await personalizeDocx(masterBytes, hospital_name);
-    if (replacements === 0) {
+
+    if (replacements === 0 && doc.document_type !== "record") {
       return Response.json(
-        { error: `Master ${standard_code} had no «Hospital Name» placeholder — refusing to serve an unpersonalised document.` },
+        { error: `${doc.document_type} ${doc.standard_code} had no «Hospital Name» placeholder — refusing to serve an unpersonalised document.` },
         { status: 500, headers: CORS },
       );
     }
 
-    const safeTitle = String(master.policy_title ?? standard_code)
+    // Log the download — best-effort, never blocks or fails the response.
+    try {
+      await supabase.from("document_downloads").insert({
+        hospital_id: callerHospitalId,
+        hospital_name,
+        programme: "hco",
+        standard_code: doc.standard_code,
+        document_type: doc.document_type,
+        document_id: doc.id,
+      });
+    } catch (logErr) {
+      console.error("document_downloads insert failed:", logErr);
+    }
+
+    const safeTitle = String(doc.title ?? doc.standard_code)
       .replace(/[^a-zA-Z0-9\s-]/g, "")
       .replace(/\s+/g, "_");
 
@@ -118,7 +239,7 @@ Deno.serve(async (req: Request) => {
       headers: {
         ...CORS,
         "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        "Content-Disposition": `attachment; filename="${standard_code}_${safeTitle}.docx"`,
+        "Content-Disposition": `attachment; filename="${doc.standard_code}_${safeTitle}.docx"`,
       },
     });
   } catch (err) {

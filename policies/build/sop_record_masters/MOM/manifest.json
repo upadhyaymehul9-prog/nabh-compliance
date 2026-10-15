@@ -1,0 +1,462 @@
+[
+  {
+    "file": "SOP_MOM.1.a_to_f_formulary_committee_governance.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.1",
+    "title": "SOP \u2014 Multidisciplinary Committee Governance of Pharmacy Services and the Formulary (MOM.1)"
+  },
+  {
+    "file": "Records/MOM.1_Record_01_formulary_review_revision_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.1",
+    "record_index": 1,
+    "title": "Formulary review and revision log"
+  },
+  {
+    "file": "Records/MOM.1_Record_02_committee_meeting_minutes.docx",
+    "document_type": "record",
+    "standard_code": "MOM.1",
+    "record_index": 2,
+    "title": "Multidisciplinary Medication Committee meeting minutes"
+  },
+  {
+    "file": "Records/MOM.1_Record_03_non_formulary_acquisition_register.docx",
+    "document_type": "record",
+    "standard_code": "MOM.1",
+    "record_index": 3,
+    "title": "Non-formulary medication acquisition register"
+  },
+  {
+    "file": "Records/MOM.1_Record_04_after_hours_withdrawal_reconciliation_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.1",
+    "record_index": 4,
+    "title": "After-hours medication withdrawal and reconciliation log"
+  },
+  {
+    "file": "Records/MOM.1_Record_05_implant_device_committee_approval_register.docx",
+    "document_type": "record",
+    "standard_code": "MOM.1",
+    "record_index": 5,
+    "title": "Committee-approved implant and medical device list"
+  },
+  {
+    "file": "Records/MOM.1_Record_06_off_formulary_prescription_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.1",
+    "record_index": 6,
+    "title": "Off-formulary prescription log and committee review"
+  },
+  {
+    "file": "SOP_MOM.2.a_to_f_medication_storage_availability.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.2",
+    "title": "SOP \u2014 Medication Storage and Availability (MOM.2)"
+  },
+  {
+    "file": "Records/MOM.2_Record_01_storage_temperature_inspection_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.2",
+    "record_index": 1,
+    "title": "Storage temperature and inspection log"
+  },
+  {
+    "file": "Records/MOM.2_Record_02_monthly_stock_count_reconciliation_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.2",
+    "record_index": 2,
+    "title": "Monthly stock-count and reconciliation record"
+  },
+  {
+    "file": "Records/MOM.2_Record_03_high_risk_lasa_list_safeguard_inspection.docx",
+    "document_type": "record",
+    "standard_code": "MOM.2",
+    "record_index": 3,
+    "title": "High-risk and look-alike/sound-alike medication list and safeguard inspection"
+  },
+  {
+    "file": "Records/MOM.2_Record_04_high_risk_outside_pharmacy_approval_audit_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.2",
+    "record_index": 4,
+    "title": "High-risk medication outside-pharmacy approval and audit log"
+  },
+  {
+    "file": "Records/MOM.2_Record_05_emergency_medication_layout_uniformity_verification.docx",
+    "document_type": "record",
+    "standard_code": "MOM.2",
+    "record_index": 5,
+    "title": "Emergency medication list and layout-uniformity verification"
+  },
+  {
+    "file": "Records/MOM.2_Record_06_daily_emergency_medication_checklist_replenishment_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.2",
+    "record_index": 6,
+    "title": "Daily emergency medication checklist and replenishment log"
+  },
+  {
+    "file": "Records/MOM.2_Record_07_medication_quarantine_log_stop_work.docx",
+    "document_type": "record",
+    "standard_code": "MOM.2",
+    "record_index": 7,
+    "title": "Medication quarantine log (stop-work)"
+  },
+  {
+    "file": "SOP_MOM.3.a_to_h_safe_rational_prescribing.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.3",
+    "title": "SOP \u2014 Safe and Rational Prescribing (MOM.3)"
+  },
+  {
+    "file": "Records/MOM.3_Record_01_rational_prescribing_guideline_adoption_review.docx",
+    "document_type": "record",
+    "standard_code": "MOM.3",
+    "record_index": 1,
+    "title": "Rational-prescribing guideline adoption and quarterly pattern review"
+  },
+  {
+    "file": "Records/MOM.3_Record_02_returned_prescription_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.3",
+    "record_index": 2,
+    "title": "Returned-prescription log (incomplete prescriptions)"
+  },
+  {
+    "file": "Records/MOM.3_Record_03_allergy_ascertainment_documentation_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.3",
+    "record_index": 3,
+    "title": "Allergy ascertainment and documentation record"
+  },
+  {
+    "file": "Records/MOM.3_Record_04_decision_support_resource_availability_annual_review.docx",
+    "document_type": "record",
+    "standard_code": "MOM.3",
+    "record_index": 4,
+    "title": "Clinical decision-support resource availability and annual review"
+  },
+  {
+    "file": "Records/MOM.3_Record_05_verbal_order_readback_countersignature_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.3",
+    "record_index": 5,
+    "title": "Verbal order read-back and countersignature log"
+  },
+  {
+    "file": "Records/MOM.3_Record_06_quarterly_prescription_audit_report.docx",
+    "document_type": "record",
+    "standard_code": "MOM.3",
+    "record_index": 6,
+    "title": "Quarterly prescription audit report"
+  },
+  {
+    "file": "Records/MOM.3_Record_07_prescription_audit_capa_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.3",
+    "record_index": 7,
+    "title": "Prescription audit CAPA log"
+  },
+  {
+    "file": "Records/MOM.3_Record_08_medication_reconciliation_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.3",
+    "record_index": 8,
+    "title": "Medication reconciliation record (admission, transfer, discharge)"
+  },
+  {
+    "file": "SOP_MOM.4.a_to_d_uniform_medication_orders.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.4",
+    "title": "SOP \u2014 Uniform Medication Orders (MOM.4)"
+  },
+  {
+    "file": "Records/MOM.4_Record_01_authorised_prescriber_list_audit_sample.docx",
+    "document_type": "record",
+    "standard_code": "MOM.4",
+    "record_index": 1,
+    "title": "Authorised prescriber list and audit sample"
+  },
+  {
+    "file": "Records/MOM.4_Record_02_returned_order_log_wrong_location.docx",
+    "document_type": "record",
+    "standard_code": "MOM.4",
+    "record_index": 2,
+    "title": "Returned-order log (wrong location)"
+  },
+  {
+    "file": "Records/MOM.4_Record_03_returned_order_log_illegible_unsigned.docx",
+    "document_type": "record",
+    "standard_code": "MOM.4",
+    "record_index": 3,
+    "title": "Returned-order log (illegible/unsigned)"
+  },
+  {
+    "file": "Records/MOM.4_Record_04_returned_order_log_incomplete_elements_abbreviation_list.docx",
+    "document_type": "record",
+    "standard_code": "MOM.4",
+    "record_index": 4,
+    "title": "Returned-order log (incomplete mandatory elements) and approved abbreviation list"
+  },
+  {
+    "file": "Records/MOM.4_Record_05_noncompliant_order_stop_work_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.4",
+    "record_index": 5,
+    "title": "Non-compliant order stop-work log"
+  },
+  {
+    "file": "SOP_MOM.5.a_to_f_safe_dispensing.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.5",
+    "title": "SOP \u2014 Safe Dispensing of Medications (MOM.5)"
+  },
+  {
+    "file": "Records/MOM.5_Record_01_dispensing_log_final_check_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.5",
+    "record_index": 1,
+    "title": "Dispensing log and final-check record"
+  },
+  {
+    "file": "Records/MOM.5_Record_02_recall_register.docx",
+    "document_type": "record",
+    "standard_code": "MOM.5",
+    "record_index": 2,
+    "title": "Recall register"
+  },
+  {
+    "file": "Records/MOM.5_Record_03_near_expiry_review_action_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.5",
+    "record_index": 3,
+    "title": "Near-expiry review and action record"
+  },
+  {
+    "file": "Records/MOM.5_Record_04_labelling_verification_audit.docx",
+    "document_type": "record",
+    "standard_code": "MOM.5",
+    "record_index": 4,
+    "title": "Labelling verification audit"
+  },
+  {
+    "file": "Records/MOM.5_Record_05_high_risk_independent_verification_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.5",
+    "record_index": 5,
+    "title": "High-risk medication independent verification log"
+  },
+  {
+    "file": "Records/MOM.5_Record_06_medication_return_disposition_register.docx",
+    "document_type": "record",
+    "standard_code": "MOM.5",
+    "record_index": 6,
+    "title": "Medication return and disposition register"
+  },
+  {
+    "file": "Records/MOM.5_Record_07_dispensing_stop_work_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.5",
+    "record_index": 7,
+    "title": "Dispensing stop-work log"
+  },
+  {
+    "file": "SOP_MOM.6.a_to_i_safe_administration.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.6",
+    "title": "SOP \u2014 Safe Medication Administration (MOM.6)"
+  },
+  {
+    "file": "Records/MOM.6_Record_01_five_rights_bedside_observation_audit.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 1,
+    "title": "Five-rights bedside observation audit"
+  },
+  {
+    "file": "Records/MOM.6_Record_02_prepared_medication_labelling_compliance_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 2,
+    "title": "Prepared-medication labelling compliance log"
+  },
+  {
+    "file": "Records/MOM.6_Record_03_patient_identification_compliance_audit.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 3,
+    "title": "Patient identification compliance audit"
+  },
+  {
+    "file": "Records/MOM.6_Record_04_medication_verification_inspection_incident_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 4,
+    "title": "Medication verification and physical inspection incident log"
+  },
+  {
+    "file": "Records/MOM.6_Record_05_strength_route_timing_error_near_miss_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 5,
+    "title": "Strength/route/timing error and near-miss log"
+  },
+  {
+    "file": "Records/MOM.6_Record_06_tubing_connection_spot_check_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 6,
+    "title": "Tubing and connection spot-check log"
+  },
+  {
+    "file": "Records/MOM.6_Record_07_mar_completeness_timeliness_audit.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 7,
+    "title": "MAR completeness and timeliness audit"
+  },
+  {
+    "file": "Records/MOM.6_Record_08_self_administration_authorisation_competence_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 8,
+    "title": "Self-administration authorisation and competence record"
+  },
+  {
+    "file": "Records/MOM.6_Record_09_outside_medication_approval_verification_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 9,
+    "title": "Outside-medication approval and verification record"
+  },
+  {
+    "file": "Records/MOM.6_Record_10_administration_stop_work_withheld_dose_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.6",
+    "record_index": 10,
+    "title": "Administration stop-work (withheld dose) log"
+  },
+  {
+    "file": "SOP_MOM.7.a_to_e_post_administration_monitoring.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.7",
+    "title": "SOP \u2014 Monitoring After Medication Administration (MOM.7)"
+  },
+  {
+    "file": "Records/MOM.7_Record_01_post_administration_monitoring_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.7",
+    "record_index": 1,
+    "title": "Post-administration monitoring record"
+  },
+  {
+    "file": "Records/MOM.7_Record_02_medication_change_based_on_monitoring_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.7",
+    "record_index": 2,
+    "title": "Medication change based on monitoring record"
+  },
+  {
+    "file": "Records/MOM.7_Record_03_medication_incident_form_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.7",
+    "record_index": 3,
+    "title": "Medication incident form log (near-miss / error / ADR)"
+  },
+  {
+    "file": "Records/MOM.7_Record_04_medication_event_reporting_analysis_timeline_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.7",
+    "record_index": 4,
+    "title": "Medication-event reporting and analysis timeline record"
+  },
+  {
+    "file": "Records/MOM.7_Record_05_medication_event_capa_trend_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.7",
+    "record_index": 5,
+    "title": "Medication-event CAPA and trend log"
+  },
+  {
+    "file": "SOP_MOM.8.a_to_e_narcotics_chemo_radioactive.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.8",
+    "title": "SOP \u2014 Safe Use of Narcotics, Psychotropics, Chemotherapy and Radioactive Agents (MOM.8)"
+  },
+  {
+    "file": "Records/MOM.8_Record_01_written_procedure_training_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.8",
+    "record_index": 1,
+    "title": "Written procedure training record (narcotics/chemo/radioactive)"
+  },
+  {
+    "file": "Records/MOM.8_Record_02_authorised_prescriber_verification_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.8",
+    "record_index": 2,
+    "title": "Authorised-prescriber verification log (NDPS/chemo/radioactive)"
+  },
+  {
+    "file": "Records/MOM.8_Record_03_shift_change_register_reconciliation.docx",
+    "document_type": "record",
+    "standard_code": "MOM.8",
+    "record_index": 3,
+    "title": "Shift-change register reconciliation (narcotics/psychotropics)"
+  },
+  {
+    "file": "Records/MOM.8_Record_04_chemo_radioactive_preparation_administration_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.8",
+    "record_index": 4,
+    "title": "Chemotherapy/radioactive agent preparation and administration record"
+  },
+  {
+    "file": "Records/MOM.8_Record_05_monthly_register_reconciliation_summary.docx",
+    "document_type": "record",
+    "standard_code": "MOM.8",
+    "record_index": 5,
+    "title": "Monthly register reconciliation summary (NDPS/cytotoxic/radioactive logs)"
+  },
+  {
+    "file": "Records/MOM.8_Record_06_stop_work_register_discrepancy_investigation_log.docx",
+    "document_type": "record",
+    "standard_code": "MOM.8",
+    "record_index": 6,
+    "title": "Stop-work and register-discrepancy investigation log"
+  },
+  {
+    "file": "SOP_MOM.9.a_to_c_implantable_prostheses_devices.docx",
+    "document_type": "sop",
+    "standard_code": "MOM.9",
+    "title": "SOP \u2014 Implantable Prostheses and Medical Devices (MOM.9)"
+  },
+  {
+    "file": "Records/MOM.9_Record_01_implant_procurement_goods_receipt_register.docx",
+    "document_type": "record",
+    "standard_code": "MOM.9",
+    "record_index": 1,
+    "title": "Implant procurement and goods-receipt register"
+  },
+  {
+    "file": "Records/MOM.9_Record_02_implant_counselling_acknowledgement_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.9",
+    "record_index": 2,
+    "title": "Implant counselling and acknowledgement record"
+  },
+  {
+    "file": "Records/MOM.9_Record_03_implant_traceability_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.9",
+    "record_index": 3,
+    "title": "Implant traceability record (medical record / master logbook / discharge summary)"
+  },
+  {
+    "file": "Records/MOM.9_Record_04_monthly_implant_logbook_reconciliation_record.docx",
+    "document_type": "record",
+    "standard_code": "MOM.9",
+    "record_index": 4,
+    "title": "Monthly implant logbook reconciliation record"
+  }
+]

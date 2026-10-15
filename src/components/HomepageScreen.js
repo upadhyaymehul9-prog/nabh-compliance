@@ -514,7 +514,7 @@ export default function HomepageScreen({ onLogin }) {
         onClick={() => goToAuth('signup')}
         role="button" tabIndex={0} aria-label="Sign up to try Clinical Audit">
         <div className="hp-ticker-inner">
-          &nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — available alongside your other NABH modules once you sign in. →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — available alongside your other NABH modules once you sign in. →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — available alongside your other NABH modules once you sign in. →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — available alongside your other NABH modules once you sign in. →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
       </div>
 
@@ -586,7 +586,7 @@ export default function HomepageScreen({ onLogin }) {
             </p>
             <p className="hero-note">
               <i className="ti ti-lock" aria-hidden="true"></i>
-              No card required &nbsp;·&nbsp; Secured by Supabase &nbsp;·&nbsp; Email-only signup
+              Secured by Supabase &nbsp;·&nbsp; Email-only signup
             </p>
             <div className="hero-stats">
               <div className="hstat">
@@ -723,7 +723,7 @@ export default function HomepageScreen({ onLogin }) {
             <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-file-text"></i></div>
               <h3>Ready-to-use policy documents <span className="badge-live">Live</span></h3>
-              <p>Open any standard in the objective element scoring section and download its Policy, SOPs, or Records — ready-to-use documents personalised with your hospital's name.</p>
+              <p>Open any standard in the objective element scoring section and download its Policy, SOPs, or Records — ready-to-use documents personalised with your hospital's name. Need a Policy, SOP, Manual, or Record document customised further for your hospital? <a href="mailto:doctor@accredready.in?subject=Customised%20Policy%2FSOP%2FRecord%20documents" style={{color:"#2563EB", textDecoration:"underline"}}>Contact us</a>.</p>
             </div>
             <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-file-download"></i></div>
@@ -900,7 +900,7 @@ export default function HomepageScreen({ onLogin }) {
                 <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
                   <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
                 </button>
-                <p className="pricing-disclaimer">Free through Oct 31, 2026 (special promotion) · No credit card required · Email-only signup · Cancel anytime.</p>
+                <p className="pricing-disclaimer">Free through Oct 31, 2026 (special promotion) · Email-only signup · Cancel anytime.</p>
               </div>
             </div>
             <div className="pricing-right">
