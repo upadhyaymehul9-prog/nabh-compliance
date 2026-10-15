@@ -2713,7 +2713,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
         onMouseLeave={e => e.currentTarget.style.background="#D97706"}
         role="button" tabIndex={0} aria-label="Scroll to free tools">
         <span style={{display:"inline-block", animation:"ps-ticker 30s linear infinite", padding:"9px 0", fontSize:13, fontWeight:600, color:"#fff", fontFamily:"Figtree,sans-serif", letterSpacing:".01em"}}>
-          &nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — open its dashboard below to get started →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — open its dashboard below to get started →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span>
       </div>
       <div style={{ minHeight: "100vh", background: `linear-gradient(180deg,${HP.brandBg} 0%,${HP.white} 45%)`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Inter,system-ui,sans-serif", padding: 24 }}>
