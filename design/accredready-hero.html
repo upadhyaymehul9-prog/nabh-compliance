@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AccredReady — Hero</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { ink:'#0B1B2B', paper:'#FBFDFD', verify:'#0E8A5F', verifydark:'#0A6B4A', signal:'#D97706', alert:'#DC2626', slate:'#4B5D6E', hairline:'#DCE6E4', mint:'#EBF4F0' },
+    fontFamily: { display:['"Bricolage Grotesque"','sans-serif'], body:['"IBM Plex Sans"','sans-serif'], mono:['"IBM Plex Mono"','monospace'] }
+  }}
+}
+</script>
+<style>
+  body { background:#FBFDFD; }
+  .grid-bg {
+    background-image: linear-gradient(#0B1B2B08 1px, transparent 1px), linear-gradient(90deg, #0B1B2B08 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  /* Score ring */
+  .ring { --p:0; background: conic-gradient(#0E8A5F calc(var(--p)*1%), #EBF4F0 0); transition: --p 0.9s ease-out; }
+  @property --p { syntax:'<number>'; inherits:false; initial-value:0; }
+  /* Chapter bars */
+  .bar-fill { width:0; transition: width .7s ease-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .ring { transition:none; }
+    .bar-fill { transition:none; }
+  }
+</style>
+</head>
+<body class="font-body text-ink antialiased">
+
+<!-- ============ HERO ============ -->
+<section class="grid-bg relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <div class="grid lg:grid-cols-[55fr_45fr] gap-14 lg:gap-10 items-center">
+
+      <!-- Left: message -->
+      <div>
+        <span class="inline-flex items-center gap-2 font-mono text-[13px] tracking-wide uppercase text-verify bg-mint border border-verify/20 rounded-lg px-3 py-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-verify"></span>
+          NABH 6th Edition &middot; 639 OEs
+        </span>
+
+        <h1 class="font-display font-bold text-[40px] leading-[1.05] lg:text-[56px] tracking-[-0.02em] mt-6">
+          Walk into your NABH assessment already knowing the verdict.
+        </h1>
+
+        <p class="text-slate text-[17px] lg:text-[19px] leading-relaxed mt-6 max-w-xl">
+          Stop tracking 639 Objective Elements in spreadsheets. AccredReady scores every OE, shows exactly what to fix, and tells you Ready or Not — before the assessors do.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 mt-9">
+          <a href="https://accredready.in" class="bg-verify hover:bg-verifydark text-white font-semibold text-[16px] rounded-xl px-7 py-4 transition-all duration-150 hover:-translate-y-px hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus:ring-2 focus:ring-verify focus:ring-offset-2">
+            Start free trial
+          </a>
+          <a href="#" class="border-[1.5px] border-ink text-ink font-semibold text-[16px] rounded-xl px-7 py-[14px] hover:bg-mint transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2">
+            See a live gap report
+          </a>
+        </div>
+
+        <p class="text-slate text-[14px] mt-7 flex items-center gap-2">
+          <svg class="w-4 h-4 text-verify shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          Built by a certified NABH Quality Manager &middot; 14-day free trial &middot; ₹499/month after
+        </p>
+      </div>
+
+      <!-- Right: the live scorecard (signature element) -->
+      <div class="relative">
+        <div class="bg-white border border-hairline rounded-2xl shadow-[0_8px_30px_rgba(11,27,43,0.08)] p-6 lg:p-7">
+
+          <div class="flex items-center justify-between pb-5 border-b border-hairline">
+            <div>
+              <p class="font-mono text-[12px] uppercase tracking-wide text-slate">Assessment readiness</p>
+              <p class="font-display font-semibold text-[18px] mt-0.5">City Care Hospital</p>
+            </div>
+            <!-- Score ring -->
+            <div class="ring w-[88px] h-[88px] rounded-full grid place-items-center" id="scoreRing">
+              <div class="w-[68px] h-[68px] rounded-full bg-white grid place-items-center">
+                <span class="font-display font-bold text-[22px]" id="scoreNum">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter bars -->
+          <div class="space-y-3 pt-5" id="chapters">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[12px] text-slate w-9">AAC</span>
+              <div class="flex-1 h-2 bg-mint rounded-full overflow-hidden"><div class="bar-fill h-full bg-verify rounded-full" data-w="92%"></div></div>
+              <span class="font-mono text-[12px] text-ink w-9 text-right">92%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[12px] text-slate w-9">COP</span>
+              <div class="flex-1 h-2 bg-mint rounded-full overflow-hidden"><div class="bar-fill h-full bg-verify rounded-full" data-w="85%"></div></div>
+              <span class="font-mono text-[12px] text-ink w-9 text-right">85%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[12px] text-slate w-9">IPC</span>
+              <div class="flex-1 h-2 bg-mint rounded-full overflow-hidden"><div class="bar-fill h-full bg-signal rounded-full" data-w="64%"></div></div>
+              <span class="font-mono text-[12px] text-signal w-9 text-right">64%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[12px] text-slate w-9">FMS</span>
+              <div class="flex-1 h-2 bg-mint rounded-full overflow-hidden"><div class="bar-fill h-full bg-verify rounded-full" data-w="89%"></div></div>
+              <span class="font-mono text-[12px] text-ink w-9 text-right">89%</span>
+            </div>
+          </div>
+
+          <!-- Status chips -->
+          <div class="flex flex-wrap gap-2 pt-5">
+            <span class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium bg-mint text-verify rounded-lg px-2.5 py-1">&#9679; 512 Met</span>
+            <span class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium bg-[#FCF0DF] text-signal rounded-lg px-2.5 py-1">&#9679; 86 Partial</span>
+            <span class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium bg-[#FDEAEA] text-alert rounded-lg px-2.5 py-1">&#9679; 41 Not Met</span>
+          </div>
+
+          <!-- Verdict -->
+          <div class="mt-5 bg-ink rounded-xl px-4 py-3.5 flex items-center justify-between">
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-wide text-white/50">Verdict engine</p>
+              <p class="text-white font-semibold text-[15px]">Needs Work — 41 OEs to fix</p>
+            </div>
+            <span class="font-mono text-[12px] text-verify bg-white rounded-lg px-2.5 py-1.5 font-medium">View gaps →</span>
+          </div>
+
+        </div>
+        <!-- Soft glow behind card -->
+        <div class="absolute -z-10 inset-6 bg-verify/10 blur-3xl rounded-full" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Animate score ring + bars on load (respects reduced motion via CSS)
+  window.addEventListener('load', () => {
+    const ring = document.getElementById('scoreRing');
+    const num = document.getElementById('scoreNum');
+    requestAnimationFrame(() => { ring.style.setProperty('--p', 87); });
+    let v = 0;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { num.textContent = '87%'; }
+    else {
+      const t = setInterval(() => { v += 3; if (v >= 87) { v = 87; clearInterval(t); } num.textContent = v + '%'; }, 30);
+    }
+    document.querySelectorAll('.bar-fill').forEach((b, i) => {
+      setTimeout(() => { b.style.width = b.dataset.w; }, 200 + i * 80);
+    });
+  });
+</script>
+
+</body>
+</html>
