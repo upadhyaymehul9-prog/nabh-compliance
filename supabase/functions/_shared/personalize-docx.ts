@@ -47,6 +47,17 @@ export async function personalizeDocx(
     total += count;
   }
 
+  // JSZip adds explicit directory entries (e.g. "word/") when a loaded zip is
+  // re-saved, even though real docx/OPC packages never contain them. Word is
+  // far stricter than other viewers about zip/package conformance and can
+  // "repair" a file with these entries, which strips active content like
+  // hyperlink fields down to plain text. Delete directly from the internal
+  // files map -- zip.remove() recursively deletes everything under a folder
+  // path, which would wipe the files we just personalised.
+  for (const path of Object.keys(zip.files)) {
+    if (zip.files[path].dir) delete zip.files[path];
+  }
+
   const bytes = new Uint8Array(await zip.generateAsync({ type: "uint8array", compression: "DEFLATE" }));
   return { bytes, replacements: total };
 }
