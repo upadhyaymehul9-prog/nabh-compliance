@@ -3233,7 +3233,7 @@ function DocumentConsentModal({ open, docLabel, checked, onCheck, onCancel, onCo
   );
 }
 
-function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }) {
+function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName, onNavPricing }) {
   const [filter,setFilter]=useState("ALL"); const [chFilter,setChFilter]=useState("ALL");
   const [search,setSearch]=useState("");
   const [toast,setToast]=useState(null); const [saving,setSaving]=useState({});
@@ -3285,6 +3285,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
     const cleanHospital=(hospitalName||'Hospital').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
     setHcoDocDownloading(doc.id);
     hcoDocToastFor({type:'PREPARING',sev:'HIGH',msg:`Personalising ${doc.standard_code} for ${cleanHospital}…`});
+    let upgradeRequired=false;
     try{
       const {data:{session}}=await supabase.auth.getSession();
       if(!session)throw new Error('Your session has expired — sign in again to download documents.');
@@ -3299,7 +3300,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
       });
       if(!res.ok){
         let msg=`Download failed (HTTP ${res.status}).`;
-        try{const j=await res.json();if(j?.error)msg=j.error;}catch(_){}
+        try{const j=await res.json();if(j?.error)msg=j.error;if(j?.upgrade_required)upgradeRequired=true;}catch(_){}
         throw new Error(msg);
       }
       const blob=await res.blob();
@@ -3313,6 +3314,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
     }catch(e){
       console.error('HCO v2 document download failed:',e);
       hcoDocToastFor({type:'ERROR',sev:'CRITICAL',msg:e.message||'Could not download the document.'});
+      if(upgradeRequired&&onNavPricing)onNavPricing();
     }
     setHcoDocDownloading(null);
   };
@@ -7885,6 +7887,7 @@ export default function App() {
     const cleanHospital=(context?.hospitalName||'Hospital').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
     setShcoDocDownloading(doc.id);
     shcoPolicyToastFor({type:'PREPARING',sev:'HIGH',msg:`Personalising ${doc.standard_code} for ${cleanHospital}…`});
+    let upgradeRequired=false;
     try{
       const {data:{session}}=await supabase.auth.getSession();
       if(!session)throw new Error('Your session has expired — sign in again to download documents.');
@@ -7899,7 +7902,7 @@ export default function App() {
       });
       if(!res.ok){
         let msg=`Download failed (HTTP ${res.status}).`;
-        try{const j=await res.json();if(j?.error)msg=j.error;}catch(_){}
+        try{const j=await res.json();if(j?.error)msg=j.error;if(j?.upgrade_required)upgradeRequired=true;}catch(_){}
         throw new Error(msg);
       }
       const blob=await res.blob();
@@ -7913,6 +7916,7 @@ export default function App() {
     }catch(e){
       console.error('SHCO v2 document download failed:',e);
       shcoPolicyToastFor({type:'ERROR',sev:'CRITICAL',msg:e.message||'Could not download the document.'});
+      if(upgradeRequired)setScreen('pricing');
     }
     setShcoDocDownloading(null);
   };
@@ -8795,6 +8799,7 @@ export default function App() {
     const cleanHospital = (context?.hospitalName||'Hospital').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
     setShcoPolicyDownloading(stdCode);
     setShcoPolicyToast({type:'PREPARING',sev:'HIGH',msg:`Personalising ${stdCode} for ${cleanHospital}…`});
+    let upgradeRequired=false;
     try {
       const { data:{ session } } = await supabase.auth.getSession();
       if(!session) throw new Error('Your session has expired — sign in again to download policies.');
@@ -8810,7 +8815,7 @@ export default function App() {
       if(!res.ok){
         // the function returns {"error":"…"} on every failure path
         let msg = `Download failed (HTTP ${res.status}).`;
-        try { const j = await res.json(); if(j?.error) msg = j.error; } catch(_){}
+        try { const j = await res.json(); if(j?.error) msg = j.error; if(j?.upgrade_required) upgradeRequired=true; } catch(_){}
         throw new Error(msg);
       }
       const blob = await res.blob();
@@ -8824,6 +8829,7 @@ export default function App() {
     } catch(e){
       console.error('SHCO v2 policy download failed:',e);
       shcoPolicyToastFor({type:'ERROR',sev:'CRITICAL',msg:e.message||'Could not download the policy.'});
+      if(upgradeRequired)setScreen('pricing');
     }
     setShcoPolicyDownloading(null);
   };
@@ -14059,7 +14065,7 @@ export default function App() {
 
       <div style={{maxWidth:1200,margin:"0 auto",padding:"16px"}}>
         {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={id=>navigate({screen:id})} onExportPDF={generatePDF} pdfLoading={pdfLoading}/>}
-        {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)} hospitalName={context?.hospitalName}/>}
+        {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)} hospitalName={context?.hospitalName} onNavPricing={()=>setScreen('pricing')}/>}
         {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)} onDownloadReport={generatePDF} pdfLoading={pdfLoading}/>}
         {screen==="checklist"&&<QuickChecklistTab T={T} programme="hco" hospitalId={context?.hospitalId} assessmentId={context?.assessmentId} hospitalName={context?.hospitalName} refData={QUICK_CHECKLIST_REF}/>}
         {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={selectedProgramme}/>}
