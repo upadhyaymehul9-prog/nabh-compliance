@@ -3198,6 +3198,37 @@ function Dashboard({ decision, gaps, onNav, onExportPDF, pdfLoading }) {
   );
 }
 
+// Consent gate shown before any Policy/SOP/Record document download — the document is a
+// starting point, not a finished policy, and responsibility for what the hospital actually
+// implements from it is the hospital's own, not AccredReady's.
+function DocumentConsentModal({ open, docLabel, checked, onCheck, onCancel, onConfirm }) {
+  if (!open) return null;
+  return (
+    <div style={{position:"fixed",inset:0,zIndex:2500,background:"rgba(0,0,0,0.75)",display:"flex",alignItems:"center",justifyContent:"center",padding:16}}>
+      <div style={{background:T.panel,border:`2px solid ${T.gold}50`,borderRadius:14,padding:"28px 24px",maxWidth:440,width:"100%",boxShadow:"0 16px 64px rgba(0,0,0,0.7)"}}>
+        <div style={{fontSize:22,marginBottom:8,textAlign:"center"}}>📄</div>
+        <div style={{fontSize:17,fontWeight:800,color:T.gold,marginBottom:10,textAlign:"center"}}>Before You Download{docLabel?`: ${docLabel}`:""}</div>
+        <div style={{fontSize:13,color:T.text,lineHeight:1.7,marginBottom:16,padding:"12px 14px",background:T.panel2,borderRadius:8,border:`1px solid ${T.border}`}}>
+          This document is a ready-made starting point for your hospital — not a finished policy. Read it thoroughly, adapt it to your hospital's actual processes, and discuss it with your team before you implement it.
+        </div>
+        <label style={{display:"flex",gap:10,alignItems:"flex-start",cursor:"pointer",marginBottom:18,fontSize:12.5,color:T.muted,lineHeight:1.6}}>
+          <input type="checkbox" checked={checked} onChange={e=>onCheck(e.target.checked)} style={{marginTop:2,width:16,height:16,flexShrink:0,cursor:"pointer"}}/>
+          <span>I will read this document thoroughly, add, edit, or delete content as needed for my hospital, and discuss it with my team before implementation. Once downloaded, this document and its use is entirely my hospital's own responsibility — not AccredReady's.</span>
+        </label>
+        <div style={{display:"flex",gap:10,justifyContent:"flex-end"}}>
+          <button onClick={onCancel} style={{padding:"9px 20px",borderRadius:8,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:13,fontWeight:700,cursor:"pointer"}}>
+            Cancel
+          </button>
+          <button onClick={onConfirm} disabled={!checked}
+            style={{padding:"9px 20px",borderRadius:8,border:`1px solid ${T.gold}70`,background:checked?T.gold+"22":"transparent",color:T.gold,fontSize:13,fontWeight:800,cursor:checked?"pointer":"not-allowed",opacity:checked?1:0.4}}>
+            ⬇ Download
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }) {
   const [filter,setFilter]=useState("ALL"); const [chFilter,setChFilter]=useState("ALL");
   const [search,setSearch]=useState("");
@@ -3212,6 +3243,8 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
   const [hcoDocDownloading,setHcoDocDownloading]=useState(null);
   const [hcoDocToast,setHcoDocToast]=useState(null);
   const [hcoOpenDropdown,setHcoOpenDropdown]=useState(null);
+  const [pendingHcoDoc,setPendingHcoDoc]=useState(null);
+  const [hcoConsentChecked,setHcoConsentChecked]=useState(false);
   useEffect(()=>{
     (async()=>{
       let all=[];
@@ -3361,6 +3394,14 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
           color:hcoDocToast.sev==='CRITICAL'?T.red:hcoDocToast.sev==='SUCCESS'?T.green:T.gold}}>{hcoDocToast.type}</div>
         <div style={{fontSize:13,color:T.text,lineHeight:1.45}}>{hcoDocToast.msg}</div>
       </div>}
+      <DocumentConsentModal
+        open={!!pendingHcoDoc}
+        docLabel={pendingHcoDoc?.title}
+        checked={hcoConsentChecked}
+        onCheck={setHcoConsentChecked}
+        onCancel={()=>{setPendingHcoDoc(null);setHcoConsentChecked(false);}}
+        onConfirm={()=>{const doc=pendingHcoDoc;setPendingHcoDoc(null);setHcoConsentChecked(false);downloadHcoDocument(doc);}}
+      />
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:12}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
           <div style={{fontSize:13,color:T.text}}>Scored: <strong style={{color:T.gold}}>{scored}</strong> / {oes.length} OEs</div>
@@ -3425,7 +3466,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
                       return (
                         <div style={{flexShrink:0,display:'flex',flexWrap:'wrap',justifyContent:'flex-end',gap:4}}>
                           {hd.policy && (
-                            <button onClick={()=>downloadHcoDocument(hd.policy)} disabled={!!hcoDocDownloading}
+                            <button onClick={()=>setPendingHcoDoc(hd.policy)} disabled={!!hcoDocDownloading}
                               title={`Download the ${stdCode} policy, personalised for your hospital`}
                               style={btnStyle(hd.policy.id===hcoDocDownloading)}>
                               {hcoDocDownloading===hd.policy.id?'⏳ Preparing…':'⬇ Policy'}
@@ -3442,7 +3483,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
                                   background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,
                                   minWidth:220,maxWidth:320,boxShadow:'0 4px 14px rgba(0,0,0,0.25)',overflow:'hidden'}}>
                                   {hd.sops.map(s=>(
-                                    <button key={s.id} onClick={()=>{downloadHcoDocument(s);setHcoOpenDropdown(null);}}
+                                    <button key={s.id} onClick={()=>{setPendingHcoDoc(s);setHcoOpenDropdown(null);}}
                                       disabled={!!hcoDocDownloading}
                                       style={{display:'block',width:'100%',textAlign:'left',padding:'7px 10px',
                                         border:'none',borderBottom:`1px solid ${T.border}`,background:'transparent',
@@ -3466,7 +3507,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
                                   minWidth:220,maxWidth:320,maxHeight:260,overflowY:'auto',
                                   boxShadow:'0 4px 14px rgba(0,0,0,0.25)'}}>
                                   {hd.records.map(r=>(
-                                    <button key={r.id} onClick={()=>{downloadHcoDocument(r);setHcoOpenDropdown(null);}}
+                                    <button key={r.id} onClick={()=>{setPendingHcoDoc(r);setHcoOpenDropdown(null);}}
                                       disabled={!!hcoDocDownloading}
                                       style={{display:'block',width:'100%',textAlign:'left',padding:'7px 10px',
                                         border:'none',borderBottom:`1px solid ${T.border}`,background:'transparent',
@@ -7815,6 +7856,8 @@ export default function App() {
   const [shcoDocsByStandard, setShcoDocsByStandard] = useState({});
   const [shcoDocDownloading, setShcoDocDownloading] = useState(null);
   const [shcoDocOpenDropdown, setShcoDocOpenDropdown] = useState(null);
+  const [pendingShcoDownload, setPendingShcoDownload] = useState(null); // {run, label}
+  const [shcoConsentChecked, setShcoConsentChecked] = useState(false);
   useEffect(()=>{
     (async()=>{
       const {data,error}=await supabase.from("shco_documents")
@@ -11572,7 +11615,7 @@ export default function App() {
                     {stdAvg!==null&&<div style={{fontSize:12,fontWeight:700,color:stdAvg>=4?T.green:T.red}}>avg {stdAvg.toFixed(1)}</div>}
                     {stdLowCount>maxLowPerStd&&<div style={{fontSize:10,color:T.red}}>{stdLowCount} OE(s) ≤2</div>}
                     <div style={{fontSize:10,color:T.muted}}>{stdScoredOes.length}/{stdOes.length} scored</div>
-                    <button onClick={()=>downloadShcoV2Policy(stdCode)} disabled={!!shcoPolicyDownloading}
+                    <button onClick={()=>setPendingShcoDownload({run:()=>downloadShcoV2Policy(stdCode),label:`${stdCode} Policy`})} disabled={!!shcoPolicyDownloading}
                       title={`Download the ${stdCode} policy, personalised for your hospital`}
                       style={{marginTop:6,padding:'3px 9px',borderRadius:6,border:`1px solid ${T.gold}40`,
                         background:'transparent',color:T.gold,fontSize:10,fontWeight:700,whiteSpace:'nowrap',
@@ -11599,7 +11642,7 @@ export default function App() {
                                   background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,
                                   minWidth:220,maxWidth:320,boxShadow:'0 4px 14px rgba(0,0,0,0.25)',overflow:'hidden'}}>
                                   {sd.sops.map(s=>(
-                                    <button key={s.id} onClick={()=>{downloadShcoDocument(s);setShcoDocOpenDropdown(null);}}
+                                    <button key={s.id} onClick={()=>{setPendingShcoDownload({run:()=>downloadShcoDocument(s),label:s.title});setShcoDocOpenDropdown(null);}}
                                       disabled={!!shcoDocDownloading}
                                       style={{display:'block',width:'100%',textAlign:'left',padding:'7px 10px',
                                         border:'none',borderBottom:`1px solid ${T.border}`,background:'transparent',
@@ -11623,7 +11666,7 @@ export default function App() {
                                   minWidth:220,maxWidth:320,maxHeight:260,overflowY:'auto',
                                   boxShadow:'0 4px 14px rgba(0,0,0,0.25)'}}>
                                   {sd.records.map(r=>(
-                                    <button key={r.id} onClick={()=>{downloadShcoDocument(r);setShcoDocOpenDropdown(null);}}
+                                    <button key={r.id} onClick={()=>{setPendingShcoDownload({run:()=>downloadShcoDocument(r),label:r.title});setShcoDocOpenDropdown(null);}}
                                       disabled={!!shcoDocDownloading}
                                       style={{display:'block',width:'100%',textAlign:'left',padding:'7px 10px',
                                         border:'none',borderBottom:`1px solid ${T.border}`,background:'transparent',
@@ -14043,6 +14086,14 @@ export default function App() {
         />
       )}
       {hasTour&&tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={activeSteps.length} onNext={nextTourStep} onSkip={dismissTour} steps={activeSteps}/>}
+      <DocumentConsentModal
+        open={!!pendingShcoDownload}
+        docLabel={pendingShcoDownload?.label}
+        checked={shcoConsentChecked}
+        onCheck={setShcoConsentChecked}
+        onCancel={()=>{setPendingShcoDownload(null);setShcoConsentChecked(false);}}
+        onConfirm={()=>{const d=pendingShcoDownload;setPendingShcoDownload(null);setShcoConsentChecked(false);d.run();}}
+      />
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Accreditation Platform — Independent educational tool — Not affiliated with NABH/QCI
       </div>
