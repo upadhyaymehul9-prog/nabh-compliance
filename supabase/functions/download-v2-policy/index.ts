@@ -52,6 +52,8 @@ Deno.serve(async (req: Request) => {
     const standard_code = body?.standard_code;
     let hospital_name: string | undefined = body?.hospital_name;
     const hospital_id: string | undefined = body?.hospital_id;
+    const consent_acknowledged: boolean = body?.consent_acknowledged === true;
+    const consent_version: string | null = typeof body?.consent_version === "string" ? body.consent_version : null;
 
     if (!standard_code || typeof standard_code !== "string") {
       return Response.json({ error: "Missing standard_code" }, { status: 400, headers: CORS });
@@ -87,6 +89,7 @@ Deno.serve(async (req: Request) => {
     // ── Paywall ───────────────────────────────────────────────────────────
     const chapter = standard_code.split(".")[0];
     let callerHospitalId: string | null = null;
+    let callerUserId: string | null = null;
     if (chapter !== FREE_CHAPTER) {
       const authHeader = req.headers.get("Authorization");
       const jwt = authHeader?.replace(/^Bearer\s+/i, "");
@@ -104,6 +107,7 @@ Deno.serve(async (req: Request) => {
           { status: 401, headers: CORS },
         );
       }
+      callerUserId = userData.user.id;
 
       const { data: profile, error: profileErr } = await supabase
         .from("profiles")
@@ -139,6 +143,7 @@ Deno.serve(async (req: Request) => {
       if (jwt) {
         const { data: userData } = await supabase.auth.getUser(jwt);
         if (userData?.user) {
+          callerUserId = userData.user.id;
           const { data: profile } = await supabase
             .from("profiles")
             .select("hospital_id")
@@ -195,11 +200,14 @@ Deno.serve(async (req: Request) => {
     try {
       await supabase.from("document_downloads").insert({
         hospital_id: callerHospitalId,
+        user_id: callerUserId,
         hospital_name,
         programme: "shco",
         standard_code,
         document_type: "policy",
         document_id: null,
+        consent_acknowledged,
+        consent_version,
       });
     } catch (logErr) {
       console.error("document_downloads insert failed:", logErr);

@@ -3198,6 +3198,10 @@ function Dashboard({ decision, gaps, onNav, onExportPDF, pdfLoading }) {
   );
 }
 
+// Bump this whenever the consent checkbox text below changes, so logged downloads can be
+// tied to the exact wording the hospital agreed to at the time.
+const DOCUMENT_CONSENT_VERSION = "v1";
+
 // Consent gate shown before any Policy/SOP/Record document download — the document is a
 // starting point, not a finished policy, and responsibility for what the hospital actually
 // implements from it is the hospital's own, not AccredReady's.
@@ -3291,7 +3295,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }
           apikey: supabase.supabaseKey,
           Authorization:`Bearer ${session.access_token}`,
         },
-        body: JSON.stringify({ document_id: doc.id, hospital_name: cleanHospital }),
+        body: JSON.stringify({ document_id: doc.id, hospital_name: cleanHospital, consent_acknowledged: true, consent_version: DOCUMENT_CONSENT_VERSION }),
       });
       if(!res.ok){
         let msg=`Download failed (HTTP ${res.status}).`;
@@ -7891,7 +7895,7 @@ export default function App() {
           apikey: supabase.supabaseKey,
           Authorization:`Bearer ${session.access_token}`,
         },
-        body: JSON.stringify({ document_id: doc.id, hospital_name: cleanHospital }),
+        body: JSON.stringify({ document_id: doc.id, hospital_name: cleanHospital, consent_acknowledged: true, consent_version: DOCUMENT_CONSENT_VERSION }),
       });
       if(!res.ok){
         let msg=`Download failed (HTTP ${res.status}).`;
@@ -8801,7 +8805,7 @@ export default function App() {
           apikey: supabase.supabaseKey,
           Authorization:`Bearer ${session.access_token}`,
         },
-        body: JSON.stringify({ standard_code: stdCode, hospital_name: cleanHospital }),
+        body: JSON.stringify({ standard_code: stdCode, hospital_name: cleanHospital, consent_acknowledged: true, consent_version: DOCUMENT_CONSENT_VERSION }),
       });
       if(!res.ok){
         // the function returns {"error":"…"} on every failure path
