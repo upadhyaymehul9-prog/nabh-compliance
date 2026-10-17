@@ -2382,10 +2382,6 @@ function UpgradeWall({ daysUsed, onSignOut, user }) {
           style={{display:"block",width:"100%",padding:"14px",borderRadius:12,background:"linear-gradient(135deg,#c9a84c,#f0d070)",color:"#050e1a",fontSize:16,fontWeight:800,border:"none",cursor:subBusy?"wait":"pointer",marginBottom:12,boxShadow:"0 4px 20px rgba(201,168,76,0.4)",opacity:subBusy?0.7:1}}>
           {subBusy?"Starting…":"💳 Subscribe Now — UPI/Card"}
         </button>
-        <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
-          style={{display:"block",padding:"14px",borderRadius:12,background:"transparent",border:"1px solid #c9a84c",color:"#c9a84c",fontSize:14,fontWeight:700,textDecoration:"none",marginBottom:12}}>
-          💬 Or Get Started via WhatsApp
-        </a>
         <button onClick={onSignOut} style={{background:"transparent",border:"none",color:"#3a5870",fontSize:12,cursor:"pointer"}}>Sign out</button>
       </div>
     </div>
@@ -7422,10 +7418,6 @@ function PricingScreen({ user, isPaid, accessUntil }) {
               style={{display:"block",width:"100%",padding:"14px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,color:T.bg,fontSize:15,fontWeight:800,border:"none",cursor:subBusy?"wait":"pointer",marginBottom:12,boxShadow:`0 4px 20px ${T.gold}40`,opacity:subBusy?0.7:1}}>
               {subBusy?"Starting…":"💳 Subscribe Now — UPI/Card"}
             </button>
-            <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
-              style={{display:"block",padding:"14px",borderRadius:10,background:"transparent",border:`1px solid ${T.gold}`,color:T.gold,fontSize:14,fontWeight:700,textDecoration:"none"}}>
-              💬 Or Get Started via WhatsApp
-            </a>
           </>
         )}
       </div>
