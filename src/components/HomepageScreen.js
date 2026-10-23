@@ -52,6 +52,22 @@ export default function HomepageScreen({ onLogin }) {
     try { localStorage.setItem('hp_clinical_audit_announce_seen', '1'); } catch (e) { /* ignore */ }
   };
 
+  // Marketing pages (nabh-accreditation-software.html etc.) link their
+  // "Start free trial" / "Get started" CTAs to https://accredready.in/#signup
+  // so a visitor lands directly on the embedded sign-up card instead of
+  // just the bare homepage.
+  useEffect(() => {
+    if (window.location.hash === '#signup' || window.location.hash === '#login') {
+      const mode = window.location.hash === '#login' ? 'login' : 'signup';
+      const t = setTimeout(() => {
+        goToAuth(mode);
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      }, 150);
+      return () => clearTimeout(t);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     const header = document.getElementById('hp-header');
     if (!header) return;
