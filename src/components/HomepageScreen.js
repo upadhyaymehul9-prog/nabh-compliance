@@ -719,8 +719,8 @@ export default function HomepageScreen({ onLogin }) {
             </div>
             <div className="fcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-robot"></i></div>
-              <h3>AI assistant</h3>
-              <p>Ask questions and get answers grounded strictly in the actual standards — no guesswork.</p>
+              <h3>AI assistant <span className="badge-live">SHCO module</span></h3>
+              <p>Ask questions and get answers grounded strictly in the actual standards — no guesswork. Live for SHCO today; HCO Full coming soon.</p>
             </div>
           </div>
         </div>
@@ -951,7 +951,7 @@ export default function HomepageScreen({ onLogin }) {
                 <li><i className="ti ti-check" aria-hidden="true"></i> PDF gap &amp; CAPA reports</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> Policy, SOPs &amp; Records document downloads</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> Full-year scheduling calendar</li>
-                <li><i className="ti ti-check" aria-hidden="true"></i> AI assistant grounded in the standards</li>
+                <li><i className="ti ti-check" aria-hidden="true"></i> AI assistant grounded in the standards (SHCO today, HCO coming soon)</li>
               </ul>
             </div>
           </div>
