@@ -779,11 +779,6 @@ export default function HomepageScreen({ onLogin }) {
               <p>Set your entire year of committee meetings and mock drills on a date calendar — planned, tracked, and ready to show the assessor.</p>
             </div>
             <div className="bcard">
-              <div className="ic" aria-hidden="true"><i className="ti ti-wand"></i></div>
-              <h3>AI document generation <span className="badge-soon">Coming soon</span></h3>
-              <p>Generate the required NABH documents right from your dashboard — drafted for you, ready to adapt.</p>
-            </div>
-            <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-clipboard-check"></i></div>
               <h3>Clinical Audit module <span className="badge-live">New</span></h3>
               <p>Learn the clinical audit method from scratch, work through fully explained examples, and track your own hospital's audits — a standalone module available alongside HCO, SHCO and ELC once you sign in.</p>
