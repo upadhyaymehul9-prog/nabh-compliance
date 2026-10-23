@@ -758,7 +758,7 @@ export default function HomepageScreen({ onLogin }) {
       <section className="band">
         <div className="wrap">
           <div className="sec-head on-dark">
-            <span className="eyebrow on-dark"><i className="ti ti-sparkles" aria-hidden="true"></i> AI-supported workflow</span>
+            <span className="eyebrow on-dark"><i className="ti ti-files" aria-hidden="true"></i> Real deliverables</span>
             <h2>Not just scoring — <em className="si">real deliverables.</em></h2>
             <p>AccredReady turns your self-assessment into documents you can hand to your MD and your assessor.</p>
           </div>
