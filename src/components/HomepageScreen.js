@@ -5,6 +5,7 @@ const YOUTUBE_PROMO_ID = "de3TKt7LfT8";
 const YOUTUBE_PROMO_URL = `https://www.youtube.com/watch?v=${YOUTUBE_PROMO_ID}`;
 const FOUNDER_LINKEDIN_URL = "https://www.linkedin.com/in/dr-mehul-upadhyay-039a07197";
 const COMPANY_LINKEDIN_URL = "https://www.linkedin.com/company/135244094/";
+const CLINICAL_AUDIT_WEBINAR_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScYKHXEc-E-55y6InJb2XLOOoStZLVrBWNpqAovSfG4KEnEuQ/viewform";
 
 export default function HomepageScreen({ onLogin }) {
   const [openPersons, setOpenPersons] = useState([false, false, false]);
@@ -516,6 +517,32 @@ export default function HomepageScreen({ onLogin }) {
         <div className="hp-ticker-inner">
           &nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — available alongside your other NABH modules once you sign in. →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — available alongside your other NABH modules once you sign in. →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
+      </div>
+
+      {/* WEBINAR BANNER — Clinical Audit live webinar, 15 Nov 2026 */}
+      <div
+        onClick={() => window.open(CLINICAL_AUDIT_WEBINAR_FORM_URL, "_blank", "noopener,noreferrer")}
+        role="button" tabIndex={0} aria-label="Register for the Clinical Audit live webinar on 15 November 2026"
+        style={{
+          background: "#0B2142",
+          color: "#fff",
+          cursor: "pointer",
+          padding: "10px 16px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 10,
+          flexWrap: "wrap",
+          fontFamily: "'Figtree', sans-serif",
+          fontSize: 13,
+          fontWeight: 600,
+          textAlign: "center",
+          borderBottom: "1px solid rgba(255,255,255,.12)",
+        }}
+      >
+        <span style={{ background: "#C8102E", padding: "3px 10px", borderRadius: 100, fontSize: 10, fontWeight: 700, letterSpacing: ".05em" }}>LIVE WEBINAR</span>
+        <span>Clinical Audit: From Data to Better Patient Care — 15 Nov 2026 (Sun), 10 AM IST, with Dr. D. Rakesh Khanna, MD(AM) — ₹599 early-bird (first 10)</span>
+        <span style={{ textDecoration: "underline", fontWeight: 700 }}>Register now →</span>
       </div>
 
       {/* NAV */}
