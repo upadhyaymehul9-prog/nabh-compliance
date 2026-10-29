@@ -1,0 +1,1079 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>OT Complex Walkthrough</title>
+<style>
+/* Layout concept: fixed left rail of numbered scenes (collapses to a top strip on
+   phones) + a single animated stage on the right, with a video-style play/pause
+   transport bar that auto-advances scenes like a documentary. Steps read like
+   architectural plates in a government blueprint set — ink-navy linework, zone
+   colours used only where the source document itself colour-codes zones
+   (Protective/Clean/Sterile/Disposal); chapter-break scenes switch to a constant
+   dark "title card" treatment (film letterboxing convention) regardless of theme. */
+:root{
+  --paper:#f3efe6; --ink:#1c2230; --ink-soft:#4a5064; --line:#cdc4ad;
+  --accent:#9a6b2f; --accent-ink:#5c3f1a;
+  --protective:#b4532e; --clean:#2f7a63; --sterile:#2b4e8c; --disposal:#5a5f6e;
+  --card:#fffdf8; --shadow:0 1px 0 rgba(28,34,48,.06);
+  --filmbg:#15161b; --filmfg:#f3ede0;
+  --font-display:'Archivo',Arial,sans-serif;
+  --font-body:'Source Serif 4',Georgia,serif;
+  --font-mono:'IBM Plex Mono',Menlo,monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181f; --ink:#ece7da; --ink-soft:#aba99c; --line:#363b47;
+    --accent:#d3a35f; --accent-ink:#f0cf93;
+    --protective:#e07a52; --clean:#4fab8f; --sterile:#7fa0e0; --disposal:#9aa0b3;
+    --card:#1c2029; --shadow:0 1px 0 rgba(0,0,0,.3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15181f; --ink:#ece7da; --ink-soft:#aba99c; --line:#363b47;
+  --accent:#d3a35f; --accent-ink:#f0cf93;
+  --protective:#e07a52; --clean:#4fab8f; --sterile:#7fa0e0; --disposal:#9aa0b3;
+  --card:#1c2029; --shadow:0 1px 0 rgba(0,0,0,.3);
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink); font-family:var(--font-body);
+  padding-left:max(0px, env(safe-area-inset-left,0px));
+  padding-right:max(0px, env(safe-area-inset-right,0px));
+}
+h1,h2,h3,.disp{font-family:var(--font-display); text-wrap:balance}
+.mono{font-family:var(--font-mono)}
+::selection{background:var(--accent); color:var(--card)}
+a{color:var(--sterile)}
+
+#app{display:flex; min-height:100vh; height:100%}
+
+/* ---------- Rail ---------- */
+#rail{
+  width:300px; flex:0 0 300px; border-right:1px solid var(--line);
+  padding:28px 20px; display:flex; flex-direction:column; gap:18px;
+  position:sticky; top:0; align-self:flex-start; height:100vh; overflow-y:auto;
+}
+.brand{display:flex; flex-direction:column; gap:4px; padding-bottom:14px; border-bottom:1px solid var(--line)}
+.brand .kicker{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent)}
+.brand h1{font-size:20px; margin:0; line-height:1.15}
+.brand .sub{font-size:12px; color:var(--ink-soft); font-family:var(--font-mono)}
+
+#steplist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px; flex:1; overflow-y:auto}
+#steplist li{display:flex; align-items:center; gap:10px; padding:8px 8px; border-radius:7px; cursor:pointer; font-size:13px; color:var(--ink-soft); transition:background .15s}
+#steplist li:hover{background:rgba(154,107,47,.1)}
+#steplist li.active{background:rgba(154,107,47,.16); color:var(--ink); font-weight:600}
+#steplist li.chapter{color:var(--accent-ink); font-family:var(--font-mono); font-size:11.5px; letter-spacing:.04em; margin-top:8px}
+#steplist li.chapter .dot{background:var(--accent)}
+#steplist li .n{font-family:var(--font-mono); font-size:11px; width:22px; flex:0 0 22px; color:var(--accent); text-align:right}
+#steplist li .dot{width:7px; height:7px; border-radius:50%; flex:0 0 7px; background:var(--line)}
+#steplist li.active .dot{background:var(--accent)}
+#steplist .actlabel{font-family:var(--font-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); opacity:.6; margin:10px 0 2px 2px}
+
+.railfoot{font-size:11px; color:var(--ink-soft); font-family:var(--font-mono); border-top:1px solid var(--line); padding-top:12px; line-height:1.6}
+
+/* ---------- Mobile top bar ---------- */
+#topbar{display:none; position:sticky; top:env(safe-area-inset-top,0px); z-index:20; background:var(--paper); border-bottom:1px solid var(--line); padding:12px max(16px,env(safe-area-inset-left,0px)) 10px max(16px,env(safe-area-inset-left,0px));}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--paper)}
+#topbar .row{display:flex; align-items:center; justify-content:space-between; gap:10px}
+#topbar .kicker{font-family:var(--font-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+#topbar h2{font-size:15px; margin:2px 0 0; font-family:var(--font-display)}
+#menubtn{font-family:var(--font-mono); font-size:11px; border:1px solid var(--line); background:var(--card); color:var(--ink); padding:7px 10px; border-radius:7px}
+#progwrap{height:3px; background:var(--line); border-radius:2px; margin-top:10px; overflow:hidden}
+#progbar{height:100%; background:var(--accent); width:0%; transition:width .4s ease}
+
+#sheet{display:none; position:fixed; inset:0; background:rgba(0,0,0,.4); z-index:30}
+#sheet .panel{position:absolute; top:0; left:0; bottom:0; width:86%; max-width:320px; background:var(--paper); padding:20px; overflow-y:auto; padding-top:max(20px, env(safe-area-inset-top,0px))}
+
+/* ---------- Stage ---------- */
+#stage{flex:1; min-width:0; display:flex; flex-direction:column; align-items:center; padding:48px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px));}
+#deskprog{width:100%; max-width:760px; height:3px; background:var(--line); border-radius:2px; margin-bottom:34px; overflow:hidden}
+#deskprog i{display:block; height:100%; background:var(--accent); width:0%; transition:width .4s ease}
+
+.panel-card{width:100%; max-width:760px; transition:opacity .18s ease, transform .18s ease}
+.panel-card.leaving{opacity:0; transform:translateY(6px)}
+.eyebrow{font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:8px}
+.panel-card h2{font-size:clamp(26px,4vw,38px); margin:8px 0 6px; line-height:1.08}
+.lede{font-size:17px; color:var(--ink-soft); line-height:1.55; max-width:62ch; margin:0 0 26px}
+.panel-card .body p{font-size:16px; line-height:1.68; max-width:66ch}
+.panel-card .body p + p{margin-top:14px}
+
+.block{animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+.block:nth-child(1){animation-delay:.02s}.block:nth-child(2){animation-delay:.08s}
+.block:nth-child(3){animation-delay:.14s}.block:nth-child(4){animation-delay:.2s}
+.block:nth-child(5){animation-delay:.26s}.block:nth-child(6){animation-delay:.32s}
+.block:nth-child(7){animation-delay:.38s}.block:nth-child(8){animation-delay:.44s}
+@keyframes rise{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion: reduce){.block{animation:none}}
+
+.stat-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; margin:22px 0}
+.stat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 14px; box-shadow:var(--shadow)}
+.stat .v{font-family:var(--font-mono); font-size:20px; color:var(--accent-ink); font-weight:600}
+.stat .l{font-size:11.5px; color:var(--ink-soft); margin-top:3px; line-height:1.3}
+
+ul.spec, ol.spec{margin:14px 0 0; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:9px; max-width:66ch}
+ul.spec li, ol.spec li{display:flex; gap:10px; font-size:15px; line-height:1.55; align-items:flex-start}
+ul.spec li::before{content:"—"; color:var(--accent); flex:0 0 auto}
+ol.spec{counter-reset:s}
+ol.spec li::before{counter-increment:s; content:counter(s); font-family:var(--font-mono); font-size:12px; color:var(--card); background:var(--accent); width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex:0 0 20px; margin-top:1px}
+
+.callout{border-left:3px solid var(--accent); background:rgba(154,107,47,.08); padding:14px 16px; border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.6; margin-top:20px; max-width:62ch}
+.callout b{color:var(--accent-ink)}
+
+.cols2{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px}
+@media (max-width:640px){.cols2{grid-template-columns:1fr}}
+.card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; box-shadow:var(--shadow)}
+.card h4{font-family:var(--font-display); font-size:14px; margin:0 0 8px; display:flex; align-items:center; gap:8px}
+.rolewrap{display:flex; flex-direction:column; gap:12px; margin-top:18px}
+
+/* zone chip + room chips */
+.zchip{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; padding:3px 8px; border-radius:20px; color:#fff; display:inline-block}
+.roomchips{display:flex; flex-wrap:wrap; gap:7px; margin-top:6px}
+.roomchip{font-family:var(--font-mono); font-size:11px; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:5px 11px; color:var(--ink-soft); line-height:1.3}
+
+/* ---------- Zone flow diagram ---------- */
+.flowwrap{margin-top:22px; overflow-x:auto}
+.flow{display:flex; gap:6px; min-width:620px; align-items:stretch}
+.zone{flex:1; border-radius:12px; padding:14px 12px 16px; position:relative; border:1px solid var(--line); background:var(--card)}
+.zone .ztag{font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:#fff; padding:2px 7px; border-radius:5px; display:inline-block; margin-bottom:8px}
+.zone h5{font-family:var(--font-display); font-size:14px; margin:0 0 6px}
+.zone p{font-size:11.5px; color:var(--ink-soft); line-height:1.5; margin:0}
+.zone.protective .ztag{background:var(--protective)}
+.zone.clean .ztag{background:var(--clean)}
+.zone.sterile .ztag{background:var(--sterile)}
+.zone.disposal .ztag{background:var(--disposal)}
+.arrow{align-self:center; font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); padding:0 2px; white-space:nowrap}
+.token{position:absolute; top:-11px; left:-11px; width:22px; height:22px; border-radius:50%; background:var(--accent); box-shadow:0 2px 6px rgba(0,0,0,.25); display:flex; align-items:center; justify-content:center; font-size:11px; transition:left 1.1s cubic-bezier(.3,.7,.2,1);}
+.flowstage{position:relative}
+.flowlegend{display:flex; flex-wrap:wrap; gap:14px; margin-top:16px; font-size:12px; font-family:var(--font-mono); color:var(--ink-soft)}
+.flowlegend b{color:var(--ink)}
+#replaybtn{margin-top:14px; font-family:var(--font-mono); font-size:11.5px; border:1px solid var(--line); background:var(--card); padding:7px 12px; border-radius:7px; cursor:pointer; color:var(--ink)}
+
+/* checklist (surgical safety) */
+.checklist-cols{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:20px}
+@media (max-width:760px){.checklist-cols{grid-template-columns:1fr}}
+.cl{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; opacity:0; transform:translateY(10px); transition:all .5s cubic-bezier(.2,.8,.2,1)}
+.cl.show{opacity:1; transform:none}
+.cl h4{font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; margin:0 0 3px; color:var(--accent-ink)}
+.cl .when{font-size:11px; color:var(--ink-soft); margin-bottom:10px}
+.cl ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px}
+.cl li{font-size:13px; display:flex; gap:8px; align-items:flex-start; line-height:1.4; opacity:0; transform:translateX(-6px); transition:all .35s ease}
+.cl.show li{opacity:1; transform:none}
+.cl li .box{width:13px; height:13px; border:1.5px solid var(--ink-soft); border-radius:3px; flex:0 0 13px; margin-top:2px}
+
+/* ---------- Chapter / title-card scenes ---------- */
+.actcard{background:var(--filmbg); color:var(--filmfg); border-radius:18px; padding:72px 36px; text-align:center; position:relative; overflow:hidden; min-height:48vh; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.actcard .roman{font-family:var(--font-display); font-weight:800; font-size:clamp(90px,16vw,160px); line-height:1; letter-spacing:.01em; opacity:.15; position:absolute; top:50%; left:50%; transform:translate(-50%,-52%); color:var(--actcolor,var(--accent)); pointer-events:none}
+.actcard .rule{width:56px; height:3px; border-radius:2px; background:var(--actcolor,var(--accent)); margin:0 auto 22px; position:relative}
+.actcard .actzones{display:flex; gap:6px; margin:0 auto 24px; position:relative}
+.actcard .actzones span{width:28px; height:4px; border-radius:3px}
+.actcard .kicker3{font-family:var(--font-mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--actcolor,var(--accent)); margin-bottom:14px; position:relative}
+.actcard h2{font-size:clamp(28px,5vw,46px); margin:0 0 14px; position:relative; color:var(--filmfg)}
+.actcard p{font-size:15.5px; color:rgba(243,237,224,.72); max-width:46ch; margin:0 auto; line-height:1.62; position:relative}
+
+/* ---------- Transport / player ---------- */
+.navrow{display:flex; justify-content:space-between; align-items:center; margin-top:40px; max-width:760px; width:100%; gap:12px}
+.navbtn{font-family:var(--font-mono); font-size:13px; border:1px solid var(--line); background:var(--card); color:var(--ink); padding:11px 16px; border-radius:9px; cursor:pointer; display:flex; align-items:center; gap:8px; flex:0 0 auto}
+.navbtn:disabled{opacity:.35; cursor:default}
+.navbtn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+.navbtn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.stepof{font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); white-space:nowrap}
+#player{display:flex; align-items:center; gap:10px; flex:1; min-width:0; justify-content:center}
+#playbtn{width:36px; height:36px; border-radius:50%; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:12px; flex:0 0 36px; padding:0}
+#playbtn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+#playbtn.playing{background:var(--accent); border-color:var(--accent); color:#fff}
+#scenewrap{flex:1; max-width:220px; min-width:40px; height:4px; background:var(--line); border-radius:3px; overflow:hidden}
+#scenebar{height:100%; width:0%; background:var(--accent); border-radius:3px}
+@media (max-width:520px){
+  .navrow{flex-wrap:wrap; row-gap:14px}
+  #player{order:3; width:100%}
+}
+
+table.plain{width:100%; border-collapse:collapse; margin-top:16px; font-size:13.5px}
+table.plain th, table.plain td{text-align:left; padding:7px 10px; border-bottom:1px solid var(--line)}
+table.plain th{font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft)}
+.tablewrap{overflow-x:auto; max-width:66ch}
+
+/* cover step */
+.cover{display:flex; flex-direction:column; justify-content:center; min-height:70vh}
+.cover .kicker2{font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:14px}
+.cover h2{font-size:clamp(34px,6vw,58px); margin:0 0 14px; line-height:1.04}
+.cover .meta{font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); margin-top:28px; display:flex; gap:22px; flex-wrap:wrap}
+.coverzones{display:flex; gap:8px; margin-top:30px}
+.coverzones span{flex:1; height:6px; border-radius:4px}
+.coverhint{margin-top:18px; font-size:13.5px; color:var(--ink-soft)}
+
+@media (max-width:860px){
+  #rail{display:none}
+  #topbar{display:block}
+  #stage{padding-top:26px}
+}
+</style>
+
+<div id="app">
+  <aside id="rail">
+    <div class="brand">
+      <div class="kicker">Govt. of India · MoHFW / NHM · March 2022</div>
+      <h1>Operation Theatre Complex</h1>
+      <div class="sub">Operational Guidelines — a guided film</div>
+    </div>
+    <ul id="steplist"></ul>
+    <div class="railfoot">Sources: Operational Guidelines for Operation Theatre Complex (NHM, 2022) and Guidelines for HVAC in Operation Theatre (QAI CAHSC 055, 2024). This walkthrough condenses both documents for orientation — refer to the full PDFs for compliance use.</div>
+  </aside>
+
+  <div id="topbar">
+    <div class="row">
+      <div>
+        <div class="kicker">MoHFW / NHM</div>
+        <h2 id="mobtitle">Cover</h2>
+      </div>
+      <button id="menubtn" type="button">Scenes ≡</button>
+    </div>
+    <div id="progwrap"><div id="progbar"></div></div>
+  </div>
+
+  <div id="sheet">
+    <div class="panel">
+      <ul id="steplist2" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px;"></ul>
+    </div>
+  </div>
+
+  <main id="stage">
+    <div id="deskprog"><i id="deskprogbar"></i></div>
+    <div class="panel-card" id="panelhost"></div>
+    <div class="navrow">
+      <button class="navbtn" id="prevbtn" type="button">← Prev</button>
+      <div id="player">
+        <button id="playbtn" type="button" aria-label="Play" title="Play / pause (space)">▶</button>
+        <div id="scenewrap"><div id="scenebar"></div></div>
+        <span class="stepof" id="stepof"></span>
+      </div>
+      <button class="navbtn primary" id="nextbtn" type="button">Next →</button>
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+function el(tag, cls, html){
+  var e = document.createElement(tag);
+  if(cls) e.className = cls;
+  if(html !== undefined) e.innerHTML = html;
+  return e;
+}
+function block(parent, html){
+  var d = el('div','block', html);
+  parent.appendChild(d);
+  return d;
+}
+function statRow(parent, items){
+  var row = el('div','stat-row block');
+  items.forEach(function(it){
+    var s = el('div','stat','<div class="v">'+it[0]+'</div><div class="l">'+it[1]+'</div>');
+    row.appendChild(s);
+  });
+  parent.appendChild(row);
+}
+function eyebrow(host, text){
+  host.appendChild(el('div','eyebrow block', '<span>'+text+'</span>'));
+}
+function roomChips(host, label, rooms){
+  var wrap = el('div','block');
+  var html = '<h3 style="margin-bottom:6px">'+label+'</h3><div class="roomchips">';
+  rooms.forEach(function(r){ html += '<span class="roomchip">'+r+'</span>'; });
+  html += '</div>';
+  wrap.innerHTML = html;
+  host.appendChild(wrap);
+}
+function renderActCard(host, o){
+  var card = el('div','actcard block');
+  card.style.setProperty('--actcolor', o.colorVar ? 'var('+o.colorVar+')' : 'var(--accent)');
+  var inner = '<div class="roman">'+o.roman+'</div>';
+  if(o.zones){
+    inner += '<div class="actzones"><span style="background:var(--protective)"></span><span style="background:var(--clean)"></span><span style="background:var(--sterile)"></span><span style="background:var(--disposal)"></span></div>';
+  } else {
+    inner += '<div class="rule"></div>';
+  }
+  inner += '<div class="kicker3">Chapter '+o.roman+'</div><h2>'+o.title+'</h2><p>'+o.blurb+'</p>';
+  card.innerHTML = inner;
+  host.appendChild(card);
+}
+
+var STEPS = [
+  {title:"Cover", render:renderCover},
+
+  {title:"Act I — Why this guideline", render:function(h){ renderActCard(h,{roman:'I', title:'Why this guideline exists', blurb:'Before the blueprint, the reasoning — what’s broken in a typical OT complex, and the five objectives this guideline sets out to fix.', colorVar:'--accent'}); }},
+  {act:"Why this guideline", title:"Background", render:renderBackground},
+  {act:"Why this guideline", title:"What is an OT Complex", render:renderIntro},
+  {act:"Why this guideline", title:"Objectives & principles", render:renderObjectives},
+
+  {title:"Act II — The journey through the OT", render:function(h){ renderActCard(h,{roman:'II', title:'The journey through the OT', blurb:'Follow a patient and a surgical team step by step — Protective, Clean, Sterile, Disposal — the same path, the same direction, every single time.', zones:true}); }},
+  {act:"The journey through the OT", title:"The four zones", render:renderZonesOverview},
+  {act:"The journey through the OT", title:"Protective Zone", render:renderProtective},
+  {act:"The journey through the OT", title:"Clean Zone", render:renderClean},
+  {act:"The journey through the OT", title:"Sterile Zone", render:renderSterile},
+  {act:"The journey through the OT", title:"Disposal Zone", render:renderDisposal},
+
+  {title:"Act III — Building it right", render:function(h){ renderActCard(h,{roman:'III', title:'Building it right', blurb:'Siting, room dimensions, the air that does the real work, and the power, gas, fire and water systems underneath it all.', colorVar:'--sterile'}); }},
+  {act:"Building it right", title:"Location & layout", render:renderLayout},
+  {act:"Building it right", title:"Room specifications", render:renderRoomSpec},
+  {act:"Building it right", title:"Air handling (HVAC)", render:renderHVAC},
+  {act:"Building it right", title:"QAI HVAC standard", render:renderQAIHVAC},
+  {act:"Building it right", title:"Power, gas, fire, water", render:renderUtilities},
+
+  {title:"Act IV — Running it", render:function(h){ renderActCard(h,{roman:'IV', title:'Running it', blurb:'Staffing, training, what gets measured, how it stays clean, how infection is watched for, and the checklist run before every single surgery.', colorVar:'--clean'}); }},
+  {act:"Running it", title:"Staffing & training", render:renderHR},
+  {act:"Running it", title:"Quality policy", render:renderQuality},
+  {act:"Running it", title:"Cleaning & fogging", render:renderCleaning},
+  {act:"Running it", title:"Surveillance & monitoring", render:renderSurveillance},
+  {act:"Running it", title:"WHO Surgical Safety Checklist", render:renderChecklist},
+
+  {title:"Act V — Reference", render:function(h){ renderActCard(h,{roman:'V', title:'Reference', blurb:'The annexures, the registers, the full equipment lists — and where both source documents came from.', colorVar:'--accent'}); }},
+  {act:"Reference", title:"Roles & responsibilities", render:renderRoles},
+  {act:"Reference", title:"Equipment by specialty", render:renderEquipment},
+  {act:"Reference", title:"The full OT audit checklist", render:renderOTChecklist},
+  {act:"Reference", title:"Annexures & credits", render:renderAnnexures}
+];
+
+var current = 0;
+var playing = false;
+var sceneTimer = null;
+
+function buildRail(){
+  var lists = [document.getElementById('steplist'), document.getElementById('steplist2')];
+  lists.forEach(function(list){
+    list.innerHTML = "";
+    var lastAct = null;
+    STEPS.forEach(function(s, i){
+      if(s.act && s.act !== lastAct){
+        var lab = el('div','actlabel', s.act);
+        list.appendChild(lab);
+        lastAct = s.act;
+      }
+      var isChapter = !s.act;
+      var li = el('li', isChapter ? 'chapter' : '', '<span class="n">'+String(i).padStart(2,'0')+'</span><span class="dot"></span><span>'+s.title+'</span>');
+      li.dataset.i = i;
+      li.addEventListener('click', function(){ goTo(i); closeSheet(); });
+      list.appendChild(li);
+    });
+  });
+}
+
+function markActive(){
+  document.querySelectorAll('#steplist li, #steplist2 li').forEach(function(li){
+    li.classList.toggle('active', Number(li.dataset.i) === current);
+  });
+  var pct = (current/(STEPS.length-1))*100;
+  document.getElementById('progbar').style.width = pct+'%';
+  document.getElementById('deskprogbar').style.width = pct+'%';
+  document.getElementById('mobtitle').textContent = STEPS[current].title;
+  document.getElementById('stepof').textContent = 'Scene '+(current+1)+' of '+STEPS.length;
+  document.getElementById('prevbtn').disabled = current===0;
+  document.getElementById('nextbtn').textContent = current===STEPS.length-1 ? 'Restart ↺' : 'Next →';
+}
+
+function goTo(i){
+  var nextIndex = Math.max(0, Math.min(STEPS.length-1, i));
+  var host = document.getElementById('panelhost');
+  host.classList.add('leaving');
+  setTimeout(function(){
+    current = nextIndex;
+    host.innerHTML = "";
+    STEPS[current].render(host);
+    host.classList.remove('leaving');
+    markActive();
+    try{ window.scrollTo({top:0, behavior:'auto'}); }catch(e){ window.scrollTo(0,0); }
+    var stage = document.getElementById('stage');
+    if(stage) stage.scrollTop = 0;
+    try{ localStorage.setItem('ot-guide-step', String(current)); }catch(e){}
+    if(playing) startSceneTimer(); else resetSceneBar();
+  }, 170);
+}
+
+function resetSceneBar(){
+  var bar = document.getElementById('scenebar');
+  bar.style.transition = 'none';
+  bar.style.width = '0%';
+}
+
+function wordDuration(host){
+  var text = (host.textContent || '').trim();
+  var words = text ? text.split(/\s+/).length : 0;
+  return Math.max(6000, Math.min(26000, words * 230));
+}
+
+function clearSceneTimer(){
+  if(sceneTimer){ clearTimeout(sceneTimer); sceneTimer = null; }
+}
+
+function startSceneTimer(){
+  clearSceneTimer();
+  var bar = document.getElementById('scenebar');
+  resetSceneBar();
+  void bar.offsetWidth;
+  var dur = wordDuration(document.getElementById('panelhost'));
+  requestAnimationFrame(function(){
+    bar.style.transition = 'width '+dur+'ms linear';
+    bar.style.width = '100%';
+  });
+  sceneTimer = setTimeout(function(){
+    if(!playing) return;
+    if(current === STEPS.length-1){ setPlaying(false); return; }
+    goTo(current+1);
+  }, dur);
+}
+
+function setPlaying(v){
+  playing = v;
+  var btn = document.getElementById('playbtn');
+  btn.textContent = playing ? '❚❚' : '▶';
+  btn.classList.toggle('playing', playing);
+  btn.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+  if(playing){ startSceneTimer(); } else { clearSceneTimer(); var bar=document.getElementById('scenebar'); bar.style.transition='width .2s ease'; bar.style.width='0%'; }
+}
+
+document.getElementById('playbtn').addEventListener('click', function(){ setPlaying(!playing); });
+
+document.getElementById('prevbtn').addEventListener('click', function(){ goTo(current-1); });
+document.getElementById('nextbtn').addEventListener('click', function(){
+  if(current === STEPS.length-1){ goTo(0); } else { goTo(current+1); }
+});
+document.addEventListener('keydown', function(e){
+  if(e.key==='ArrowRight') goTo(current+1);
+  if(e.key==='ArrowLeft') goTo(current-1);
+  if(e.key===' '){ e.preventDefault(); setPlaying(!playing); }
+});
+
+document.getElementById('menubtn').addEventListener('click', function(){
+  document.getElementById('sheet').style.display = 'block';
+});
+document.getElementById('sheet').addEventListener('click', function(e){
+  if(e.target.id==='sheet') closeSheet();
+});
+function closeSheet(){ document.getElementById('sheet').style.display = 'none'; }
+
+/* touch swipe on stage */
+(function(){
+  var sx=null, sy=null;
+  var stage = document.getElementById('stage');
+  stage.addEventListener('touchstart', function(e){ sx=e.touches[0].clientX; sy=e.touches[0].clientY; }, {passive:true});
+  stage.addEventListener('touchend', function(e){
+    if(sx===null) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    var dy = e.changedTouches[0].clientY - sy;
+    if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)*1.5){
+      if(dx<0) goTo(current+1); else goTo(current-1);
+    }
+    sx=null; sy=null;
+  }, {passive:true});
+})();
+
+/* ============ scene renderers ============ */
+
+function renderCover(host){
+  var c = el('div','cover');
+  c.innerHTML =
+    '<div class="kicker2">A guided film through the guideline</div>'+
+    '<h2 class="block">Building &amp; running an<br>Operation Theatre Complex</h2>'+
+    '<p class="lede block">India\'s National Health Mission guideline on how a district-hospital OT complex should be planned, built, staffed, cleaned and run &mdash; condensed from two official documents into one guided path: background, the four-zone journey a patient and a surgical team actually walk, the infrastructure specs, and the checklists that keep it safe.</p>'+
+    '<div class="coverzones block"><span style="background:var(--protective)"></span><span style="background:var(--clean)"></span><span style="background:var(--sterile)"></span><span style="background:var(--disposal)"></span></div>'+
+    '<div class="meta block"><span>28 scenes, 5 chapters</span><span>Protective → Clean → Sterile → Disposal</span><span>MoHFW/NHM 2022 + QAI CAHSC 055, 2024</span></div>'+
+    '<p class="coverhint block">▶ Press play in the bar below to let it run on its own, chapter by chapter &mdash; or use the rail (or ← →) to move at your own pace.</p>';
+  host.appendChild(c);
+}
+
+function renderBackground(host){
+  eyebrow(host,'01 · Why this guideline');
+  host.appendChild(el('h2','block','Infection risk starts with a flawed room'));
+  host.appendChild(el('p','lede block','Surgical services are a core function of every district hospital, but post-operative infection remains a serious, preventable risk in the developing world &mdash; and a lot of that risk is architectural, not clinical.'));
+  statRow(host,[
+    ['4,520','surgical cases per 100,000 population per year, South Asia'],
+    ['25%+','of patients in developing-world hospitals acquire a healthcare-associated infection'],
+    ['~124/day','surgeries at a typical district hospital\'s public facility']
+  ]);
+  host.appendChild(el('h3','block','Five recurring gaps'));
+  var ul = el('ul','spec block');
+  ['No real zoning &mdash; areas blur into one another instead of forming a controlled pressure gradient',
+   'No defined sterilizing protocol for instruments and linen',
+   'No unidirectional movement of people, patients or material',
+   'Weak linkage to the Central Sterile Supply Department (CSSD)',
+   'Poor segregation of waste at the point it is generated'
+  ].forEach(function(t){ ul.appendChild(el('li','',t)); });
+  var b = el('div','body block');
+  b.innerHTML = '<p>Those five gaps &mdash; zoning, sterilizing, movement, CSSD linkage, waste &mdash; are the thread that runs through everything that follows in this film.</p>';
+  host.appendChild(b);
+}
+
+function renderIntro(host){
+  eyebrow(host,'02 · Why this guideline');
+  host.appendChild(el('h2','block','Three things make an OT complex'));
+  host.appendChild(el('p','lede block','An Operation Theatre Complex is not just the operating room. It is infrastructure, human resources and protocols, working together as one unit.'));
+  var cols = el('div','cols2 block');
+  cols.innerHTML =
+  '<div class="card"><h4>How many OTs?</h4><p style="font-size:13.5px;color:var(--ink-soft);line-height:1.6">Set by IPHS 2022 against bed strength &mdash; e.g. a 200-bed hospital needs 4 regular OTs plus 1 dedicated Emergency OT.</p></div>'+
+  '<div class="card"><h4>Who it\'s written for</h4><p style="font-size:13.5px;color:var(--ink-soft);line-height:1.6">Architects and planners, hospital administrators, surgeons and OT nursing officers &mdash; scoped to secondary care, usable as a reference at tertiary level too.</p></div>';
+  host.appendChild(cols);
+  var b = el('div','body block');
+  b.innerHTML = '<p>Design principles in the guideline centre on <b>healing architecture</b>, a <b>ductless air-handling approach</b>, and <b>zone-based differential air pressure</b> &mdash; the pressure inside the complex should step down as you move from the innermost sterile area outward.</p>';
+  host.appendChild(b);
+}
+
+function renderObjectives(host){
+  eyebrow(host,'03 · Why this guideline');
+  host.appendChild(el('h2','block','Five objectives, one zero-tolerance rule'));
+  var ol = el('ol','spec block');
+  ['Describe the principles and functioning of an OT complex',
+   'Serve as a planning and renovation tool for new or existing complexes',
+   'Define SOPs, job responsibilities and training requirements',
+   'Describe infection-prevention, cleaning and sterilization practice',
+   'Recommend an equipment list for each specialty OT'
+  ].forEach(function(t){ ol.appendChild(el('li','',t)); });
+  host.appendChild(ol);
+
+  host.appendChild(el('h3','block','General principles'));
+  var ul = el('ul','spec block');
+  ['Zero tolerance for non-adherence to protocol, by anyone, at any time',
+   'Four-zone design with a decreasing positive-pressure gradient from the innermost zone outward',
+   'Entry and exit only via defined routes &mdash; no shortcuts, no improvised doors',
+   'Staff never leave and re-enter a zone without repeating the full change-of-attire protocol',
+   'Cleaning tolerance for pathogens decreases from the outer zone to the inner zone',
+   'Supply and logistics are only replenished during off-hours',
+   'Temperature, humidity, air exchange, pressure and sterilization status are monitored daily',
+   'The WHO Surgical Safety Checklist is used before every single surgery'
+  ].forEach(function(t){ ul.appendChild(el('li','',t)); });
+
+  host.appendChild(el('div','callout block','<b>Zoning, defined.</b> "A process of virtual or artificial division of a place, in which certain uses are permitted or prohibited &mdash; to achieve a high degree of asepsis and eliminate nosocomial infection in post-surgery cases." That one idea drives the next chapter.'));
+}
+
+/* ---- Zone flow (shared data) ---- */
+var ZONES = [
+  {key:'protective', label:'Protective Zone', title:'Entry & reception', blurb:'OT reception, trolley bay, attendant gowning, shoe/cap change.'},
+  {key:'clean', label:'Clean Zone', title:'Change & prep', blurb:'Changing rooms, pre/post-op recovery, store room, pantry.'},
+  {key:'sterile', label:'Sterile Zone', title:'Scrub & operate', blurb:'Scrub area, the OT itself, autoclave, TSSU, documentation.'},
+  {key:'disposal', label:'Disposal Zone', title:'Exit & waste', blurb:'Dirty utility, disposal corridor, BMW handling, fire exit.'}
+];
+var CHANGES = ['Trolley change ①','Slipper change ①','Trolley change ②','Slipper change ②'];
+
+function renderZonesOverview(host){
+  eyebrow(host,'04 · The journey through the OT');
+  host.appendChild(el('h2','block','One corridor, four pressure zones'));
+  host.appendChild(el('p','lede block','Every patient, every staff member and every instrument moves through the same four zones, in the same direction, changing attire at each threshold. Air pressure steps down from the sterile core outward, so contaminated air can never drift inward.'));
+
+  var flowwrap = el('div','flowwrap block');
+  var flow = el('div','flow flowstage');
+  ZONES.forEach(function(z, i){
+    var zone = el('div','zone '+z.key, '<span class="ztag">'+z.label+'</span><h5>'+z.title+'</h5><p>'+z.blurb+'</p>');
+    flow.appendChild(zone);
+    if(i < ZONES.length-1){
+      flow.appendChild(el('div','arrow', CHANGES[i]+' →'));
+    }
+  });
+  var token = el('div','token','●');
+  token.id = 'ovtoken';
+  flow.appendChild(token);
+  flowwrap.appendChild(flow);
+  host.appendChild(flowwrap);
+
+  var legend = el('div','flowlegend block');
+  legend.innerHTML = '<span><b>2×</b> trolley changes &mdash; patient is never wheeled on the same trolley from ward to OT</span><span><b>2×</b> slipper changes &mdash; staff footwear changes before Clean Zone and again before Sterile Zone</span>';
+  host.appendChild(legend);
+
+  var btn = el('button','block','Replay movement ↻');
+  btn.id = 'replaybtn';
+  btn.addEventListener('click', function(){ animateToken(flow, token); });
+  host.appendChild(btn);
+
+  requestAnimationFrame(function(){ animateToken(flow, token); });
+}
+
+function animateToken(flow, token){
+  var zones = flow.querySelectorAll('.zone');
+  var positions = [];
+  var flowRect = flow.getBoundingClientRect();
+  zones.forEach(function(z){
+    var r = z.getBoundingClientRect();
+    positions.push(r.left - flowRect.left + r.width/2 - 11);
+  });
+  token.style.transition = 'none';
+  token.style.left = positions[0]+'px';
+  void token.offsetWidth;
+  token.style.transition = 'left 1.1s cubic-bezier(.3,.7,.2,1)';
+  var i = 1;
+  function step(){
+    if(i >= positions.length) return;
+    token.style.left = positions[i]+'px';
+    i++;
+    setTimeout(step, 1300);
+  }
+  setTimeout(step, 700);
+}
+
+function zoneDetail(host, idx, extra){
+  var z = ZONES[idx];
+  eyebrow(host, '0'+(5+idx)+' · The journey through the OT');
+  host.appendChild(el('h2','block', z.label));
+  var chip = el('span','zchip block', z.label);
+  chip.style.background = 'var(--'+z.key+')';
+  host.appendChild(chip);
+  extra(host);
+}
+
+function renderProtective(host){
+  zoneDetail(host, 0, function(host){
+    host.appendChild(el('p','lede block','The outermost ring, reached straight from the hospital\'s buffer/lobby area where a dedicated guard restricts access round the clock. Normal hospital cleanliness standards apply here, but every entrant already starts the discipline that gets stricter at every zone inward.'));
+    host.appendChild(el('h3','block','What happens here'));
+    var ol = el('ol','spec block');
+    ['Patient, attendants and staff enter through the main entrance; mask, cap, shoe change/shoe cap and hand hygiene apply to everyone',
+     'OT Reception verifies patient identity against the surgeon\'s order and logs a computerised record',
+     'Trolley/wheelchair from the ward stops here &mdash; the patient is shifted to a dedicated OT trolley (Trolley Change ①)',
+     'Attendants change into gowns before the pre-operative area, since that room is technically part of the Clean Zone',
+     'The OT Guard restricts entry to staff and permitted patients only, and maintains the entry/exit register'
+    ].forEach(function(t){ ol.appendChild(el('li','',t)); });
+    roomChips(host, 'Every room in this zone', ['Entrance to the OT complex','OT reception','Patient trolley area I','Trolley (I) / transfer bay','Entry of main storeroom','Entry of pre-operative area','Attendant gowning area','Entry to clean corridor','Doctor’s room cum counselling room']);
+    host.appendChild(el('div','callout block','<b>Before this zone:</b> a buffer/lobby with a dedicated OT-guard post, and a shoe-changing area &mdash; the very first threshold anyone crosses.'));
+  });
+}
+
+function renderClean(host){
+  zoneDetail(host, 1, function(host){
+    host.appendChild(el('p','lede block','Staff change out of outdoor clothes entirely here. The clean zone isolates the sterile core from the protective zone and holds it at a pressure slightly above it.'));
+    host.appendChild(el('h3','block','What happens here'));
+    var ol = el('ol','spec block');
+    ['Doctors, nurses and ward staff remove footwear (or wear shoe covers) and go barefoot to their changing room',
+     'First slipper change &mdash; OT slippers, scrub dress, mask and cap are put on, different in design from the slippers used inside the OT itself',
+     'Second trolley change &mdash; the patient is shifted onto the clean-zone trolley from Trolley Area II before being taken toward the OT',
+     'Pre- and post-operative recovery beds (4+4 for a 200-bed hospital) with round-the-clock vitals monitoring, at least 2 nurses on duty',
+     'The store room acts as the sole transit point from the hospital\'s general store, CSSD and laundry &mdash; stock is capped at 7 days, replenished weekly'
+    ].forEach(function(t){ ol.appendChild(el('li','',t)); });
+    roomChips(host, 'Every room in this zone', ['Pre/post-op recovery room + toilet + small store','Staff changing rooms with lockers (M/F)','Nursing in-charge changing room','Staff toilets (M/F)','Entry to sterile corridor','Storage','Janitor area','Trolley area II','Hand washing area','Pantry / equipment prep area']);
+    host.appendChild(el('div','callout block','<b>Note in the guideline:</b> slippers kept in this zone must be a different design from the ones used past the next threshold, specifically to prevent interchange.'));
+  });
+}
+
+function renderSterile(host){
+  zoneDetail(host, 2, function(host){
+    host.appendChild(el('p','lede block','The innermost, highest-pressure area &mdash; a zero-tolerance zone for any protocol violation. This is where the OT itself sits.'));
+    host.appendChild(el('h3','block','What happens here'));
+    var ol = el('ol','spec block');
+    ['Before entry: masks worn properly, 6-step hand wash completed, nothing touched with washed hands en route to the scrub area',
+     'Second slipper change into OT-specific slippers, then surgical scrub, sterile gown, cap and gloves',
+     'Operation Theatre &mdash; one operating table per OT, served by a pass box that opens only into the disposal corridor',
+     'Scrub area &mdash; shared by two OTs, elbow- or sensor-operated taps, non-slip flooring',
+     'Theatre Sterile Supply Unit (TSSU) &mdash; decontamination → autoclave → sterile storage, in that order, for equipment with a fast turnaround need',
+     'Documentation room &mdash; no paper allowed inside the OT itself; records are kept here instead'
+    ].forEach(function(t){ ol.appendChild(el('li','',t)); });
+    roomChips(host, 'Every room in this zone', ['Operation Theatre + pass box','Sterile equipment storage','Autoclave area','Scrub & hand-washing room','Critical equipment / consumable in-charge room','Documentation room','Dumbwaiters for laundry / CSSD','Passage to fire exit']);
+    var cols = el('div','cols2 block');
+    cols.innerHTML = '<div class="card"><h4>Pass box</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">Two openings &mdash; OT side and disposal-corridor side &mdash; with an interlock valve so both can never be open together, which would let unfiltered air cross into the OT.</p></div>'+
+    '<div class="card"><h4>Dumbwaiter</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">A small freight lift carrying sterile supplies from CSSD or mechanized laundry when it sits on a different floor &mdash; people never ride it.</p></div>';
+    host.appendChild(cols);
+  });
+}
+
+function renderDisposal(host){
+  zoneDetail(host, 3, function(host){
+    host.appendChild(el('p','lede block','The lowest-pressure zone, kept below the sterile zone so air can never flow back toward the OT. Everything leaving the complex leaves through here.'));
+    host.appendChild(el('h3','block','What happens here'));
+    var ul = el('ul','spec block');
+    ['Dirty Utility Room &mdash; bio-medical waste, used equipment and soiled linen wait here before pickup, disposed per BMW rules 2018',
+     'Disposal Corridor &mdash; runs behind the OT rooms; every OT\'s pass box opens into it; doubles as the fire exit route',
+     'No staff, patient or clean material ever crosses from this zone back into the rest of the complex',
+     'Exit from the complex at this end uses stairs or a dedicated lift, reserved for disposal traffic only'
+    ].forEach(function(t){ ul.appendChild(el('li','',t)); });
+    roomChips(host, 'Every room in this zone', ['Disposal corridor','Dirty utility area','Pass box','Fire exit','Exit via stairs / lift (disposal only)']);
+    host.appendChild(el('div','callout block','<b>Why it matters:</b> this is the only zone with an air pressure lower than ambient &mdash; by design, so contamination is drawn out, never in.'));
+  });
+}
+
+function renderLayout(host){
+  eyebrow(host,'09 · Building it right');
+  host.appendChild(el('h2','block','Location, then layout'));
+  host.appendChild(el('h3','block','Siting the complex'));
+  var ul = el('ul','spec block');
+  ['A quiet, innermost part of the hospital, away from patient/attendant through-traffic, noise and contamination',
+   'Never adjacent to sewerage, a garbage dump, urinals, or another building\'s boundary wall',
+   'Well connected to CSSD, mechanised laundry, the labour room, emergency, blood bank and surgical wards',
+   'Never on the top floor of a multi-storey building; reached only by a dedicated lift',
+   'Toilets and washrooms must never sit directly above the OT, to avoid seepage'
+  ].forEach(function(t){ ul.appendChild(el('li','',t)); });
+  host.appendChild(el('h3','block','Planning the layout'));
+  var b = el('div','body block');
+  b.innerHTML = '<p>The reference layouts (Annexures 1 &amp; 2) size a 4-OT complex at roughly 16,500 sq ft, with a 10ft-wide sterile corridor and separate clean/dirty corridors running alongside it. The number of OTs follows IPHS 2022; hospitals with less space can still apply the same zoning logic at a smaller scale &mdash; the flow and protocol adherence matter more than square footage.</p>';
+  host.appendChild(b);
+}
+
+function renderRoomSpec(host){
+  eyebrow(host,'10 · Building it right');
+  host.appendChild(el('h2','block','The operating room itself'));
+  statRow(host,[
+    ['6.5×6.5×3.5m','recommended room size per OT'],
+    ['1','operation table per OT, positioned away from the entrance'],
+    ['1.2–1.5m','minimum width of the OT complex\'s main door']
+  ]);
+  var tbl = el('div','tablewrap block');
+  tbl.innerHTML = '<table class="plain"><tr><th>Element</th><th>Requirement</th></tr>'+
+  '<tr><td>Doors</td><td>Sliding preferred, flush steel fittings, hermetic seal</td></tr>'+
+  '<tr><td>Ceiling</td><td>Cleanable, non-particulate shedding; false ceilings not recommended</td></tr>'+
+  '<tr><td>Floor</td><td>Hard, non-porous, no crevices; ceramic tile grouting discouraged</td></tr>'+
+  '<tr><td>Walls</td><td>No crevices or joints; laminated polyester or smooth washable paint; curved collusion corners</td></tr>'+
+  '<tr><td>Wall colour</td><td>Light &mdash; cream, off-white or green &mdash; semi-matte, soothing to the eyes</td></tr>'+
+  '<tr><td>Windows</td><td>One side only if any, kept closed</td></tr>'+
+  '<tr><td>Paint</td><td>Antimicrobial, anti-fungal, anti-dust</td></tr>'+
+  '<tr><td>X-ray illuminators</td><td>Recessed into the wall where used</td></tr></table>';
+  host.appendChild(tbl);
+  host.appendChild(el('div','callout block','<b>Why doors matter so much:</b> people are the main source of airborne contamination in an OT. Every door opening disturbs the engineered airflow &mdash; so door movement is minimised by design, not just by discipline.'));
+}
+
+function renderHVAC(host){
+  eyebrow(host,'11 · Building it right');
+  host.appendChild(el('h2','block','Air is the real wall'));
+  host.appendChild(el('p','lede block','HVAC is the single most important engineering control in the OT. Everything here exists to keep contaminated air moving away from the patient, never toward them.'));
+  statRow(host,[
+    ['20','air changes per hour, recommended'],
+    ['99.7%','particle removal at 0.3 micron by HEPA filters'],
+    ['2.5 Pa','minimum positive pressure maintained, 24×7'],
+    ['21°C ±3°C','target temperature'],
+    ['55%','ideal relative humidity'],
+    ['25–35 fpm','recommended laminar air face velocity over the table']
+  ]);
+  var ul = el('ul','spec block');
+  ['Airflow direction: from the operating table toward the main entrance, never the reverse',
+   'Window and split ACs are banned in any OT &mdash; they re-circulate air and create microbial pockets',
+   'Every OT table sits under ultraclean laminar airflow, filtered air delivered downward and unidirectionally',
+   'Air suction points sit 12 inches above the floor, at least four per OT',
+   'A separate AHU is required for each OT, plus one each for the sterile, clean and protective areas',
+   'AHU blowers run round the clock, even in non-operating hours, though air changes can drop to 25% via VFD when idle',
+   'A composite monitor displays pressure, HEPA status, air changes/hour and temperature on the OT door, with an audible alert on breach'
+  ].forEach(function(t){ ul.appendChild(el('li','',t)); });
+  host.appendChild(el('div','callout block','<b>Maintenance:</b> HEPA filters are validated every 6 months by DOP or POA testing; pre-filters and micro-vee filters are cleaned every 30 days.'));
+}
+
+function renderQAIHVAC(host){
+  eyebrow(host,'12 · Building it right');
+  host.appendChild(el('h2','block','A second standard: QAI\'s HVAC benchmark'));
+  host.appendChild(el('p','lede block','Alongside the NHM guideline, the Quality and Accreditation Institute (QAI) publishes its own HVAC addendum &mdash; QAI CAHSC 055, first edition, July 2024 &mdash; aligned to ASHRAE Standard 170-2017. QAI assessors check accredited hospitals against it directly, and it sets sharper, OT-type-specific numbers.'));
+
+  statRow(host,[
+    ['ISO 5 / ISO 6','air cleanliness class — super specialty vs. speciality OT'],
+    ['MERV 7+14','two-stage HEPA filtration required, both OT types'],
+    ['6 months','mandatory re-validation cycle under ISO 14644:2015']
+  ]);
+
+  host.appendChild(el('h3','block','Two classes of OT, two sets of numbers'));
+  var tbl = el('div','tablewrap block');
+  tbl.innerHTML = '<table class="plain"><tr><th>Requirement</th><th>Super specialty OT</th><th>Speciality OT</th></tr>'+
+  '<tr><td>Temperature</td><td>18–24°C</td><td>20–24°C</td></tr>'+
+  '<tr><td>Relative humidity</td><td>20–60%</td><td>20–60%</td></tr>'+
+  '<tr><td>Positive pressure</td><td>Min. 2.5 Pa, 24×7</td><td>Min. 2.5 Pa, 24×7</td></tr>'+
+  '<tr><td>HEPA filtration</td><td>MERV 7 + MERV 14</td><td>MERV 7 + MERV 14</td></tr>'+
+  '<tr><td>Air changes/hour</td><td>Min. 20 (4 fresh air)</td><td>Min. 20 (4 fresh air)</td></tr>'+
+  '<tr><td>Supply air quality at grille</td><td>Class 100 / ISO Class 5</td><td>Class 1000 / ISO Class 6</td></tr>'+
+  '<tr><td>Supply air velocity</td><td colspan="2">Unidirectional downward laminar flow, 0.13–0.18 m/s</td></tr>'+
+  '<tr><td>AHUs</td><td colspan="2">Independent AHU, one per OT</td></tr>'+
+  '<tr><td>Window / split AC</td><td colspan="2">Not permitted, either class</td></tr></table>';
+  host.appendChild(tbl);
+
+  host.appendChild(el('h3','block','Siting, retrofits, validation'));
+  var ulq = el('ul','spec block');
+  ['Super specialty OTs (neurosciences, cardiothoracic, transplant surgery) get the tighter ISO Class 5 air standard; speciality OTs (general surgery, ophthalmology, obstetrics) run at ISO Class 6',
+   'Outdoor air intake must sit away from diesel generator exhaust and other hospital exhaust points',
+   'Retrofitting with Direct Expansion AC units plus an AHU is allowed only if every parameter in the table above is still met',
+   'OT validation follows ISO 14644:2015 (cleanrooms and controlled environments), every 6 months — covering temperature, humidity, ISO class conformity, air changes, air velocity, pressure differentials and HEPA efficiency',
+   'Routine maintenance — filter cleaning and AHU preventive maintenance — is monthly'
+  ].forEach(function(t){ ulq.appendChild(el('li','',t)); });
+  host.appendChild(ulq);
+
+  host.appendChild(el('div','callout block','<b>The two documents agree, once converted.</b> NHM\'s 25–35 fpm laminar face velocity works out to roughly 0.13–0.18 m/s &mdash; the exact figure QAI states directly. Treat NHM\'s chapter as the architectural baseline and QAI\'s table as the sharper, OT-type-specific bar an accreditation assessor will actually check against.'));
+}
+
+function renderUtilities(host){
+  eyebrow(host,'13 · Building it right');
+  host.appendChild(el('h2','block','Power, gas, fire and water'));
+  var cols = el('div','cols2 block');
+  cols.innerHTML =
+  '<div class="card"><h4>Electrical</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-soft);line-height:1.5">'+
+  '<li>220V, circuit breakers on overload/ground fault</li><li>Locking plugs on suspended ceiling outlets</li>'+
+  '<li>Automatic two-way changeover to emergency generator</li><li>Min. 3-star BEE rating on new appliances</li>'+
+  '<li>Operating area lit to 50,000–100,000 lux at centre, ≥15,000 lux at periphery</li>'+
+  '<li>General area lit to at least 500 lux; about 2,000 lux needed to correctly assess patient colour</li></ul></div>'+
+  '<div class="card"><h4>Medical gas</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-soft);line-height:1.5">'+
+  '<li>Oxygen, nitrous oxide, 4-bar medical compressed air, vacuum</li><li>At least 4 electric sockets per OT</li>'+
+  '<li>Manifold room: cool, fire-resistant, ground floor, never in the basement</li></ul></div>'+
+  '<div class="card"><h4>Fire</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-soft);line-height:1.5">'+
+  '<li>Emergency exits at both ends of the sterile corridor, never blocked by machines or trolleys</li>'+
+  '<li>Fire department license required before the complex goes live</li><li>Periodic fire drills for all staff</li></ul></div>'+
+  '<div class="card"><h4>Water</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-soft);line-height:1.5">'+
+  '<li>Reserve overhead tank of soft water, tested every 3 months</li>'+
+  '<li>Dedicated supply to trolley area, scrub basins, pantry, autoclave room, dirty utility, all toilets</li></ul></div>';
+  host.appendChild(cols);
+}
+
+function renderHR(host){
+  eyebrow(host,'14 · Running it');
+  host.appendChild(el('h2','block','Staffing scales with OT count'));
+  host.appendChild(el('p','lede block','No standalone hiring is meant for the OT alone &mdash; staffing is drawn from the district hospital\'s own establishment, sized to the number of functional OT shifts.'));
+  var tbl = el('div','tablewrap block');
+  tbl.innerHTML = '<table class="plain"><tr><th>Bed strength</th><th>OTs</th><th>Nurses</th><th>OT Technicians</th></tr>'+
+  '<tr><td>50-bedded</td><td>2</td><td>11</td><td>4</td></tr>'+
+  '<tr><td>100-bedded</td><td>3</td><td>13</td><td>5</td></tr>'+
+  '<tr><td>200-bedded</td><td>4</td><td>22</td><td>8</td></tr>'+
+  '<tr><td>300-bedded</td><td>5</td><td>24</td><td>9</td></tr>'+
+  '<tr><td>400 / 500-bedded</td><td>5</td><td>24</td><td>9</td></tr></table>';
+  host.appendChild(tbl);
+  host.appendChild(el('h3','block','Training plan'));
+  var ol = el('ol','spec block');
+  ['Organizational behaviour &amp; OT management — 3 hrs, all OT staff',
+   'Sterilization, monitoring &amp; quality check — 3 hrs, in-charge, nurses, technicians, guards, cleaning staff',
+   'Equipment maintenance &amp; record keeping — 3 hrs, senior anaesthetist, technicians, nurses',
+   'Surgical safety, scheduling, crisis &amp; disaster management — 1 day, doctors and staff nurses'
+  ].forEach(function(t){ ol.appendChild(el('li','',t)); });
+}
+
+function renderQuality(host){
+  eyebrow(host,'15 · Running it');
+  host.appendChild(el('h2','block','What gets measured'));
+  var cols = el('div','cols2 block');
+  cols.innerHTML =
+  '<div class="card"><h4>Quality indicators</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-soft);line-height:1.5">'+
+  '<li>WHO safe surgery checklist compliance</li><li>Surgical site infection rate</li><li>Adverse events per 1,000 surgeries</li>'+
+  '<li>Re-exploration surgery rate</li><li>Autoclave Bowie-Dick test failures</li><li>Equipment downtime (max 5%)</li></ul></div>'+
+  '<div class="card"><h4>Performance indicators</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-soft);line-height:1.5">'+
+  '<li>C-section rate, and proportion done at night</li><li>Major surgeries per month, and per surgeon</li>'+
+  '<li>Operation cancellation rate</li></ul></div>';
+  host.appendChild(cols);
+  host.appendChild(el('h3','block','Who runs the OT day to day'));
+  var b = el('div','body block');
+  b.innerHTML = '<p>A senior Anaesthetist is normally designated Officer In-Charge for day-to-day coordination; the Medical Superintendent and hospital manager hold overall operational responsibility. Civil and electrical engineers inspect infrastructure every three months; doctors and nurses take daily protocol rounds.</p>';
+  host.appendChild(b);
+}
+
+function renderCleaning(host){
+  eyebrow(host,'16 · Running it');
+  host.appendChild(el('h2','block','Clean inward, never outward'));
+  host.appendChild(el('p','lede block','Cleaning always starts at the innermost zone and works outward &mdash; the opposite direction would drag contamination toward the operating table.'));
+  var tbl = el('div','tablewrap block');
+  tbl.innerHTML = '<table class="plain"><tr><th>Area</th><th>Frequency</th><th>Agent</th></tr>'+
+  '<tr><td>OT floor &amp; table</td><td>Morning, evening, after every surgery</td><td>Detergent + 0.5% chlorine</td></tr>'+
+  '<tr><td>Instruments</td><td>After every surgery</td><td>Decontaminate, then CSSD sterilization</td></tr>'+
+  '<tr><td>Equipment (monitors, ventilators)</td><td>After each use / 24-hr cycle</td><td>70% isopropyl alcohol</td></tr>'+
+  '<tr><td>Pre/post-op recovery</td><td>4×/day</td><td>Detergent + 0.5% chlorine</td></tr>'+
+  '<tr><td>Bio-medical waste</td><td>3×/day or when 3/4 full</td><td>BMW Rules 2018</td></tr></table>';
+  host.appendChild(tbl);
+  host.appendChild(el('h3','block','Fogging — the exception, not the routine'));
+  host.appendChild(el('div','callout block','<b>Fogging is not routine.</b> It is reserved for: commissioning a new OT, major renovation or civil work, an outbreak or reported infection, or an OT without a HEPA-filtered positive-pressure system. Where it is justified, hydrogen peroxide is recommended &mdash; never formaldehyde, which is carcinogenic and hard to control.'));
+}
+
+function renderSurveillance(host){
+  eyebrow(host,'17 · Running it');
+  host.appendChild(el('h2','block','Watching for infection before it shows'));
+  host.appendChild(el('p','lede block','Routine surveillance is meant to catch a problem before it becomes an outbreak. The guideline splits it into two feeds — what clinicians report, and what a dedicated infection-control round finds on its own.'));
+
+  statRow(host,[
+    ['2','feeds — active surveillance and passive surveillance'],
+    ['Monthly, min.','recommended frequency for air sampling'],
+    ['37°C, 2 days','agar plate incubation for an air culture test']
+  ]);
+
+  var cols = el('div','cols2 block');
+  cols.innerHTML = '<div class="card"><h4>Active surveillance</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">Systematic data collection by a designated, trained hospital infection-control professional or nurse — not left to chance.</p></div>'+
+  '<div class="card"><h4>Passive surveillance</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">Clinicians and ward staff report any suspected healthcare-associated infection as they encounter it.</p></div>';
+  host.appendChild(cols);
+
+  host.appendChild(el('h3','block','Four activities, run together'));
+  var ol = el('ol','spec block');
+  ['Clinical / patient-based — counting HAIs, assessing risk factors, monitoring adherence to infection-prevention principles',
+   'Laboratory-based — watching for clusters of pathogens, multidrug-resistant organisms and emerging resistance patterns, reported to the Hospital Infection Control Committee (HICC)',
+   'Process and outcome — auditing a specific practice like hand hygiene or care bundles, and outcomes like surgical-site infection or catheter-related UTI rates',
+   'Environmental — targeted microbiological sampling under a written, multidisciplinary protocol, with pre-agreed baseline values to compare results against'
+  ].forEach(function(t){ ol.appendChild(el('li','',t)); });
+
+  host.appendChild(el('div','callout block','<b>Routine environmental microbial culture is not recommended</b> &mdash; and hasn\'t been since the 1970s. General contamination levels don\'t reliably predict HAI rates, and there\'s no accepted baseline to compare a result against. It\'s only justified in specific situations.'));
+
+  host.appendChild(el('h3','block','When air sampling is actually justified'));
+  var ul = el('ul','spec block');
+  ['Commissioning a new or freshly renovated OT',
+   'Investigating a theatre-acquired infection with a possible airborne element',
+   'After any change to airflow supply rate, distribution pattern or ductwork'
+  ].forEach(function(t){ ul.appendChild(el('li','',t)); });
+
+  var cols2 = el('div','cols2 block');
+  cols2.innerHTML = '<div class="card"><h4>Empty-OT test</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">Room unoccupied 15 minutes before sampling; AHU running continuously 24 hrs prior; samples taken at each corner of the airflow zone, the inner zone and the centre.</p></div>'+
+  '<div class="card"><h4>Working-theatre test</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">Sampled with a slit sampler within 300mm of the wound; at least 2 samples; air volume &ge;0.25m&sup3; (around 1m&sup3; optimal); nutrient agar plates incubated 2 days at 37&deg;C.</p></div>';
+  host.appendChild(cols2);
+
+  host.appendChild(el('h3','block','Surveillance of the air handling unit itself'));
+  var ul2 = el('ul','spec block');
+  ['Humidifier and cooling coil disinfected at least every 6 months',
+   'Swab tests from drain trays and cooling-coil tubes only if contamination is actually suspected',
+   'Biofilm on a cooling coil is cleaned mechanically (steam) &mdash; chlorine disinfection makes little difference to an established biofilm',
+   'Ventilation controls airborne microorganisms three ways: filtering supplied air, diluting contaminated air in the theatre, and keeping outside contaminated air from entering'
+  ].forEach(function(t){ ul2.appendChild(el('li','',t)); });
+}
+
+function renderChecklist(host){
+  eyebrow(host,'18 · Running it');
+  host.appendChild(el('h2','block','The WHO Surgical Safety Checklist'));
+  host.appendChild(el('p','lede block','Required before every single surgery in every OT. Three verbal checkpoints, each owned by a different team member.'));
+
+  var cols = el('div','checklist-cols block');
+  var data = [
+    {h:'Sign In', when:'Before induction of anaesthesia · Nurse', items:['Patient identity, site, procedure and consent confirmed','Surgical site marked, or marked not applicable','Anaesthesia safety check completed','Pulse oximeter on patient and functioning','Known allergy checked','Difficult airway / aspiration risk checked','Risk of &gt;500ml blood loss checked']},
+    {h:'Time Out', when:'After induction, before incision · Surgeon', items:['All team members introduced by name and role','Patient, site and procedure re-confirmed aloud','Surgeon reviews critical or unexpected steps','Anaesthetist reviews patient-specific concerns','Nursing team confirms sterility and equipment','Antibiotic prophylaxis given within last 60 minutes','Essential imaging displayed']},
+    {h:'Sign Out', when:'Before patient leaves OT · Nurse', items:['Name of procedure recorded','Instrument, sponge and needle counts correct','Specimen labelling confirmed','Equipment problems flagged','Recovery and post-op concerns reviewed aloud','Attendant informed of procedure and outcome']}
+  ];
+  data.forEach(function(d, i){
+    var card = el('div','cl', '<h4>'+d.h+'</h4><div class="when">'+d.when+'</div>');
+    var ul = document.createElement('ul');
+    d.items.forEach(function(t){ ul.appendChild(el('li','', '<span class="box"></span>'+t)); });
+    card.appendChild(ul);
+    cols.appendChild(card);
+  });
+  host.appendChild(cols);
+
+  requestAnimationFrame(function(){
+    var cards = cols.querySelectorAll('.cl');
+    cards.forEach(function(c, i){ setTimeout(function(){ c.classList.add('show'); }, 150 + i*450); });
+  });
+}
+
+function renderRoles(host){
+  eyebrow(host,'19 · Reference');
+  host.appendChild(el('h2','block','Who is responsible for what'));
+  host.appendChild(el('p','lede block','Annexure 4 assigns a named responsibility for every post in the OT complex, down to who keeps the counselling room tidy. The guideline is explicit that none of this should be verbal &mdash; every responsibility is a written assignment.'));
+  var ROLES = [
+    ['OT Guard', ['Restrict unnecessary entry into the OT complex','Ensure shoe change/cap, mask and hand hygiene for everyone before entry','Ensure the first trolley change happens right at the entry gate','Maintain the entry/exit register']],
+    ['OT Receptionist', ['Shift patients from the ward trolley to the OT trolley and verify identity against the surgeon’s order, logged on computer','Ensure patients change into OT dress before entering the complex','Ensure the consent form records that valuables were returned to attendants, with their signature','Act as the communicator between OT in-charge and attendant, keeping them updated on progress','Ensure gowns, cap and mask are worn by anyone going into the pre-operative area','Keep the counselling room in order']],
+    ['Anaesthetist & pre-op OT nurse', ['Ensure every patient’s Pre-Anaesthesia Check-up (PAC) is done and the record uploaded','Ensure the surgical safety checklist and pre/post-op checklist are completed, and the operating site verified','Document every intra-operative event for medico-legal purposes','Ensure oxygen, suction, air outlets and monitors are functional','Maintain a 7-day emergency drug stock and keep the pre/post-op room, store and toilet clean']],
+    ['OT Technician', ['Check temperature, humidity, air-particle count, air-change rate and pressure differential against protocol','Get HEPA filters validated by DOP/POA testing every six months','Keep the pendant, lighting and every piece of equipment serviced, with specification, manufacturer and AMC/CMC details on file','Escalate and switch to back-up equipment the moment something stops working','Maintain daily documentation of equipment autoclaving and sterilization through CSSD/TSSU']],
+    ['OT In-charge Nurse', ['Prepare surgical and anaesthetic trolleys','Run periodic cleaning, BMW handling and microbiological sampling of the OT &mdash; table, lamp, floor, trolley &mdash; and log any positive culture','Send samples to the nearest medical college if no in-house microbiology lab exists','Keep a 7-day store of consumables and maintain the OT store register','Ensure the pass box, dumbwaiter, electrical, plumbing and pantry fittings all work, checked daily','Maintain room-wise records across the whole complex and prepare the duty roster with the nurse in-charge']],
+    ['Staff Nurse', ['Support the surgeon and OT in-charge','Count and clean instruments, keep trolleys ready for surgery','Maintain sterilization and segregate linen at source']],
+    ['Ward Boy / Girl', ['Carry out overall cleaning of the OT complex to the prescribed protocol and schedule','Never let cleaning be compromised &mdash; it is continuously monitored by the nurse in-charge and anaesthetist']],
+    ['State Programme Officer', ['Plan and map district hospitals for new OT sites, and hire the architect','Estimate and release the OT budget on time through the state or NHM PIP','Issue guidelines, translated into the local language','Link OT strengthening to specialist hiring, equipment, infrastructure, HR and training under NHM','Ensure every piece of equipment is covered by the maintenance guideline','Review OT performance and patient feedback to assess utilisation']]
+  ];
+  var wrap = el('div','rolewrap block');
+  ROLES.forEach(function(r){
+    var html = '<h4>'+r[0]+'</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--ink-soft);line-height:1.55">';
+    r[1].forEach(function(d){ html += '<li>'+d+'</li>'; });
+    html += '</ul>';
+    wrap.appendChild(el('div','card', html));
+  });
+  host.appendChild(wrap);
+}
+
+function renderEquipment(host){
+  eyebrow(host,'20 · Reference');
+  host.appendChild(el('h2','block','What has to be in the room'));
+  host.appendChild(el('p','lede block','Annexure 6 gives a planning-purpose equipment list &mdash; a baseline for every OT, a dedicated anaesthesia list, and then separate lists for ortho, eye and obstetric specialty OTs.'));
+  statRow(host,[
+    ['23 items','baseline equipment every single OT needs'],
+    ['25 items','dedicated anaesthesia equipment'],
+    ['3 lists','ortho (90 items), eye (28), obstetric/gynae (35)']
+  ]);
+  roomChips(host, 'Common equipment — every OT', ['OT table','OT light — ceiling double dome','Mayo stand','Surgical trolley','Equipment trolley','Emergency & drugs trolley','Anaesthesia trolley','Difficult airway trolley','Anaesthesia work station','Electrical suction','Laryngoscope, 5 LED blades','Defibrillator (AED + manual, ECG)','Flash autoclave, ~20L/cycle','Surgical diathermy, bipolar','ECG machine, 6-channel','Crash cart','Bowl sterilizers','Oxygen cylinder, D type','Washer disinfector, 30–45L','Patient trolley','Blood warmer','IV stand','Glucometer']);
+  roomChips(host, 'Anaesthesia equipment', ['Anaesthesia machine','4-blade Magill’s laryngoscope','Endotracheal tubes, assorted sizes','Magill’s forceps, adult & paediatric','E.T.T. connector set','Catheter mount','Oral & nasopharyngeal airways','Mouth prop','Tongue depressors','O2 cylinder, Boyles-D','N2O cylinder, Boyles-D','CO2 cylinder for laparoscopy','Spirometer','Exchange transfusion sets','Adult resuscitation kit','Neonate resuscitation kit','Emergency first-aid kit','Multi-para monitor','Defibrillator (AED + manual)','Infusion pump','Pressure bags for transfusion','Patient trolley','Oxygen concentrator','Electric suction apparatus']);
+  host.appendChild(el('h3','block','Specialty OTs add their own list'));
+  var cols = el('div','cols2 block');
+  cols.innerHTML = '<div class="card"><h4>Ortho OT — 90 items</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">Tourniquets, K-wire sets, DCP/LCDCP plates, reamers, rush nails, an electro-hydraulic OT table, C-arm, autoclaveable power drill and saw &mdash; a full fracture-fixation hardware set.</p></div>'+
+  '<div class="card"><h4>Eye OT — 28 items</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">Operating microscope, phacoemulsification machine, A-scan, biometer, keratometer, cryosurgery unit, Nd-YAG laser, IOL operating set.</p></div>'+
+  '<div class="card"><h4>Obstetric/Gynae OT — 35 items</h4><p style="font-size:13px;color:var(--ink-soft);line-height:1.6">Delivery kit, episiotomy and forceps-delivery kits, craniotomy set, vacuum extractor, CTG monitor, fetal Doppler, infant radiant warmer, on top of the general OT list.</p></div>';
+  host.appendChild(cols);
+  host.appendChild(el('div','callout block','<b>These are planning lists, not purchase orders.</b> The guideline is explicit: procure against a gap analysis, available HR and realistic case volume &mdash; high-end equipment nobody is trained to maintain is a liability, not an asset.'));
+}
+
+function renderOTChecklist(host){
+  eyebrow(host,'21 · Reference');
+  host.appendChild(el('h2','block','The structure / process / outcome checklist'));
+  host.appendChild(el('p','lede block','Annexure 9 is the actual certifying instrument &mdash; a Yes / No / Partial-compliance checklist an assessor runs through, in three sections.'));
+
+  host.appendChild(el('h3','block','Section A — Structure (8 checks)'));
+  var a = el('ol','spec block');
+  ['Departmental signage — numbering of the department and internal sections, including restricted-area signage and the OT zones',
+   'A warning light outside the OT, used whenever the OT is functional',
+   'Facility displays — updated duty roster, OT schedule, protocols, work instructions',
+   'A wheelchair or stretcher available for easy access to the OT',
+   'Layout demarcated by function — the four zones with unidirectional flow, changing rooms, a scrub area with a deep sink and elbow tap, pre-op and post-op rooms, TSSU, dirty utility, store',
+   'A safe, comfortable environment — secured non-structural fittings, seamless vitrified-tile floors/walls, 24×7 water/electricity with 2-tier UPS backup, positive pressure/humidity (50–60%)/temperature (20–25°C) maintained and logged, lighting (300–500 lux generally, up to 100,000 lux at the table), wide unidirectional corridors, piped medical gases, sufficient ABC-type fire extinguishers with a separate fire-exit route, colour-coded waste bins',
+   'Security arrangements — personnel, CCTV',
+   'A complaint box is available'
+  ].forEach(function(t){ a.appendChild(el('li','',t)); });
+  host.appendChild(a);
+
+  host.appendChild(el('h3','block','Section B — Process (21 checks)'));
+  var b = el('ol','spec block');
+  ['OT service available 24×7',
+   'Patient scheduling is done',
+   'A defined procedure before entering the OT — footwear change, clothes change, hand washing, PPE (mask, apron/drape, gloves, cap)',
+   'A procedure for informed consent — general, high-risk, anaesthesia',
+   'The attendant is informed of the clinical condition and treatment',
+   'Privacy and confidentiality — patients draped/covered, screens between tables, records kept secure, no unnecessary display of patient details',
+   'Staff behaviour is empathetic and courteous',
+   'A procedure to monitor pre-operative assessment — exam, lab results, diagnosis, proposed surgery',
+   'A process to confirm identity before any procedure — ID band plus verbal confirmation',
+   'Treatment plan and first orders written on the bed-head ticket',
+   'Anaesthesia notes recorded; adverse events recorded and reported',
+   'Functional, sterilized instruments available as the case requires',
+   'A process for identifying and cautiously administering high-alert drugs, documented',
+   'Every procedure or advice carries date, time and signature — operative notes',
+   'A procedure for recording events on the in-OT whiteboard — births/deaths, instrument counts, timings',
+   'Post-operative procedure followed — monitoring records before discharge, post-op notes and orders',
+   'Established criteria for shifting patients — to SNCU, ICU, a higher centre, or the ward',
+   'Waste segregated by category per guidelines',
+   'A disinfection procedure — general items, sharps, disposal items',
+   'Daily documentation covers every procedure, every sterilization cycle, equipment maintenance/breakdown, consumable stock, periodic equipment cleaning, sterilization defects, spill management, fumigation and instrument calibration',
+   'A designated nodal person runs daily rounds and internal audits'
+  ].forEach(function(t){ b.appendChild(el('li','',t)); });
+  host.appendChild(b);
+
+  host.appendChild(el('h3','block','Section C — Outcome indicators'));
+  var c = el('ul','spec block');
+  ['Proportion of emergency services performed at night','Unscheduled / emergency surgery rate','Number of surgeries per surgeon','Adverse events per thousand surgeries','Pre-operative death rate','Proportion of general to spinal anaesthesia','Number of major surgeries performed','Operation cancellation rate','Number of swab cultures reported positive','Downtime of critical instruments','LAMA rate'
+  ].forEach(function(t){ c.appendChild(el('li','',t)); });
+  host.appendChild(c);
+
+  host.appendChild(el('div','callout block','<b>Why this matters for an accreditation programme:</b> this is the same structure / process / outcome split most hospital accreditation frameworks use &mdash; structure checks what exists, process checks what is actually followed, outcome checks whether it worked.'));
+}
+
+function renderAnnexures(host){
+  eyebrow(host,'22 · Reference');
+  host.appendChild(el('h2','block','What else is in the guideline'));
+  host.appendChild(el('p','lede block','Nine annexures back the guidance with working templates. The last three scenes covered Annexures 4, 6 and 9 in full &mdash; here is the complete index.'));
+  var items = [
+    ['Annexure 1–2','Full OT complex layout plans for 2-OT and 4-OT configurations'],
+    ['Annexure 3','Zone-by-zone cleaning protocol, plus the fogging/fumigation procedure and surveillance methods'],
+    ['Annexure 4','Role and responsibilities for every post &mdash; covered in full two scenes back'],
+    ['Annexure 5','Ten registers every OT must maintain, from the surgeries register to the HVAC/HEPA maintenance log'],
+    ['Annexure 6','Equipment lists by specialty &mdash; covered in full one scene back'],
+    ['Annexure 7','The WHO Surgical Safety Checklist, reproduced in full'],
+    ['Annexure 8','A sample monitoring &amp; supervision format, meant to be displayed outside the OT'],
+    ['Annexure 9','The full structure / process / outcome audit checklist &mdash; covered in full the scene before this one']
+  ];
+  var ul = el('ul','spec block');
+  items.forEach(function(it){ ul.appendChild(el('li','', '<span><b style="font-family:var(--font-mono);font-size:12px;color:var(--accent-ink)">'+it[0]+'</b> — '+it[1]+'</span>')); });
+  host.appendChild(ul);
+
+  host.appendChild(el('h3','block','Source'));
+  var b = el('div','body block');
+  b.innerHTML = '<p>Operational Guidelines for Operation Theatre Complex, National Health Mission, Ministry of Health &amp; Family Welfare, Government of India — March 2022. Prepared with the Expert Group chaired by Dr. Manohar Agnani, the National Health Systems Resource Centre, AIIMS New Delhi, and institutional experts across India.</p>'+
+  '<p style="margin-top:10px">Guidelines for Heating, Ventilation, and Air Conditioning (HVAC) in Operation Theatre — QAI CAHSC 055, first edition, July 2024. Quality and Accreditation Institute, Centre for Accreditation of Health &amp; Social Care, Noida.</p>'+
+  '<p style="margin-top:10px;color:var(--ink-soft);font-size:13.5px">This walkthrough is a condensed orientation guide, not a substitute for the official PDFs. For compliance, procurement or construction decisions, always verify against the source documents.</p>';
+  host.appendChild(b);
+}
+
+/* init */
+buildRail();
+var saved = 0;
+try{ saved = parseInt(localStorage.getItem('ot-guide-step')||'0',10) || 0; }catch(e){}
+current = Math.min(saved, STEPS.length-1);
+(function(){
+  var host = document.getElementById('panelhost');
+  STEPS[current].render(host);
+  markActive();
+})();
+
+})();
+</script>
+
+</body></html>

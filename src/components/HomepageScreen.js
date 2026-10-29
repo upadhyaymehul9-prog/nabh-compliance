@@ -719,8 +719,8 @@ export default function HomepageScreen({ onLogin }) {
             </div>
             <div className="fcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-robot"></i></div>
-              <h3>AI assistant</h3>
-              <p>Ask questions and get answers grounded strictly in the actual standards — no guesswork.</p>
+              <h3>AI assistant <span className="badge-live">SHCO module</span></h3>
+              <p>Ask questions and get answers grounded strictly in the actual standards — no guesswork. Live for SHCO today; HCO Full coming soon.</p>
             </div>
           </div>
         </div>
@@ -758,7 +758,7 @@ export default function HomepageScreen({ onLogin }) {
       <section className="band">
         <div className="wrap">
           <div className="sec-head on-dark">
-            <span className="eyebrow on-dark"><i className="ti ti-sparkles" aria-hidden="true"></i> AI-supported workflow</span>
+            <span className="eyebrow on-dark"><i className="ti ti-files" aria-hidden="true"></i> Real deliverables</span>
             <h2>Not just scoring — <em className="si">real deliverables.</em></h2>
             <p>AccredReady turns your self-assessment into documents you can hand to your MD and your assessor.</p>
           </div>
@@ -777,11 +777,6 @@ export default function HomepageScreen({ onLogin }) {
               <div className="ic" aria-hidden="true"><i className="ti ti-calendar-check"></i></div>
               <h3>Full-year scheduling <span className="badge-live">Live</span></h3>
               <p>Set your entire year of committee meetings and mock drills on a date calendar — planned, tracked, and ready to show the assessor.</p>
-            </div>
-            <div className="bcard">
-              <div className="ic" aria-hidden="true"><i className="ti ti-wand"></i></div>
-              <h3>AI document generation <span className="badge-soon">Coming soon</span></h3>
-              <p>Generate the required NABH documents right from your dashboard — drafted for you, ready to adapt.</p>
             </div>
             <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-clipboard-check"></i></div>
@@ -956,7 +951,7 @@ export default function HomepageScreen({ onLogin }) {
                 <li><i className="ti ti-check" aria-hidden="true"></i> PDF gap &amp; CAPA reports</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> Policy, SOPs &amp; Records document downloads</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> Full-year scheduling calendar</li>
-                <li><i className="ti ti-check" aria-hidden="true"></i> AI assistant grounded in the standards</li>
+                <li><i className="ti ti-check" aria-hidden="true"></i> AI assistant grounded in the standards (SHCO today, HCO coming soon)</li>
               </ul>
             </div>
           </div>

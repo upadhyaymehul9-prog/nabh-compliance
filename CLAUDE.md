@@ -1,5 +1,9 @@
 # CLAUDE.md
 
+## Discuss-First Rule (hard rule)
+
+Before implementing, coding, or deploying ANY change — no matter how small or obvious it looks — discuss it with Mk first and get explicit agreement on the approach. This applies to pricing/paywall logic, marketing copy, trial lengths, document access rules, and any other decision, not just code. Research, verification, and pointing out problems is fine without asking; writing or changing anything is not.
+
 ## Session Start Rule
 
 At the start of every session, first check the current branch:
