@@ -3342,6 +3342,8 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName, 
       if(!(isDocAlert&&hasLinks)){
         setToast({type:a.type,sev:a.severity,msg:a.message});setTimeout(()=>setToast(null),4000);
       }
+    }else{
+      setToast({type:"Saved",sev:"SUCCESS",msg:"Score saved."});setTimeout(()=>setToast(null),1800);
     }
     onRefresh();
   };
@@ -3384,7 +3386,8 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName, 
   };
   return (
     <div>
-      {toast&&<div style={{position:"fixed",top:80,right:16,zIndex:999,maxWidth:360,background:toast.sev==="CRITICAL"?T.redD:toast.sev==="SUCCESS"?T.greenD:toast.sev==="HIGH"?T.orangeD:T.goldD,border:`1px solid ${toast.sev==="CRITICAL"?T.red:toast.sev==="SUCCESS"?T.green:toast.sev==="HIGH"?T.orange:T.gold}50`,borderRadius:10,padding:"12px 16px",boxShadow:"0 8px 32px rgba(0,0,0,0.5)"}}>
+      {toast&&toast.type==="Saved"&&<style>{`@keyframes oe-save-fade { 0%,70% { opacity:1; } 100% { opacity:0; } }`}</style>}
+      {toast&&<div style={{position:"fixed",top:80,right:16,zIndex:999,maxWidth:360,background:toast.sev==="CRITICAL"?T.redD:toast.sev==="SUCCESS"?T.greenD:toast.sev==="HIGH"?T.orangeD:T.goldD,border:`1px solid ${toast.sev==="CRITICAL"?T.red:toast.sev==="SUCCESS"?T.green:toast.sev==="HIGH"?T.orange:T.gold}50`,borderRadius:10,padding:"12px 16px",boxShadow:"0 8px 32px rgba(0,0,0,0.5)",...(toast.type==="Saved"?{animation:"oe-save-fade 1.8s ease-in forwards"}:{})}}>
         <div style={{fontSize:12,fontWeight:700,marginBottom:4,color:toast.sev==="CRITICAL"?T.red:toast.sev==="SUCCESS"?T.green:toast.sev==="HIGH"?T.orange:T.gold}}>{toast.sev==="CRITICAL"?"🚨":toast.sev==="SUCCESS"?"✅":toast.sev==="HIGH"?"⚠️":"📄"} {toast.type?.replace(/_/g," ")}</div>
         <div style={{fontSize:13,color:T.text,lineHeight:1.5}}>{toast.msg}</div>
       </div>}
