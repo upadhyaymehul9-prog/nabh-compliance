@@ -1049,6 +1049,7 @@ export default function HomepageScreen({ onLogin }) {
             <a href="mailto:doctor@accredready.in">Contact</a>
             <a href="/terms.html">Terms</a>
             <a href="/privacy.html">Privacy</a>
+            <a href="https://course.accredready.in" target="_blank" rel="noopener noreferrer">Diabetes Course</a>
           </div>
         </div>
       </footer>
