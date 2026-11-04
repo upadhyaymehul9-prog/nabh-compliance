@@ -2350,17 +2350,17 @@ async function startRazorpaySubscription({ userName, userEmail, setBusy, setErro
   }
 }
 
-function UpgradeWall({ daysUsed, onSignOut, user }) {
+function UpgradeWall({ daysUsed, onSignOut, user, lapsedPaid }) {
   const [subBusy, setSubBusy] = useState(false);
   const [subError, setSubError] = useState(null);
   const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","Policy, SOPs & Records document downloads","No setup fee. Cancel anytime."];
   return (
     <div style={{minHeight:"100vh",background:"#050e1a",display:"flex",alignItems:"center",justifyContent:"center",padding:20,fontFamily:"Segoe UI,system-ui,sans-serif"}}>
       <div style={{maxWidth:440,width:"100%",textAlign:"center"}}>
-        <div style={{fontSize:48,marginBottom:16}}>🔒</div>
+        <div style={{fontSize:48,marginBottom:16}}>{lapsedPaid?"⚠️":"🔒"}</div>
         <div style={{fontSize:11,letterSpacing:3,color:"#c9a84c",marginBottom:8}}>ACCREDREADY</div>
-        <div style={{fontSize:26,fontWeight:800,color:"#eef4f9",marginBottom:8}}>Your Free Trial Has Ended</div>
-        <div style={{fontSize:14,color:"#3a5870",marginBottom:28}}>Your free trial has expired. Upgrade to continue accessing your NABH compliance data.</div>
+        <div style={{fontSize:26,fontWeight:800,color:"#eef4f9",marginBottom:8}}>{lapsedPaid?"Payment Issue — We're On It":"Your Free Trial Has Ended"}</div>
+        <div style={{fontSize:14,color:"#3a5870",marginBottom:28}}>{lapsedPaid?"Your last payment didn't go through. We'll reach out to you shortly — you can also fix it yourself below.":"Your free trial has expired. Upgrade to continue accessing your NABH compliance data."}</div>
         <div style={{background:"#081525",border:"1px solid #c9a84c",borderRadius:14,padding:"24px 22px",marginBottom:20,textAlign:"center"}}>
           <div style={{fontSize:12,letterSpacing:2,color:"#c9a84c",fontWeight:700,marginBottom:8}}>ACCREDREADY</div>
           <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:4,marginBottom:4}}>
@@ -10234,8 +10234,9 @@ export default function App() {
   const daysLeft = accessUntil ? Math.max(0, Math.ceil((accessUntil.getTime() - Date.now()) / (1000*60*60*24))) : 0;
   const trialExpired = !hasAccess;
   const isTrialActive = hasAccess && !isFree && !isPaid;
+  const lapsedPaid = isPaid && trialExpired;
 
-  if(trialExpired) return <UpgradeWall onSignOut={handleSignOut} user={user}/>;
+  if(trialExpired) return <UpgradeWall onSignOut={handleSignOut} user={user} lapsedPaid={lapsedPaid}/>;
 
   const readinessColor=decision.readiness==="NOT READY"?T.red:decision.readiness==="RISKY"?T.orange:T.green;
   const verdictColor=decision.verdict==="FAIL"?T.red:decision.verdict==="PASS"?T.green:decision.verdict==="PARTIAL"?T.orange:T.blue;
