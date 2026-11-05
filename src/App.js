@@ -2331,6 +2331,7 @@ async function startRazorpaySubscription({ userName, userEmail, setBusy, setErro
       theme: { color: '#c9a84c' },
       prefill: { name: userName||'', email: userEmail||'' },
       handler: function(){
+        if(window.gtag) window.gtag('event','subscription_authorised',{value:499,currency:'INR'});
         alert('Payment authorised! Refreshing your account — this can take a few seconds to reflect.');
         setTimeout(()=>window.location.reload(), 2500);
       },
@@ -2886,6 +2887,7 @@ function SetupScreen({ user, onReady }) {
     if(prof?.whatsapp_number)hospInsert.whatsapp=prof.whatsapp_number;
     const{data,error:err}=await supabase.from("hospitals").insert(hospInsert).select().single();
     if(err){setError(err.message);setLoading(false);return;}
+    if(window.gtag) window.gtag('event','sign_up',{method:'hospital_created'});
     const{error:linkErr}=await supabase.from("profiles").update({hospital_id:data.id,role:"admin",name:user.email}).eq("id",user.id);
     if(linkErr){
       console.error("Hospital link failed:",linkErr);
