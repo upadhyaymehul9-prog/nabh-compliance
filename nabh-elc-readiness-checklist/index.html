@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/favicon.ico" />
+<title>NABH ELC Readiness Checklist — Free 100-Point Self-Assessment</title>
+<meta name="description" content="Score your hospital's NABH Entry Level Certification readiness free. 100-question self-assessment across all 10 chapters, instant results." />
+<link rel="canonical" href="https://accredready.in/nabh-elc-readiness-checklist/" />
+<meta property="og:title" content="NABH ELC Readiness Checklist — Free 100-Point Self-Assessment" />
+<meta property="og:description" content="Score your hospital's NABH Entry Level Certification readiness free. 100-question self-assessment across all 10 chapters, instant results." />
+<meta property="og:url" content="https://accredready.in/nabh-elc-readiness-checklist/" />
+<meta property="og:image" content="https://accredready.in/logo512.png" />
+<meta property="og:type" content="website" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "NABH ELC Readiness Checklist",
+  "url": "https://accredready.in/nabh-elc-readiness-checklist/",
+  "description": "A free 100-question self-assessment that helps hospitals and SHCOs gauge readiness for NABH Entry Level Certification across all 10 chapters, with an instant readiness score.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web browser",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "publisher": { "@type": "Organization", "name": "AccredReady", "url": "https://accredready.in/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is NABH ELC (Entry Level Certification)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "NABH's Entry Level Certification is a shorter, simpler accreditation pathway designed for hospitals and SHCOs preparing for full NABH accreditation, built around core patient safety and quality requirements before the full standard set applies." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this readiness score calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Each question scores Yes = 1, Partially = 0.5, No = 0. Your percentage score maps to one of four bands: Not Ready (under 40%), Early Stage (40–60%), On Track (60–80%), or Likely Ready (over 80%, subject to document verification during the actual assessment)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this an official NABH checklist?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No, this is AccredReady's own self-assessment tool built around ELC requirements, meant to help you gauge readiness before applying. It isn't a substitute for the official NABH assessment or document review." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after I complete the checklist?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You get your readiness band and score instantly. For a chapter-by-chapter breakdown of exactly which items need work, you can request the detailed PDF report by email." }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#050e1a; --panel:#0b1c30; --panel2:#0e2338; --border:#1e3a52;
+    --text:#eef4f9; --muted:#7a9db8; --gold:#c9a84c; --blue:#3b82f6;
+    --green:#16a34a; --amber:#f59e0b; --red:#ef4444;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,sans-serif;}
+  a{color:var(--gold);}
+  .wrap{max-width:760px;margin:0 auto;padding:28px 18px 90px;}
+  .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+  h1{font-size:26px;line-height:1.3;margin:10px 0 8px;}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 22px;}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:16px;}
+  label.field{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:600;}
+  select, input[type="email"], input[type="text"]{width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:14px;margin-bottom:16px;}
+  .progress-outer{height:8px;background:var(--panel2);border-radius:99px;overflow:hidden;margin-bottom:6px;border:1px solid var(--border);}
+  .progress-inner{height:100%;background:linear-gradient(90deg,var(--gold),#e8c97a);transition:width .25s ease;}
+  .progress-label{font-size:12px;color:var(--muted);margin-bottom:18px;}
+  .chapter-title{font-size:19px;margin:0 0 2px;}
+  .chapter-code{font-size:12px;color:var(--muted);margin-bottom:18px;}
+  .q{border-top:1px solid var(--border);padding:16px 0;}
+  .q:first-of-type{border-top:none;padding-top:0;}
+  .q-error{background:rgba(239,68,68,0.08);box-shadow:inset 3px 0 0 var(--red);border-radius:6px;padding-left:10px;margin:0 -10px;padding-right:10px;}
+  .error-msg{color:var(--red);font-size:13px;font-weight:700;margin:4px 0 10px;}
+  .q-text{font-size:14.5px;line-height:1.45;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start;}
+  .core-badge{flex-shrink:0;font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:rgba(201,168,76,0.18);color:var(--gold);border:1px solid rgba(201,168,76,0.45);padding:2px 7px;border-radius:99px;white-space:nowrap;margin-top:2px;}
+  .opts{display:flex;gap:8px;flex-wrap:wrap;}
+  .opt{flex:1;min-width:80px;}
+  @media (max-width:480px){
+    .opts{display:grid;grid-template-columns:1fr 1fr;flex-wrap:unset;}
+    .opt{min-width:0;}
+  }
+  .opt input{display:none;}
+  .opt label{display:block;text-align:center;padding:8px 6px;border:1px solid var(--border);border-radius:8px;font-size:12.5px;color:var(--muted);cursor:pointer;transition:all .15s;}
+  .opt input:checked + label{background:var(--gold);color:#1a1200;border-color:var(--gold);font-weight:700;}
+  .nav-row{display:flex;justify-content:space-between;gap:10px;margin-top:8px;}
+  button{font-family:inherit;cursor:pointer;border:none;border-radius:8px;padding:12px 20px;font-size:14px;font-weight:700;}
+  .btn-primary{background:var(--gold);color:#1a1200;}
+  .btn-primary:hover{background:#dbb95a;}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border);}
+  .btn-ghost:hover{border-color:var(--muted);}
+  .btn-ghost:disabled{opacity:.4;cursor:not-allowed;}
+  .btn-primary:disabled{opacity:.6;cursor:not-allowed;}
+  .result-score{font-size:52px;font-weight:800;margin:6px 0 2px;}
+  .result-band{display:inline-block;font-size:14px;font-weight:700;padding:6px 14px;border-radius:99px;margin-bottom:6px;}
+  .result-note{font-size:12.5px;color:var(--muted);margin-top:2px;}
+  .faq-item{border-top:1px solid var(--border);padding:16px 0;}
+  .faq-item:first-of-type{border-top:none;padding-top:0;}
+  .faq-q{font-size:15px;font-weight:700;margin-bottom:6px;}
+  .faq-a{font-size:13.5px;color:var(--muted);line-height:1.5;}
+  .pdf-btn{width:100%;margin-top:4px;}
+  .ar-footer{position:fixed;left:0;bottom:0;z-index:9;display:flex;align-items:center;gap:8px;padding:6px 14px;font-size:12px;line-height:1.4;color:#7a9db8;background:rgba(8,21,37,0.94);border-top:1px solid #1e3a52;border-right:1px solid #1e3a52;border-radius:0 8px 0 0;}
+  .ar-footer a{color:#eef4f9;text-decoration:none;font-weight:600;}
+  .ar-footer a:hover{color:#c9a84c;}
+  .ar-footer__sep{color:#3a5870;}
+  .ar-footer a.ar-footer__wa{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;color:#4caf7d;background:rgba(76,175,125,0.14);border:1px solid rgba(76,175,125,0.45);}
+  .ar-footer a.ar-footer__wa:hover{color:#eef4f9;background:rgba(76,175,125,0.28);border-color:#4caf7d;}
+  @media (max-width:900px){.ar-footer{font-size:11px;padding:5px 10px;gap:6px;}}
+  @media print{.ar-footer{display:none !important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Free Self-Assessment</div>
+  <h1 id="h1">NABH ELC Readiness Meter — Free 100-Question Self-Assessment</h1>
+  <p class="sub" id="sub">Answer honestly across all 10 chapters. No login, no email required to see your score.</p>
+  <p class="result-note" style="margin:-14px 0 22px;">Core = required for ELC certification.</p>
+
+  <div id="app"></div>
+
+  <div class="card" id="faq-card">
+    <h2 style="font-size:18px;margin:0 0 14px;">Frequently asked questions</h2>
+    <div id="faq-list"></div>
+  </div>
+</div>
+
+<footer class="ar-footer no-print">
+  <span>Powered by <a href="https://accredready.in/" rel="noopener">AccredReady</a></span>
+  <span class="ar-footer__sep" aria-hidden="true">&middot;</span>
+  <a class="ar-footer__wa" href="https://wa.me/918511180957" target="_blank" rel="noopener noreferrer">
+    <span aria-hidden="true">&#128172;</span> WhatsApp us
+  </a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js"
+  integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+(function(){
+  "use strict";
+
+  var SUPABASE_URL = "https://tbptllgcjtiiqspxqcde.supabase.co";
+  var SUPABASE_ANON_KEY = "sb_publishable_tEu-kA8f9VLW-5uvU4E7ZA_PtaX59bw";
+
+  var PROGRAMME_LABELS = { "elc-hospital":"ELC Hospital", "elc-shco":"ELC SHCO" };
+  var CYCLE_LABELS = { "first-time":"First-time certification", "renewal":"Renewal" };
+
+  var CHAPTERS = [
+    { code:"AAC", name:"Access, Assessment & Continuity of Care", questions:[
+      ["Do you have a written list of all services your hospital provides (including outsourced ones)?",true],
+      ["Is this services list displayed prominently where patients can see it (at least in 2 languages)?",true],
+      ["Is there a written process for registering and admitting patients?",true],
+      ["Is every patient assessed by a qualified doctor before treatment begins, and is it documented?",true],
+      ["Does every patient have one identified doctor responsible for their overall care?",true],
+      ["Are patients reassessed at least daily (or more often if critical), with actions documented in the case sheet?",true],
+      ["Is there a defined emergency/casualty service with 24x7 availability, and do staff know the triage process?",true],
+      ["Are there written transfer/discharge criteria, and is discharge (including discharge summary) documented?",true],
+      ["Do you have a process for patients who leave against medical advice (LAMA/DAMA), with documentation?",false],
+      ["Are waiting times for OPD, emergency, and diagnostics monitored and reviewed?",false]
+    ]},
+    { code:"COP", name:"Care of Patients", questions:[
+      ["Is there a written plan of care for each patient, and is it updated as the patient's condition changes?",true],
+      ["Are nursing care plans documented and followed for admitted patients?",true],
+      ["Is there a written policy for patient assessment including pain, nutrition, and psychological needs?",true],
+      ["Are clinical guidelines/SOPs for common conditions available and actually used in the wards?",true],
+      ["Is there a process for medication reconciliation (verifying what medicines the patient is already on)?",true],
+      ["Is patient identification verified before every procedure/test (using ID band or similar)?",true],
+      ["Is there a surgical safety checklist (Sign In / Time Out / Sign Out) used in the OT?",true],
+      ["Is consent taken and documented for all procedures, using a proper consent form?",true],
+      ["Are high-risk patients (elderly, pediatric, ICU) identified and given additional precautions?",false],
+      ["Is care coordinated when patients move between departments (ward to ICU to OT to discharge)?",false]
+    ]},
+    { code:"MOM", name:"Management of Medication", questions:[
+      ["Is there a written hospital formulary (list of approved medicines), reviewed at least annually?",true],
+      ["Is there written guidance on how medicines should be prescribed (prescription format, generic names)?",true],
+      ["Is there written guidance on safe dispensing (checking, labeling, patient counseling)?",true],
+      ["Are medicines stored correctly (temperature-controlled where needed, segregated, within expiry)?",true],
+      ["Is there a system for reporting and reviewing medication errors and adverse drug reactions?",true],
+      ["Are high-alert medicines (e.g., insulin, heparin, potassium chloride) identified and stored/handled with extra precautions?",true],
+      ["Are narcotic drugs and psychotropic substances stored securely per NDPS rules, with a separate register?",true],
+      ["Is medicine administration verified (right patient, drug, dose, route, time) and documented?",true],
+      ["Are pharmacy services available 24x7 - or is there a defined process to obtain medicines when the pharmacy is closed?",true],
+      ["Is there a process for managing expired/returned medicines and vendor quality?",false]
+    ]},
+    { code:"PRE", name:"Patient Rights & Education", questions:[
+      ["Is the patient rights charter documented, displayed, and available in a language patients understand?",true],
+      ["Are patients informed of their rights and responsibilities at admission?",true],
+      ["Is there a documented informed consent process, and do staff actually follow it?",true],
+      ["Are treatment costs explained to patients/family in advance (or an estimate/tariff list displayed)?",true],
+      ["Is there a grievance redressal process that patients know about (suggestion box + named contact)?",true],
+      ["Do you respect patient confidentiality and privacy during examination and in records?",true],
+      ["Are patients educated about their condition, medicines, and follow-up care before discharge?",false],
+      ["Is there a process to accommodate patients' cultural/religious beliefs and values?",false],
+      ["Are patient complaints logged, investigated, and replied to within a defined time?",false],
+      ["Do you have a feedback mechanism (satisfaction survey) whose results are reviewed?",false]
+    ]},
+    { code:"IPC", name:"Infection Prevention & Control", questions:[
+      ["Is there a written IPC programme/manual, reviewed and updated at least annually?",true],
+      ["Is there an infection control committee/team that meets and documents minutes?",true],
+      ["Is hand hygiene compliance monitored (audits done and results reviewed)?",true],
+      ["Is biomedical waste segregated at source into color-coded bins per BMW Rules?",true],
+      ["Is there a needle-stick injury policy with post-exposure prophylaxis available?",true],
+      ["Are isolation/transmission-based precautions implemented for infectious patients?",true],
+      ["Is environmental cleaning/disinfection scheduled, done, and monitored (checklists)?",true],
+      ["Is there an antibiotic stewardship / rational antibiotic use policy?",true],
+      ["Are healthcare-associated infections (e.g., SSI, UTI, BSI) monitored/surveilled, even if simple?",false],
+      ["Is staff immunization (Hepatitis B, etc.) tracked and done?",false]
+    ]},
+    { code:"PSQ", name:"Patient Safety & Quality Improvement", questions:[
+      ["Is there a designated person responsible for quality and patient safety?",true],
+      ["Is there a documented quality improvement programme with defined goals?",true],
+      ["Are adverse events/near misses reported (non-punitive) and analyzed?",true],
+      ["Are incidents (falls, pressure ulcers, medication errors) tracked with root-cause analysis for significant ones?",true],
+      ["Is there an internal audit schedule, and are audits actually conducted with documented findings?",true],
+      ["Are key performance indicators (KPIs) defined, measured, and reviewed by management?",true],
+      ["Is corrective and preventive action (CAPA) tracked to closure?",false],
+      ["Is patient safety data (indicators, incidents) shared with staff?",false],
+      ["Are safety goals (e.g., WHO Safe Surgery, patient ID) adopted and monitored?",false],
+      ["Does the hospital participate in any external quality benchmarking or learning networks?",false]
+    ]},
+    { code:"ROM", name:"Responsibilities of Management", questions:[
+      ["Is there a documented organization chart with defined roles and responsibilities?",true],
+      ["Does management review quality/safety performance at defined intervals (review meetings with minutes)?",true],
+      ["Is there a mission/quality policy approved by leadership and communicated to staff?",true],
+      ["Are statutory and regulatory requirements (registrations, licenses, clinical establishment act) identified and met?",true],
+      ["Is there a budget/resource allocation for quality and safety activities?",true],
+      ["Are committee structures defined (clinical, infection control, pharmacy, etc.) with clear terms of reference?",true],
+      ["Is there a process for managing outsourced services (agreements, monitoring, quality checks)?",false],
+      ["Are staff informed about hospital policies (orientation + ongoing communication)?",false],
+      ["Is risk management practiced (identifying risks, mitigation plans)?",false],
+      ["Does leadership participate in quality activities (rounds, audits, committee meetings)?",false]
+    ]},
+    { code:"FMS", name:"Facility Management & Safety", questions:[
+      ["Is the facility maintained safe and clean, with regular facility inspection rounds documented?",true],
+      ["Is there an equipment inventory with preventive maintenance schedule and records?",true],
+      ["Are electricity, water, and medical gas/vacuum systems tested and maintained with records?",true],
+      ["Is the Fire NOC current, with fire exits, extinguishers, and fire drills conducted and documented?",true],
+      ["Are hazardous materials (chemicals, gases, radioactive materials if any) stored and handled safely?",true],
+      ["Is there an emergency/disaster plan (fire, earthquake, utility failure) with staff aware of their roles?",true],
+      ["Is potable water quality tested periodically?",false],
+      ["Are diesel generators and emergency power tested regularly?",false],
+      ["Is there a maintenance log for critical equipment downtime and alternative arrangements?",false],
+      ["Are signage and wayfinding (including fire exits, patient rights, hazards) adequate and maintained?",false]
+    ]},
+    { code:"HRM", name:"Human Resource Management", questions:[
+      ["Is there a process to verify qualifications, registration, and experience before hiring clinical staff?",true],
+      ["Are duty rosters maintained and are staffing levels appropriate to the services offered?",true],
+      ["Is an orientation/induction given to all new staff and documented?",true],
+      ["Is there an annual training plan, and are training records maintained?",true],
+      ["Are credentials and privileging (defining what each doctor is authorized to do) done and documented?",true],
+      ["Is staff health managed (pre-employment checks, periodic health checks, immunization)?",true],
+      ["Is there a performance appraisal system in place?",false],
+      ["Are locum/temporary staff credentialed and inducted?",false],
+      ["Is there a disciplinary/code-of-conduct process?",false],
+      ["Are staff competencies for critical tasks (OT, ICU, emergency) assessed and documented?",false]
+    ]},
+    { code:"IMS", name:"Information Management System", questions:[
+      ["Does every patient have a unique identifier, and are medical records maintained for each patient?",true],
+      ["Are medical records complete (history, examination, orders, consents, discharge summary) and legible?",true],
+      ["Is record confidentiality protected (secure storage, controlled access)?",true],
+      ["Are records retained for the required period and disposed of safely?",true],
+      ["Is there a system to capture and report notifiable diseases and vital statistics?",true],
+      ["Is documentation completed in a timely manner (within defined time after admission/discharge)?",false],
+      ["Are registers (OPD, IPD, birth, death) maintained accurately?",false],
+      ["Is data accuracy checked (periodic MRD audits)?",false],
+      ["Is there a process for amending records (corrections documented properly, no overwriting)?",false],
+      ["If using HMIS/software: is data backed up, access-controlled, and is there a downtime procedure?",false]
+    ]}
+  ];
+
+  var FAQS = [
+    ["What is NABH ELC (Entry Level Certification)?","NABH's Entry Level Certification is a shorter, simpler accreditation pathway designed for hospitals and SHCOs preparing for full NABH accreditation, built around core patient safety and quality requirements before the full standard set applies."],
+    ["How is this readiness score calculated?","Each question scores Yes = 1, Partially = 0.5, No = 0. Your percentage score maps to one of four bands: Not Ready (under 40%), Early Stage (40–60%), On Track (60–80%), or Likely Ready (over 80%, subject to document verification during the actual assessment)."],
+    ["Is this an official NABH checklist?","No, this is AccredReady's own self-assessment tool built around ELC requirements, meant to help you gauge readiness before applying. It isn't a substitute for the official NABH assessment or document review."],
+    ["What happens after I complete the checklist?","You get your readiness band and score instantly. For a chapter-by-chapter breakdown of exactly which items need work, you can request the detailed PDF report by email."]
+  ];
+
+  var TOTAL_Q = CHAPTERS.reduce(function(n,c){return n+c.questions.length;},0);
+  console.assert(TOTAL_Q===100, "expected 100 questions, got "+TOTAL_Q);
+
+  var screening = { programme:"", cycle:"" };
+  var answers = new Array(TOTAL_Q).fill(null);
+  var step = 0; // 0 = screening, 1..10 = chapters, 11 = results
+
+  function qGlobalIndex(chapterIdx, qIdx){
+    var n = 0;
+    for(var i=0;i<chapterIdx;i++) n += CHAPTERS[i].questions.length;
+    return n + qIdx;
+  }
+
+  function unansweredInChapter(chapterIdx){
+    var missing = [];
+    CHAPTERS[chapterIdx].questions.forEach(function(q, qIdx){
+      var gIdx = qGlobalIndex(chapterIdx, qIdx);
+      if(!answers[gIdx]) missing.push(gIdx);
+    });
+    return missing;
+  }
+
+  function scoreAnswer(v){
+    if(v==="yes") return 1;
+    if(v==="partial") return 0.5;
+    if(v==="no") return 0;
+    return null; // n/a or unanswered - excluded
+  }
+
+  function computeResult(){
+    var sum=0, count=0;
+    for(var i=0;i<TOTAL_Q;i++){
+      var s = scoreAnswer(answers[i]);
+      if(s!==null){ sum+=s; count++; }
+    }
+    var pct = count>0 ? (sum/count*100) : 0;
+    var band;
+    if(pct<40) band={label:"Not Ready",color:"var(--red)"};
+    else if(pct<60) band={label:"Early Stage",color:"var(--amber)"};
+    else if(pct<80) band={label:"On Track",color:"var(--blue)"};
+    else band={label:"Likely Ready (subject to document verification)",color:"var(--green)"};
+    return { pct:pct, band:band, count:count };
+  }
+
+  function el(tag, attrs, children){
+    var e = document.createElement(tag);
+    if(attrs) for(var k in attrs){
+      if(k==="html") e.innerHTML = attrs[k];
+      else if(k.indexOf("on")===0) e.addEventListener(k.slice(2), attrs[k]);
+      else e.setAttribute(k, attrs[k]);
+    }
+    (children||[]).forEach(function(c){ if(c) e.appendChild(c); });
+    return e;
+  }
+
+  function renderScreening(container){
+    var card = el("div",{class:"card"});
+    card.appendChild(el("label",{class:"field",html:"Programme applying for"}));
+    var sel1 = el("select",{onchange:function(e){screening.programme=e.target.value;}});
+    [["","Select..."],["elc-hospital","ELC Hospital"],["elc-shco","ELC SHCO"]].forEach(function(o){
+      var opt = el("option",{value:o[0],html:o[1]});
+      if(screening.programme===o[0]) opt.selected=true;
+      sel1.appendChild(opt);
+    });
+    card.appendChild(sel1);
+
+    card.appendChild(el("label",{class:"field",html:"First-time certification or renewal?"}));
+    var sel3 = el("select",{onchange:function(e){screening.cycle=e.target.value;}});
+    [["","Select..."],["first-time","First-time certification"],["renewal","Renewal"]].forEach(function(o){
+      var opt = el("option",{value:o[0],html:o[1]});
+      if(screening.cycle===o[0]) opt.selected=true;
+      sel3.appendChild(opt);
+    });
+    card.appendChild(sel3);
+
+    var nav = el("div",{class:"nav-row"},[
+      el("span",{}),
+      el("button",{class:"btn-primary",onclick:function(){ step=1; render(); }},[document.createTextNode("Start Assessment →")])
+    ]);
+    card.appendChild(nav);
+    container.appendChild(card);
+  }
+
+  function renderChapter(container, chapterIdx){
+    var chapter = CHAPTERS[chapterIdx];
+    var pctDone = Math.round((chapterIdx/10)*100);
+
+    container.appendChild(el("div",{class:"progress-outer"},[el("div",{class:"progress-inner",style:"width:"+pctDone+"%"})]));
+    container.appendChild(el("div",{class:"progress-label",html:"Chapter "+(chapterIdx+1)+" of 10"}));
+
+    var card = el("div",{class:"card"});
+    card.appendChild(el("div",{class:"chapter-title",html:chapter.name}));
+    card.appendChild(el("div",{class:"chapter-code",html:chapter.code}));
+
+    var errorMsg = el("div",{class:"error-msg",style:"display:none;"});
+
+    chapter.questions.forEach(function(q, qIdx){
+      var gIdx = qGlobalIndex(chapterIdx, qIdx);
+      var qWrap = el("div",{class:"q"});
+      var textRow = el("div",{class:"q-text"},[
+        document.createTextNode((gIdx+1)+". "+q[0])
+      ]);
+      if(q[1]) textRow.appendChild(el("span",{class:"core-badge",title:"Core — required for ELC certification",html:"Core"}));
+      qWrap.appendChild(textRow);
+
+      var opts = el("div",{class:"opts"});
+      [["yes","Yes"],["partial","Partially"],["no","No"],["na","N/A"]].forEach(function(o){
+        var inputId = "q"+gIdx+"_"+o[0];
+        var radio = el("input",{type:"radio",name:"q"+gIdx,id:inputId,value:o[0],onchange:function(){
+          answers[gIdx]=o[0];
+          qWrap.classList.remove("q-error");
+          if(errorMsg.style.display!=="none" && unansweredInChapter(chapterIdx).length===0){
+            errorMsg.style.display = "none";
+          }
+        }});
+        if(answers[gIdx]===o[0]) radio.checked = true;
+        var label = el("label",{for:inputId,html:o[1]});
+        opts.appendChild(el("div",{class:"opt"},[radio,label]));
+      });
+      qWrap.appendChild(opts);
+      card.appendChild(qWrap);
+    });
+
+    card.appendChild(errorMsg);
+
+    var nav = el("div",{class:"nav-row"},[
+      el("button",{class:"btn-ghost",onclick:function(){ step=chapterIdx; render(); }},[document.createTextNode("← Back")]),
+      el("button",{class:"btn-primary",onclick:function(){
+        var missing = unansweredInChapter(chapterIdx);
+        if(missing.length>0){
+          missing.forEach(function(gIdx){
+            var wrap = card.querySelectorAll(".q")[gIdx - qGlobalIndex(chapterIdx,0)];
+            if(wrap) wrap.classList.add("q-error");
+          });
+          errorMsg.textContent = "Please answer all questions before continuing — " + missing.length + " question" + (missing.length>1?"s":"") + " left blank.";
+          errorMsg.style.display = "block";
+          var firstWrap = card.querySelectorAll(".q")[missing[0] - qGlobalIndex(chapterIdx,0)];
+          if(firstWrap) firstWrap.scrollIntoView({behavior:"smooth", block:"center"});
+          return;
+        }
+        step=chapterIdx+2; render();
+      }},[
+        document.createTextNode(chapterIdx===9 ? "See My Score →" : "Next →")
+      ])
+    ]);
+    card.appendChild(nav);
+    container.appendChild(card);
+  }
+
+  function chapterResult(chapterIdx){
+    var sum=0, count=0;
+    CHAPTERS[chapterIdx].questions.forEach(function(q, qIdx){
+      var s = scoreAnswer(answers[qGlobalIndex(chapterIdx, qIdx)]);
+      if(s!==null){ sum+=s; count++; }
+    });
+    return { pct: count>0 ? (sum/count*100) : 0, count: count };
+  }
+
+  var ANSWER_LABELS = { yes:"Yes", partial:"Partially", no:"No", na:"N/A" };
+
+  function generatePdf(meta, result){
+    if(!window.jspdf){ console.error("[ELC checklist] jsPDF failed to load; skipping PDF generation."); return; }
+    var doc = new window.jspdf.jsPDF();
+    var pageHeight = doc.internal.pageSize.getHeight();
+    var marginBottom = 15;
+    var y = 18;
+
+    function ensureSpace(lineCount, lineHeight){
+      if(y + lineCount*lineHeight > pageHeight - marginBottom){ doc.addPage(); y = 18; }
+    }
+
+    doc.setFontSize(16);
+    doc.text("NABH ELC Readiness Report", 14, y); y += 9;
+    doc.setFontSize(10);
+    doc.text("Hospital: " + meta.hospitalName, 14, y); y += 6;
+    doc.text("Programme: " + (PROGRAMME_LABELS[meta.programme] || "-") + "   |   " + (CYCLE_LABELS[meta.cycle] || "-"), 14, y); y += 8;
+    doc.setFontSize(13);
+    doc.text("Overall score: " + Math.round(result.pct) + "%  —  " + result.band.label, 14, y); y += 10;
+
+    CHAPTERS.forEach(function(chapter, cIdx){
+      var chResult = chapterResult(cIdx);
+      ensureSpace(2, 6);
+      doc.setFontSize(12);
+      doc.setFont(undefined, "bold");
+      doc.text(chapter.code + " - " + chapter.name + " (" + Math.round(chResult.pct) + "%)", 14, y);
+      doc.setFont(undefined, "normal");
+      y += 7;
+      doc.setFontSize(9);
+
+      chapter.questions.forEach(function(q, qIdx){
+        var gIdx = qGlobalIndex(cIdx, qIdx);
+        var ansLabel = ANSWER_LABELS[answers[gIdx]] || "Not answered";
+        var text = (gIdx+1) + ". " + q[0] + (q[1] ? " [Core]" : "") + " — " + ansLabel;
+        var lines = doc.splitTextToSize(text, 180);
+        ensureSpace(lines.length, 4.5);
+        doc.text(lines, 14, y);
+        y += lines.length*4.5;
+      });
+      y += 4;
+    });
+
+    doc.save("NABH-ELC-Readiness-Report.pdf");
+  }
+
+  function submitLead(meta, result){
+    return fetch(SUPABASE_URL + "/rest/v1/elc_checklist_leads", {
+      method: "POST",
+      headers: {
+        "apikey": SUPABASE_ANON_KEY,
+        "Authorization": "Bearer " + SUPABASE_ANON_KEY,
+        "Content-Type": "application/json",
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify({
+        name: meta.name,
+        hospital_name: meta.hospitalName,
+        email: meta.email,
+        programme: screening.programme || null,
+        cert_type: screening.cycle || null,
+        readiness_score: Math.round(result.pct),
+        readiness_band: result.band.label,
+        answered_count: result.count,
+        total_count: TOTAL_Q
+      })
+    });
+  }
+
+  function renderResults(container){
+    var r = computeResult();
+    var card = el("div",{class:"card"});
+    card.appendChild(el("div",{class:"eyebrow",html:"Your Result"}));
+    card.appendChild(el("div",{class:"result-score",html:Math.round(r.pct)+"%"}));
+    card.appendChild(el("div",{class:"result-band",style:"background:"+r.band.color+"22;color:"+r.band.color+";border:1px solid "+r.band.color+"55;",html:r.band.label}));
+    card.appendChild(el("div",{class:"result-note",html:"Based on "+r.count+" answered questions (N/A and skipped questions are excluded from scoring)."}));
+    container.appendChild(card);
+
+    var pdfCard = el("div",{class:"card"});
+    pdfCard.appendChild(el("div",{style:"font-weight:700;margin-bottom:4px;",html:"Want the full breakdown?"}));
+    pdfCard.appendChild(el("div",{class:"result-note",style:"margin-bottom:14px;",html:"Get a chapter-by-chapter PDF report showing exactly which items need work."}));
+    var formWrap = el("div",{});
+    var nameInput = el("input",{type:"text",required:"required",placeholder:"Your name"});
+    var hospitalInput = el("input",{type:"text",required:"required",placeholder:"Hospital name"});
+    var emailInput = el("input",{type:"email",required:"required",placeholder:"you@hospital.com"});
+    var submitBtn = el("button",{type:"submit",class:"btn-primary pdf-btn",html:"Get detailed PDF report"});
+
+    var form = el("form",{onsubmit:function(e){
+      e.preventDefault();
+      var meta = { name:nameInput.value, hospitalName:hospitalInput.value, email:emailInput.value, programme:screening.programme, cycle:screening.cycle };
+      submitBtn.setAttribute("disabled","disabled");
+      submitBtn.textContent = "Generating report…";
+
+      submitLead(meta, r).then(function(res){
+        if(!res.ok) return res.text().then(function(body){ throw new Error("Supabase insert failed: "+res.status+" "+body); });
+      }).catch(function(err){
+        console.error("[ELC checklist] lead insert failed", err);
+      }).then(function(){
+        generatePdf(meta, r);
+        formWrap.innerHTML = "";
+        formWrap.appendChild(el("div",{class:"result-note",style:"color:var(--green);",html:"Your PDF report has downloaded. Thanks, "+meta.name+"!"}));
+      });
+    }});
+    form.appendChild(el("label",{class:"field",html:"Name"}));
+    form.appendChild(nameInput);
+    form.appendChild(el("label",{class:"field",html:"Hospital name"}));
+    form.appendChild(hospitalInput);
+    form.appendChild(el("label",{class:"field",html:"Email address"}));
+    form.appendChild(emailInput);
+    form.appendChild(submitBtn);
+    formWrap.appendChild(form);
+    pdfCard.appendChild(formWrap);
+    container.appendChild(pdfCard);
+
+    var again = el("div",{class:"nav-row"},[
+      el("button",{class:"btn-ghost",onclick:function(){ step=10; render(); }},[document.createTextNode("← Back")]),
+      el("span",{})
+    ]);
+    container.appendChild(again);
+  }
+
+  function render(){
+    var app = document.getElementById("app");
+    app.innerHTML = "";
+    if(step===0) renderScreening(app);
+    else if(step>=1 && step<=10) renderChapter(app, step-1);
+    else renderResults(app);
+    window.scrollTo(0,0);
+  }
+
+  function renderFaqs(){
+    var list = document.getElementById("faq-list");
+    FAQS.forEach(function(f){
+      list.appendChild(el("div",{class:"faq-item"},[
+        el("div",{class:"faq-q",html:f[0]}),
+        el("div",{class:"faq-a",html:f[1]})
+      ]));
+    });
+  }
+
+  render();
+  renderFaqs();
+})();
+</script>
+</body>
+</html>
