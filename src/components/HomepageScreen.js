@@ -1006,6 +1006,15 @@ export default function HomepageScreen({ onLogin }) {
                 Take the audit →
               </a>
             </div>
+            <div className="mcard" style={{position:"relative", cursor:"pointer"}} onClick={() => window.open("/nabh-elc-readiness-checklist/", "_blank", "noopener,noreferrer")}>
+              <span style={{position:"absolute",top:14,right:14,fontSize:"9px",fontWeight:700,letterSpacing:".05em",textTransform:"uppercase",background:"#dbeafe",color:"#2563eb",padding:"3px 9px",borderRadius:100}}>Free Tool</span>
+              <div className="ic" style={{background:"#dbeafe",color:"#2563eb"}} aria-hidden="true">📋</div>
+              <h4>NABH ELC Readiness Checklist</h4>
+              <p>See how ready your hospital is for NABH Entry Level Certification — 100-question self-assessment across all 10 chapters.</p>
+              <a href="/nabh-elc-readiness-checklist/" target="_blank" rel="noopener noreferrer" className="waitlist-btn" style={{color:"#2563eb"}}>
+                Take the checklist →
+              </a>
+            </div>
           </div>
           <div className="tier-label">Coming soon</div>
           <div className="mgrid">
