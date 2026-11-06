@@ -3135,39 +3135,50 @@ function Dashboard({ decision, gaps, onNav, onExportPDF, pdfLoading }) {
 
   return (
     <div>
-      <VerdictBanner decision={decision} onExportPDF={onExportPDF} pdfLoading={pdfLoading}/>
-      {/* Next Actions */}
-      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
-        <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:10}}>WHAT TO DO NEXT</div>
-        {nextActions.length===0
-          ?<div style={{fontSize:13,color:T.green,textAlign:"center",padding:"8px 0"}}>✅ All key actions completed — you're on track!</div>
-          :nextActions.map((item,i)=>(
-            <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 10px",borderRadius:8,borderLeft:`3px solid ${item.color}`,background:`${item.color}10`,marginBottom:i<nextActions.length-1?6:0}}>
-              <div style={{flex:1,fontSize:13,color:T.text,lineHeight:1.4}}>{item.text}</div>
-              <button onClick={()=>onNav(item.nav)} style={{padding:"3px 9px",borderRadius:6,border:`1px solid ${item.color}40`,background:"transparent",color:item.color,fontSize:13,cursor:"pointer",flexShrink:0}}>→</button>
+      {decision.scored_count ? (
+        <>
+          <VerdictBanner decision={decision} onExportPDF={onExportPDF} pdfLoading={pdfLoading}/>
+          {/* Next Actions */}
+          <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
+            <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:10}}>WHAT TO DO NEXT</div>
+            {nextActions.length===0
+              ?<div style={{fontSize:13,color:T.green,textAlign:"center",padding:"8px 0"}}>✅ All key actions completed — you're on track!</div>
+              :nextActions.map((item,i)=>(
+                <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 10px",borderRadius:8,borderLeft:`3px solid ${item.color}`,background:`${item.color}10`,marginBottom:i<nextActions.length-1?6:0}}>
+                  <div style={{flex:1,fontSize:13,color:T.text,lineHeight:1.4}}>{item.text}</div>
+                  <button onClick={()=>onNav(item.nav)} style={{padding:"3px 9px",borderRadius:6,border:`1px solid ${item.color}40`,background:"transparent",color:item.color,fontSize:13,cursor:"pointer",flexShrink:0}}>→</button>
+                </div>
+              ))
+            }
+          </div>
+          {/* 4-Pillar Readiness */}
+          <div style={{background:T.panel,border:`1px solid ${allReady?T.green:T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
+            <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:10}}>ASSESSMENT READINESS — 4 PILLARS</div>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}}>
+              {pillars.map(p=>(
+                <div key={p.key} onClick={()=>onNav(p.nav)} style={{background:T.panel2,border:`1px solid ${statusColor(p.status)}30`,borderRadius:10,padding:"12px 10px",cursor:"pointer",textAlign:"center"}}>
+                  <div style={{fontSize:20,marginBottom:4}}>{p.icon}</div>
+                  <div style={{fontSize:12,fontWeight:700,color:T.white,marginBottom:4}}>{p.label}</div>
+                  <div style={{fontSize:18,fontWeight:800,color:statusColor(p.status),marginBottom:2}}>{Math.round(p.pct)}%</div>
+                  <div style={{fontSize:8,color:T.muted,marginBottom:4}}>{p.detail}</div>
+                  <div style={{fontSize:8,color:statusColor(p.status)}}>{statusLabel(p.status)}</div>
+                  <div style={{height:3,background:T.border,borderRadius:2,marginTop:8}}>
+                    <div style={{height:"100%",borderRadius:2,background:statusColor(p.status),width:`${Math.min(100,p.pct)}%`}}/>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))
-        }
-      </div>
-      {/* 4-Pillar Readiness */}
-      <div style={{background:T.panel,border:`1px solid ${allReady?T.green:T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
-        <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:10}}>ASSESSMENT READINESS — 4 PILLARS</div>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}}>
-          {pillars.map(p=>(
-            <div key={p.key} onClick={()=>onNav(p.nav)} style={{background:T.panel2,border:`1px solid ${statusColor(p.status)}30`,borderRadius:10,padding:"12px 10px",cursor:"pointer",textAlign:"center"}}>
-              <div style={{fontSize:20,marginBottom:4}}>{p.icon}</div>
-              <div style={{fontSize:12,fontWeight:700,color:T.white,marginBottom:4}}>{p.label}</div>
-              <div style={{fontSize:18,fontWeight:800,color:statusColor(p.status),marginBottom:2}}>{Math.round(p.pct)}%</div>
-              <div style={{fontSize:8,color:T.muted,marginBottom:4}}>{p.detail}</div>
-              <div style={{fontSize:8,color:statusColor(p.status)}}>{statusLabel(p.status)}</div>
-              <div style={{height:3,background:T.border,borderRadius:2,marginTop:8}}>
-                <div style={{height:"100%",borderRadius:2,background:statusColor(p.status),width:`${Math.min(100,p.pct)}%`}}/>
-              </div>
-            </div>
-          ))}
+            {!allReady&&<div style={{marginTop:10,padding:"8px 12px",background:T.redD,borderRadius:8,fontSize:12,color:T.red}}>⚠️ NABH assessors verify all 4 pillars — OE scores, KPI data (≥3 months), committee meeting minutes, and clinical audit records. App shows PASS only when all 4 pillars are ready.</div>}
+          </div>
+        </>
+      ) : (
+        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:14,padding:"36px 24px",textAlign:"center",marginBottom:14}}>
+          <div style={{fontSize:30,marginBottom:10}}>🚀</div>
+          <div style={{fontSize:17,fontWeight:800,color:T.white,marginBottom:8}}>Let's get your first readiness snapshot</div>
+          <div style={{fontSize:13,color:T.muted,lineHeight:1.6,maxWidth:420,margin:"0 auto 18px"}}>Score a few Objective Elements and we'll show you exactly where your hospital stands — no pressure, just a starting point.</div>
+          <button onClick={()=>onNav("scoring")} style={{padding:"11px 26px",borderRadius:10,border:"none",background:T.gold,color:T.bg,fontSize:14,fontWeight:800,cursor:"pointer"}}>Start Scoring OEs →</button>
         </div>
-        {!allReady&&<div style={{marginTop:10,padding:"8px 12px",background:T.redD,borderRadius:8,fontSize:12,color:T.red}}>⚠️ NABH assessors verify all 4 pillars — OE scores, KPI data (≥3 months), committee meeting minutes, and clinical audit records. App shows PASS only when all 4 pillars are ready.</div>}
-      </div>
+      )}
       <ChapterHeatmap breakdown={decision.chapter_breakdown}/>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 18px",marginTop:14}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:12}}>
