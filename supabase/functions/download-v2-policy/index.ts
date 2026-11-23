@@ -6,11 +6,12 @@
 // Input: { standard_code: "FMS.4", hospital_name: "HMP Foundation" }
 //    or: { standard_code: "FMS.4", hospital_id: "<uuid>" }  (name looked up)
 //
-// PAYWALL: AAC-chapter documents are free for every signed-in hospital.
-// Every other chapter requires hospitals.plan = 'paid'. The plan check is
-// derived server-side from the caller's own JWT (profiles -> hospital_id),
-// never from a client-supplied hospital_id/hospital_name — those remain
-// for display/personalisation only and cannot be used to bypass the gate.
+// PAYWALL (Nov 2026): every chapter requires sign-in. AAC requires an
+// active trial (hospitals.access_until in the future) or a paid plan.
+// Every other chapter requires hospitals.plan = 'paid'. Derived server-side
+// from the caller's own JWT (profiles -> hospital_id), never from a
+// client-supplied hospital_id/hospital_name — those remain for
+// display/personalisation only and cannot be used to bypass the gate.
 //
 // TRACKING: every successful download is logged to document_downloads
 // (programme='shco') so we can see real usage. Logging failures never
@@ -88,70 +89,50 @@ Deno.serve(async (req: Request) => {
 
     // ── Paywall ───────────────────────────────────────────────────────────
     const chapter = standard_code.split(".")[0];
-    let callerHospitalId: string | null = null;
-    let callerUserId: string | null = null;
-    if (chapter !== FREE_CHAPTER) {
-      const authHeader = req.headers.get("Authorization");
-      const jwt = authHeader?.replace(/^Bearer\s+/i, "");
-      if (!jwt) {
-        return Response.json(
-          { error: "Sign in required to download this document." },
-          { status: 401, headers: CORS },
-        );
-      }
+    const authHeader = req.headers.get("Authorization");
+    const jwt = authHeader?.replace(/^Bearer\s+/i, "");
+    if (!jwt) {
+      return Response.json(
+        { error: "Sign in required to download this document." },
+        { status: 401, headers: CORS },
+      );
+    }
 
-      const { data: userData, error: userErr } = await supabase.auth.getUser(jwt);
-      if (userErr || !userData?.user) {
-        return Response.json(
-          { error: "Your session has expired — sign in again." },
-          { status: 401, headers: CORS },
-        );
-      }
-      callerUserId = userData.user.id;
+    const { data: userData, error: userErr } = await supabase.auth.getUser(jwt);
+    if (userErr || !userData?.user) {
+      return Response.json(
+        { error: "Your session has expired — sign in again." },
+        { status: 401, headers: CORS },
+      );
+    }
+    const callerUserId = userData.user.id;
 
-      const { data: profile, error: profileErr } = await supabase
-        .from("profiles")
-        .select("hospital_id")
-        .eq("id", userData.user.id)
+    const { data: profile, error: profileErr } = await supabase
+      .from("profiles")
+      .select("hospital_id")
+      .eq("id", callerUserId)
+      .maybeSingle();
+    if (profileErr) throw new Error(`Profile lookup: ${profileErr.message}`);
+    const callerHospitalId: string | null = profile?.hospital_id ?? null;
+
+    let accessOk = false;
+    if (callerHospitalId) {
+      const { data: hospRow, error: hospPlanErr } = await supabase
+        .from("hospitals")
+        .select("plan, access_until")
+        .eq("id", callerHospitalId)
         .maybeSingle();
-      if (profileErr) throw new Error(`Profile lookup: ${profileErr.message}`);
+      if (hospPlanErr) throw new Error(`Plan lookup: ${hospPlanErr.message}`);
+      const isPaid = hospRow?.plan === "paid";
+      const inTrial = hospRow?.access_until ? new Date(hospRow.access_until) > new Date() : false;
+      accessOk = isPaid || (chapter === FREE_CHAPTER && inTrial);
+    }
 
-      let planOk = false;
-      if (profile?.hospital_id) {
-        callerHospitalId = profile.hospital_id;
-        const { data: hospRow, error: hospPlanErr } = await supabase
-          .from("hospitals")
-          .select("plan")
-          .eq("id", profile.hospital_id)
-          .maybeSingle();
-        if (hospPlanErr) throw new Error(`Plan lookup: ${hospPlanErr.message}`);
-        planOk = hospRow?.plan === "paid";
-      }
-
-      if (!planOk) {
-        return Response.json(
-          {
-            error: `${chapter} documents need a paid plan. ${FREE_CHAPTER} chapter documents are free to try — upgrade to unlock the rest.`,
-            upgrade_required: true,
-          },
-          { status: 402, headers: CORS },
-        );
-      }
-    } else {
-      const authHeader = req.headers.get("Authorization");
-      const jwt = authHeader?.replace(/^Bearer\s+/i, "");
-      if (jwt) {
-        const { data: userData } = await supabase.auth.getUser(jwt);
-        if (userData?.user) {
-          callerUserId = userData.user.id;
-          const { data: profile } = await supabase
-            .from("profiles")
-            .select("hospital_id")
-            .eq("id", userData.user.id)
-            .maybeSingle();
-          callerHospitalId = profile?.hospital_id ?? null;
-        }
-      }
+    if (!accessOk) {
+      const msg = chapter === FREE_CHAPTER
+        ? `Your free trial has ended. Upgrade to a paid plan to keep downloading ${FREE_CHAPTER} documents.`
+        : `${chapter} documents need a paid plan. ${FREE_CHAPTER} chapter documents are free during your trial — upgrade to unlock the rest.`;
+      return Response.json({ error: msg, upgrade_required: true }, { status: 402, headers: CORS });
     }
     // ─────────────────────────────────────────────────────────────────────
 
