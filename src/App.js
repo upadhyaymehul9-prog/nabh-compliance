@@ -14684,7 +14684,7 @@ function StatutoryLicensesScreen({ hospitalId, showAdd, navigate, setShowAdd }) 
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14,flexWrap:"wrap",gap:8}}>
         <div>
           <div style={{fontSize:16,fontWeight:700,color:T.gold}}>📋 Statutory License Tracker</div>
-          <div style={{fontSize:12,color:T.muted}}>Track all mandatory licenses — get alerted before expiry</div>
+          <div style={{fontSize:12,color:T.muted}}>Track all mandatory licenses and their expiry dates</div>
         </div>
         <button onClick={()=>{navigate({ showLicenseAdd: true });setEditId(null);setForm({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""});}} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>+ Add License</button>
       </div>
