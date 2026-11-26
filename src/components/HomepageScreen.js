@@ -5,12 +5,26 @@ const YOUTUBE_PROMO_ID = "de3TKt7LfT8";
 const YOUTUBE_PROMO_URL = `https://www.youtube.com/watch?v=${YOUTUBE_PROMO_ID}`;
 const FOUNDER_LINKEDIN_URL = "https://www.linkedin.com/in/dr-mehul-upadhyay-039a07197";
 const COMPANY_LINKEDIN_URL = "https://www.linkedin.com/company/135244094/";
+// Set to the founder photo path (e.g. "/founder.jpg") once Mk supplies it. Empty = initials placeholder.
+const FOUNDER_PHOTO_URL = "";
 
 export default function HomepageScreen({ onLogin }) {
   const [openPersons, setOpenPersons] = useState([false, false, false]);
   const [menuOpen, setMenuOpen] = useState(false);
   const [authCardMode, setAuthCardMode] = useState("signup");
   const [showAnnounce, setShowAnnounce] = useState(false);
+  const [showHeroFilm, setShowHeroFilm] = useState(false);
+
+  // Brand film plays only on wide screens, with motion allowed, and not on Save-Data connections.
+  useEffect(() => {
+    const wide = window.matchMedia("(min-width: 961px)");
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const saveData = navigator.connection && navigator.connection.saveData;
+    const update = () => setShowHeroFilm(wide.matches && !calm.matches && !saveData);
+    update();
+    wide.addEventListener("change", update);
+    return () => wide.removeEventListener("change", update);
+  }, []);
 
   const goToAuth = (mode) => {
     setMenuOpen(false);
@@ -326,6 +340,35 @@ export default function HomepageScreen({ onLogin }) {
           position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
         }
 
+        /* ── HERO BRAND FILM (muted background, desktop only) ── */
+        #hp-root .hero-bg-video {
+          position: absolute; inset: 0; width: 100%; height: 100%;
+          object-fit: cover; opacity: .38; pointer-events: none; z-index: 0;
+        }
+        #hp-root .hero-bg-shade {
+          position: absolute; inset: 0; z-index: 1; pointer-events: none;
+          background: linear-gradient(90deg, rgba(6,78,59,.92) 0%, rgba(6,78,59,.72) 55%, rgba(6,78,59,.55) 100%);
+        }
+        #hp-root .hero-link {
+          color: #A7F3D0; font-weight: 600; font-size: 15px; text-decoration: none;
+          padding: 10px 6px; display: inline-flex; align-items: center; gap: 6px;
+          border-bottom: 1px solid rgba(167,243,208,.35);
+        }
+        #hp-root .hero-link:hover { color: #fff; border-bottom-color: #fff; }
+
+        /* ── FOUNDER STORY ── */
+        #hp-root .story { background: var(--white); }
+        #hp-root .story-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 56px; align-items: center; }
+        @media(max-width:900px) { #hp-root .story-grid { grid-template-columns: 1fr; gap: 36px; } }
+        #hp-root .story-text h2 { font-family: 'Figtree', sans-serif; font-size: clamp(28px, 4vw, 40px); line-height: 1.12; font-weight: 800; letter-spacing: -.02em; color: var(--text); margin: 12px 0 18px; }
+        #hp-root .story-text p { font-size: 17px; line-height: 1.75; color: var(--muted); margin-bottom: 14px; max-width: 52ch; }
+        #hp-root .story-sign { display: flex; align-items: center; gap: 14px; margin-top: 26px; }
+        #hp-root .story-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--brand-light); flex-shrink: 0; }
+        #hp-root .story-photo-ph { background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Figtree', sans-serif; font-weight: 800; font-size: 20px; }
+        #hp-root .story-name { font-family: 'Figtree', sans-serif; font-weight: 800; font-size: 16px; color: var(--text); }
+        #hp-root .story-role { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+        #hp-root .story .hero-video { justify-self: stretch; max-width: none; }
+
         /* ── TRUST BAR ── */
         #hp-root .trust-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 0; }
         #hp-root .trust-bar .wrap { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center; }
@@ -569,6 +612,21 @@ export default function HomepageScreen({ onLogin }) {
 
       {/* HERO */}
       <section className="hero" aria-label="AccredReady platform introduction">
+        {showHeroFilm && (
+          <video
+            className="hero-bg-video"
+            src="/accredready-hero-bg.mp4"
+            poster="/accredready-hero-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            aria-hidden="true"
+            tabIndex={-1}
+          />
+        )}
+        <div className="hero-bg-shade" aria-hidden="true"></div>
         <div className="hero-inner">
           <div>
             <div className="hero-badge">
@@ -576,53 +634,61 @@ export default function HomepageScreen({ onLogin }) {
               NABH Compliance Platform — India
             </div>
             <h1>
-              Get accreditation-ready,{" "}
-              <em className="hero-hi si">without the consultant price tag.</em>
+              NABH ready,{" "}
+              <em className="hero-hi si">without the last-minute chaos.</em>
             </h1>
-            <p className="hero-sub">India's most affordable NABH compliance platform — built by a healthcare operations leader. Score your standards, find your gaps, fix them, and reach survey-readiness. For hospitals and small healthcare organisations.</p>
+            <p className="hero-sub">Built by Dr. Mehul Upadhyay, a hospital operations leader with 15+ years in the field and a certified NABH Quality Manager. Score your standards, find your gaps, fix them, and walk into survey day ready.</p>
             <div className="hero-actions">
               <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
                 <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
               </button>
-              <a className="btn btn-ghost-white btn-lg" href="#features">
-                See How It Works <i className="ti ti-arrow-down" aria-hidden="true"></i>
+              <a className="hero-link" href="#story">
+                Why I built this <i className="ti ti-arrow-down" aria-hidden="true"></i>
               </a>
-              <a className="btn btn-ghost-white btn-lg" href={YOUTUBE_PROMO_URL} target="_blank" rel="noopener noreferrer">
-                <i className="ti ti-brand-youtube" aria-hidden="true"></i> Watch Video
-              </a>
-            </div>
-            <div className="hero-app">
-              <span className="hero-app-label">Also available on Android</span>
-              <a href="https://play.google.com/store/apps/details?id=com.mktech.nabhcompliance" target="_blank" rel="noopener noreferrer">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
-              </a>
-            </div>
-            <p className="hero-social">
-              <i className="ti ti-circle-check" aria-hidden="true"></i> 40+ hospitals already signed up
-            </p>
-            <p className="hero-note">
-              <i className="ti ti-lock" aria-hidden="true"></i>
-              Secured by Supabase &nbsp;·&nbsp; Email-only signup
-            </p>
-            <div className="hero-stats">
-              <div className="hstat">
-                <div className="val">15<span className="accent">+</span></div>
-                <div className="label">Years healthcare operations &amp; quality management</div>
-              </div>
-              <div className="hstat">
-                <div className="val">All</div>
-                <div className="label">Types of NABH accreditation &amp; certification covered</div>
-              </div>
-              <div className="hstat">
-                <div className="val">60<span className="accent">+</span></div>
-                <div className="label">Hospitals served by our accreditation partner network</div>
-              </div>
             </div>
           </div>
 
           <div className="hero-side">
             <div id="hero-auth-card">
               <AuthForm key={authCardMode} variant="embedded" initialMode={authCardMode} onLogin={onLogin} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TRUST BAR */}
+      <div className="trust-bar" role="region" aria-label="Trust indicators">
+        <div className="wrap">
+          <div className="trust-item"><i className="ti ti-rosette-discount-check" aria-hidden="true"></i> Built by a healthcare operations leader</div>
+          <div className="trust-sep" aria-hidden="true"></div>
+          <div className="trust-item"><i className="ti ti-building-hospital" aria-hidden="true"></i> All NABH programmes covered</div>
+          <div className="trust-sep" aria-hidden="true"></div>
+          <div className="trust-item"><i className="ti ti-shield-check" aria-hidden="true"></i> 50+ accreditations by our expert partner network</div>
+          <div className="trust-sep" aria-hidden="true"></div>
+          <div className="trust-item"><i className="ti ti-currency-rupee" aria-hidden="true"></i> From ₹499/month</div>
+        </div>
+      </div>
+
+      {/* FOUNDER STORY */}
+      <section className="story" id="story">
+        <div className="wrap">
+          <div className="story-grid">
+            <div className="story-text">
+              <span className="eyebrow"><i className="ti ti-heart-handshake" aria-hidden="true"></i> Why AccredReady exists</span>
+              <h2>I lived the audit. <em className="si">So I built this.</em></h2>
+              <p>AccredReady was built out of direct, on-ground hospital experience: the documentation burden, the audit cycles, and the gap between a standard's written requirement and a hospital's day-to-day reality.</p>
+              <p>It reflects what accreditation actually looks like from inside a hospital, not from outside it.</p>
+              <div className="story-sign">
+                {FOUNDER_PHOTO_URL ? (
+                  <img className="story-photo" src={FOUNDER_PHOTO_URL} alt="Dr. Mehul Upadhyay, founder of AccredReady" loading="lazy" />
+                ) : (
+                  <div className="story-photo story-photo-ph" aria-hidden="true">MU</div>
+                )}
+                <div>
+                  <div className="story-name">Dr. Mehul Upadhyay</div>
+                  <div className="story-role">Founder · Certified NABH Quality Manager</div>
+                </div>
+              </div>
             </div>
             <div className="hero-video" id="promo-video">
               <div className="hero-video-cap">
@@ -642,19 +708,6 @@ export default function HomepageScreen({ onLogin }) {
           </div>
         </div>
       </section>
-
-      {/* TRUST BAR */}
-      <div className="trust-bar" role="region" aria-label="Trust indicators">
-        <div className="wrap">
-          <div className="trust-item"><i className="ti ti-rosette-discount-check" aria-hidden="true"></i> Built by a healthcare operations leader</div>
-          <div className="trust-sep" aria-hidden="true"></div>
-          <div className="trust-item"><i className="ti ti-building-hospital" aria-hidden="true"></i> All NABH programmes covered</div>
-          <div className="trust-sep" aria-hidden="true"></div>
-          <div className="trust-item"><i className="ti ti-shield-check" aria-hidden="true"></i> 50+ accreditations by our expert partner network</div>
-          <div className="trust-sep" aria-hidden="true"></div>
-          <div className="trust-item"><i className="ti ti-currency-rupee" aria-hidden="true"></i> From ₹499/month</div>
-        </div>
-      </div>
 
       {/* FEATURES */}
       <section className="features" id="features">
@@ -1015,6 +1068,12 @@ export default function HomepageScreen({ onLogin }) {
           <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
             <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
           </button>
+          <div className="hero-app" style={{justifyContent: "center", marginTop: 28}}>
+            <span className="hero-app-label">Also available on Android</span>
+            <a href="https://play.google.com/store/apps/details?id=com.mktech.nabhcompliance" target="_blank" rel="noopener noreferrer">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+            </a>
+          </div>
           <div className="contact-row">
             <div className="item"><div className="k">Website</div><div className="v">accredready.in</div></div>
             <div className="item"><div className="k">Email</div><div className="v">doctor@accredready.in</div></div>
