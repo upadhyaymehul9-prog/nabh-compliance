@@ -675,7 +675,7 @@ export default function HomepageScreen({ onLogin }) {
           <div className="story-grid">
             <div className="story-text">
               <span className="eyebrow"><i className="ti ti-heart-handshake" aria-hidden="true"></i> Why AccredReady exists</span>
-              <h2>I lived the audit. <em className="si">So I built this.</em></h2>
+              <h2>Dedicated to quality. <em className="si">Driven by excellence in hospital care.</em></h2>
               <p>AccredReady was built out of direct, on-ground hospital experience: the documentation burden, the audit cycles, and the gap between a standard's written requirement and a hospital's day-to-day reality.</p>
               <p>It reflects what accreditation actually looks like from inside a hospital, not from outside it.</p>
               <div className="story-sign">
