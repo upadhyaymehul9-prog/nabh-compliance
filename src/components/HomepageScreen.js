@@ -634,10 +634,10 @@ export default function HomepageScreen({ onLogin }) {
               NABH Compliance Platform — India
             </div>
             <h1>
-              NABH ready,{" "}
-              <em className="hero-hi si">without the last-minute chaos.</em>
+              Get accreditation-ready,{" "}
+              <em className="hero-hi si">without the consultant price tag.</em>
             </h1>
-            <p className="hero-sub">Built by Dr. Mehul Upadhyay, a hospital operations leader with 15+ years in the field and a certified NABH Quality Manager. Score your standards, find your gaps, fix them, and walk into survey day ready.</p>
+            <p className="hero-sub">India's most affordable NABH compliance platform — built by a healthcare operations leader. Score your standards, find your gaps, fix them, and reach survey-readiness. For hospitals and small healthcare organisations.</p>
             <div className="hero-actions">
               <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
                 <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
@@ -686,7 +686,7 @@ export default function HomepageScreen({ onLogin }) {
                 )}
                 <div>
                   <div className="story-name">Dr. Mehul Upadhyay</div>
-                  <div className="story-role">Founder · Certified NABH Quality Manager</div>
+                  <div className="story-role">Founder</div>
                 </div>
               </div>
             </div>
